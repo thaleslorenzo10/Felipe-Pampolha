@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Distribuição de Conteúdo — Felipe Pampolha</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  /* ── Lorenzo Media Brand Tokens ── */
+  :root {
+    --lm-navy:   #0F1B87;
+    --lm-black:  #333333;
+    --lm-light:  #EAE5E2;
+    --lm-navy2:  #1A28A0;
+    --lm-navy3:  #0a1260;
+    --lm-accent: #0F1B87;
+    --lm-bg:     #EAE5E2;
+    --lm-white:  #ffffff;
+    --lm-gray:   #6B6B7B;
+    --lm-border: #D6D3E4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', 'Segoe UI', Arial, sans-serif; background: var(--lm-bg); color: var(--lm-black); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; transition: background .3s, color .3s; }
+
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(107, 107, 123, 0.3); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(107, 107, 123, 0.5); }
+
+  /* ── Dark Mode Tokens ── */
+  :root[data-theme="dark"] {
+    --lm-bg:     #0F111A;
+    --lm-white:  #1A1D24;
+    --lm-black:  #E8E6F2;
+    --lm-gray:   #9CA3AF;
+    --lm-border: #2D3748;
+    --lm-light:  #242835;
+  }
+  :root[data-theme="dark"] .header { background: linear-gradient(135deg, #0a1260 0%, #0F1B87 50%, #060917 100%); }
+  :root[data-theme="dark"] .filter-bar { background: rgba(26,29,36,0.85); border-bottom-color: #2D3748; }
+  :root[data-theme="dark"] tbody tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+  :root[data-theme="dark"] tbody tr:hover { background: rgba(255,255,255,0.06); }
+  :root[data-theme="dark"] .kpi-card { box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-color: #2D3748; }
+  :root[data-theme="dark"] .btn-refresh { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.15); }
+  :root[data-theme="dark"] .btn-refresh:hover { background: rgba(255,255,255,0.15); }
+  :root[data-theme="dark"] .preset-btn { background: #242835; color: #D1D5DB; }
+  :root[data-theme="dark"] .preset-btn:hover { background: #2D3748; }
+  :root[data-theme="dark"] .preset-btn.active { background: var(--lm-accent); color: white; border-color: var(--lm-accent); }
+  :root[data-theme="dark"] .date-input { background: #1A1D24; color: #E8E6F2; border-color: #4B5563; }
+  :root[data-theme="dark"] .date-input::-webkit-calendar-picker-indicator { filter: invert(1); opacity: 0.6; }
+  :root[data-theme="dark"] .section-title { color: #E8E6F2; border-bottom-color: #2D3748; }
+  :root[data-theme="dark"] thead th { background: #242835; color: #9CA3AF; border-bottom-color: #2D3748; }
+  :root[data-theme="dark"] thead th:hover { background: #2D3748; }
+
+  /* ── Header ── */
+  .header {
+    background: linear-gradient(135deg, #0F1B87 0%, #1A28A0 40%, #0a1260 100%);
+    color: white; padding: 18px 40px 14px;
+    position: relative; overflow: hidden;
+  }
+  .header::before {
+    content: ''; position: absolute; top: -50%; right: -10%; width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(61,90,241,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .header-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; position: relative; }
+  .header-logo { display: flex; align-items: center; gap: 16px; }
+  .header-logo svg { height: 38px; width: auto; flex-shrink: 0; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
+  .header-divider { width: 1px; height: 38px; background: rgba(255,255,255,0.2); }
+  .header-text h1 { font-size: 18px; font-weight: 800; letter-spacing: -0.4px; line-height: 1.2; }
+  .header-text .subtitle { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 4px; font-weight: 500; }
+  .header-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 10px; position: relative; }
+  .header-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(255,255,255,0.08); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.15); border-radius: 20px;
+    padding: 5px 14px; font-size: 12px; font-weight: 500; transition: background .2s;
+  }
+  .header-badge:hover { background: rgba(255,255,255,0.14); }
+  .status-dot { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; flex-shrink: 0; }
+  .status-dot.error { background: #f87171; }
+  .status-dot.loading { background: #fbbf24; animation: pulse 1s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+  .btn-refresh {
+    background: rgba(255,255,255,0.12); border: 1.5px solid rgba(255,255,255,0.3);
+    color: white; border-radius: 20px; padding: 7px 20px; font-size: 13px;
+    cursor: pointer; transition: all .2s; font-weight: 700; letter-spacing: 0.2px;
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  }
+  .btn-refresh:hover { background: rgba(255,255,255,0.22); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+
+  /* ── Layout ── */
+  .container { max-width: 1200px; margin: 0 auto; padding: 28px 20px; }
+
+  /* ── Skeleton ── */
+  .skeleton { background: linear-gradient(90deg, var(--lm-border) 25%, var(--lm-light) 50%, var(--lm-border) 75%); background-size: 200% 100%; animation: shimmer 1.4s ease-in-out infinite; border-radius: 8px; }
+  @keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+
+  @keyframes fadeInUp { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+  .section, .kpi-groups { animation: fadeInUp .5s ease-out both; }
+  .section:nth-child(2) { animation-delay: .05s; }
+  .section:nth-child(3) { animation-delay: .1s; }
+
+  /* ── Error Banner ── */
+  .error-banner { background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; padding: 14px 18px; margin-bottom: 20px; color: #991b1b; font-size: 13px; display: none; }
+  .error-banner.show { display: block; }
+  .info-banner { background: #DBEAFE; border: 1px solid #3B82F6; border-radius: 10px; padding: 10px 16px; margin-bottom: 16px; font-size: 12px; color: #1E40AF; font-weight: 500; }
+  :root[data-theme="dark"] .info-banner { background: rgba(59,130,246,0.15); color: #93C5FD; border-color: rgba(59,130,246,0.3); }
+
+  /* ── KPI Cards ── */
+  .kpi-card {
+    background: var(--lm-white); border-radius: 16px; padding: 22px 24px;
+    box-shadow: 0 2px 12px rgba(13,31,110,0.06);
+    border: 1px solid var(--lm-border); border-left: 4px solid var(--lm-border);
+    transition: transform .25s, box-shadow .25s;
+    position: relative; overflow: hidden;
+  }
+  .kpi-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(13,31,110,0.1); }
+  .kpi-card.green  { border-left-color: #16a34a; }
+  .kpi-card.orange { border-left-color: #f97316; }
+  .kpi-card.teal   { border-left-color: #0d9488; }
+  .kpi-card.red    { border-left-color: #ef4444; }
+  .kpi-card.green  .kpi-label { color: #16a34a; }
+  .kpi-card.orange .kpi-label { color: #ea580c; }
+  .kpi-card.teal   .kpi-label { color: #0d9488; }
+  .kpi-card.red    .kpi-label { color: #dc2626; }
+  .kpi-label { font-size: 11px; color: var(--lm-gray); font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; }
+  .kpi-value { font-size: 28px; font-weight: 800; margin-top: 10px; color: var(--lm-black); line-height: 1; letter-spacing: -0.5px; }
+  .kpi-sub { font-size: 11px; color: #9ca3af; margin-top: 8px; font-weight: 500; }
+  .kpi-skel { height: 26px; width: 80%; margin-top: 8px; }
+
+  /* ── KPI Groups ── */
+  .kpi-groups { display: flex; flex-direction: column; gap: 20px; margin-bottom: 28px; }
+  .kpi-group { display: flex; flex-wrap: wrap; gap: 14px; }
+  .kpi-group-label {
+    font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px;
+    color: var(--lm-navy); padding: 0 4px 8px; border-bottom: 2px solid var(--lm-navy);
+    margin-bottom: 4px; display: flex; align-items: center; gap: 8px; width: 100%;
+  }
+  .kpi-group-label::before {
+    content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+    background: currentColor; flex-shrink: 0;
+  }
+  .kpi-group .kpi-card { flex: 1; min-width: 150px; }
+
+  /* IG-specific group */
+  .kpi-card.ig-card { border-left-color: #E1306C; }
+  .kpi-card.ig-card .kpi-label { color: #E1306C; }
+  .kpi-group-ig .kpi-group-label { color: #E1306C; border-color: #E1306C; }
+
+  /* Meta-specific group */
+  .kpi-card.dist-invest { border-left-color: var(--lm-navy); }
+  .kpi-card.dist-invest .kpi-label { color: var(--lm-navy); }
+  .kpi-group-meta .kpi-group-label { color: var(--lm-navy); border-color: var(--lm-navy); }
+  .kpi-group-perf .kpi-group-label { color: #0d9488; border-color: #0d9488; }
+
+  /* ── Section ── */
+  .section {
+    background: var(--lm-white); border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(13,31,110,0.06);
+    padding: 28px; margin-bottom: 22px; border: 1px solid var(--lm-border);
+  }
+  .section-title {
+    font-size: 15px; font-weight: 800; color: var(--lm-navy); margin-bottom: 18px;
+    display: flex; align-items: center; gap: 8px; letter-spacing: -0.2px;
+    padding-bottom: 14px; border-bottom: 1px solid var(--lm-light);
+  }
+
+  /* ── Chart ── */
+  .chart-wrap { position: relative; height: 320px; }
+
+  /* ── Table ── */
+  .table-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid var(--lm-border); }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead th {
+    background: var(--lm-light); color: var(--lm-navy); font-weight: 700;
+    padding: 10px 14px; text-align: left; border-bottom: 2px solid var(--lm-border);
+    white-space: nowrap; cursor: pointer; user-select: none; transition: background .15s;
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.4px;
+  }
+  thead th:hover { background: #d6d3e4; }
+  thead th .sort-arrow { font-size: 10px; margin-left: 3px; opacity: 0.3; }
+  thead th.sort-active .sort-arrow { opacity: 1; color: var(--lm-navy); }
+  tbody td { padding: 10px 14px; border-bottom: 1px solid var(--lm-light); color: var(--lm-black); white-space: nowrap; font-weight: 500; font-size: 12.5px; }
+  tbody tr { transition: background .15s; }
+  tbody tr:nth-child(even) { background: rgba(232,230,242,0.25); }
+  tbody tr:hover { background: rgba(232,230,242,0.6); }
+  tbody tr:last-child td { border-bottom: none; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+
+  /* ── Engagement breakdown cards ── */
+  .eng-breakdown { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
+  @media (max-width: 640px) { .eng-breakdown { grid-template-columns: repeat(2,1fr); } }
+
+  /* ── Demographics ── */
+  .demo-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+  @media (max-width: 900px) { .demo-grid { grid-template-columns: 1fr; } }
+  .demo-block { background: var(--lm-white); border: 1px solid var(--lm-border); border-radius: 12px; padding: 18px; }
+  .demo-title { font-size: 11px; font-weight: 800; color: var(--lm-navy); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--lm-light); }
+  :root[data-theme="dark"] .demo-block { background: #1A1D24; border-color: #2D3748; }
+  :root[data-theme="dark"] .demo-title { color: #E8E6F2; border-bottom-color: #2D3748; }
+  .demo-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 12px; }
+  .demo-row:last-child { margin-bottom: 0; }
+  .demo-label { flex: 0 0 90px; color: var(--lm-gray); font-weight: 600; text-transform: capitalize; }
+  .demo-bar-wrap { flex: 1; background: var(--lm-light); border-radius: 20px; height: 10px; overflow: hidden; position: relative; }
+  .demo-bar { height: 100%; background: linear-gradient(90deg, #0F1B87, #1A28A0); border-radius: 20px; transition: width .5s ease; }
+  .demo-bar.pink { background: linear-gradient(90deg, #E1306C, #F77737); }
+  .demo-bar.teal { background: linear-gradient(90deg, #0d9488, #14b8a6); }
+  .demo-val { flex: 0 0 auto; color: var(--lm-black); font-weight: 700; font-variant-numeric: tabular-nums; min-width: 60px; text-align: right; }
+  :root[data-theme="dark"] .demo-bar-wrap { background: #2D3748; }
+
+  /* ── Filter Bar ── */
+  .filter-bar {
+    background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--lm-border);
+    padding: 8px 40px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+    position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 4px rgba(13,31,110,0.04);
+  }
+  .filter-label { font-weight: 700; color: var(--lm-gray); margin-right: 2px; white-space: nowrap; text-transform: uppercase; letter-spacing: 0.5px; font-size: 10.5px; }
+  .preset-btn {
+    background: var(--lm-light); border: 1.5px solid transparent; color: var(--lm-black);
+    border-radius: 20px; padding: 6px 16px; font-size: 12px; font-weight: 600;
+    cursor: pointer; transition: all .2s; white-space: nowrap;
+  }
+  .preset-btn:hover { background: #dde3fd; color: var(--lm-navy); transform: translateY(-1px); }
+  .preset-btn.active { background: var(--lm-navy); color: white; border-color: var(--lm-navy); box-shadow: 0 2px 8px rgba(13,31,110,0.25); }
+  .filter-sep { width: 1px; height: 22px; background: var(--lm-border); margin: 0 4px; flex-shrink: 0; }
+  .custom-dates { display: none; align-items: center; gap: 6px; }
+  .custom-dates.show { display: flex; }
+  .custom-dates label { font-size: 12px; color: var(--lm-gray); font-weight: 600; }
+  .date-input {
+    border: 1.5px solid var(--lm-border); border-radius: 8px; padding: 4px 10px;
+    font-size: 12px; color: var(--lm-black); outline: none; cursor: pointer;
+    transition: border-color .15s;
+  }
+  .date-input:focus { border-color: var(--lm-navy); }
+  .btn-apply {
+    background: var(--lm-navy); color: white; border: none; border-radius: 20px;
+    padding: 5px 16px; font-size: 12px; font-weight: 700; cursor: pointer; transition: background .15s;
+  }
+  .btn-apply:hover { background: var(--lm-navy2); }
+
+  /* ── Post card (organic top posts) ── */
+  .post-thumb {
+    display: inline-block; width: 32px; height: 32px; border-radius: 8px;
+    background: linear-gradient(135deg,#833AB4,#E1306C,#F77737);
+    color: white; font-size: 14px; display: inline-flex; align-items: center; justify-content: center;
+    flex-shrink: 0; vertical-align: middle; margin-right: 8px;
+  }
+  .post-link { color: var(--lm-navy); text-decoration: none; font-weight: 600; }
+  .post-link:hover { text-decoration: underline; }
+
+  footer { text-align: center; font-size: 11px; color: var(--lm-gray); padding: 20px; }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .header { padding: 16px 20px 12px; }
+    .header-top { flex-direction: column; align-items: flex-start; }
+    .header-text h1 { font-size: 16px; }
+    .header-meta { flex-wrap: wrap; }
+    .filter-bar { padding: 8px 16px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  }
+  @media (max-width: 640px) {
+    .header { padding: 14px 16px 10px; }
+    .header-text h1 { font-size: 13px; line-height: 1.3; }
+    .header-text .subtitle { font-size: 10px; }
+    .header-logo { gap: 8px; flex-wrap: wrap; }
+    .header-logo svg { height: 28px; }
+    .header-logo > div:first-of-type { display: none; }
+    .header-divider { display: none; }
+    .header-meta { gap: 6px; margin-top: 8px; }
+    .header-badge { padding: 4px 10px; font-size: 11px; }
+    .filter-bar { padding: 8px 12px; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; }
+    .preset-btn { padding: 5px 10px; font-size: 10px; flex-shrink: 0; }
+    .filter-label { font-size: 10px; }
+    .filter-sep { display: none; }
+    .custom-dates { flex-wrap: wrap; }
+    .date-input { font-size: 11px; padding: 3px 8px; }
+    .container { padding: 16px 10px; }
+    .section { padding: 16px 14px; border-radius: 12px; margin-bottom: 16px; }
+    .section-title { font-size: 13px; padding-bottom: 10px; }
+    .kpi-groups { gap: 14px; }
+    .kpi-group { gap: 10px; }
+    .kpi-group .kpi-card { min-width: calc(50% - 6px); flex: 1 1 calc(50% - 6px); }
+    .kpi-card { padding: 14px 16px; border-radius: 12px; }
+    .kpi-value { font-size: 20px; }
+    .kpi-label { font-size: 10px; }
+    .kpi-sub { font-size: 10px; }
+    .kpi-group-label { font-size: 9px; }
+    .chart-wrap { height: 220px; }
+    .table-wrap { border-radius: 10px; }
+    table { font-size: 11px; }
+    thead th { padding: 8px 6px; font-size: 10px; letter-spacing: 0.2px; }
+    tbody td { padding: 7px 6px; font-size: 11px; }
+    .btn-refresh { padding: 6px 14px; font-size: 12px; }
+  }
+  @media (max-width: 380px) {
+    .kpi-group .kpi-card { min-width: 100%; flex: 1 1 100%; }
+    .kpi-value { font-size: 18px; }
+    .header-text h1 { font-size: 12px; }
+    .preset-btn { padding: 4px 8px; font-size: 9px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════ HEADER ═══════════════════════ -->
+<div class="header">
+  <div class="header-top">
+    <div class="header-logo">
+      <svg viewBox="0 0 44 44" width="36" height="36" xmlns="http://www.w3.org/2000/svg">
+        <path d="M26 2 A20 20 0 1 0 26 42" fill="none" stroke="white" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+        <rect x="22" y="0" width="16" height="16" rx="2" fill="white" opacity="0.95"/>
+      </svg>
+      <div style="line-height:1.1;">
+        <svg viewBox="0 0 180 24" height="20" xmlns="http://www.w3.org/2000/svg">
+          <text x="0" y="18" font-family="'Segoe UI',system-ui,sans-serif" font-size="20" font-weight="800" fill="white" letter-spacing="-0.5">lorenzo</text>
+          <text x="82" y="18" font-family="'Segoe UI',system-ui,sans-serif" font-size="20" font-weight="400" fill="rgba(255,255,255,0.5)" letter-spacing="-0.5">media</text>
+        </svg>
+      </div>
+      <div class="header-divider"></div>
+      <div class="header-text">
+        <h1>Dashboard — Distribuição de Conteúdo</h1>
+        <div class="subtitle">Felipe Pampolha · Conta <code style="background:rgba(255,255,255,.12);padding:1px 6px;border-radius:4px;font-size:11px;">716311018073722</code></div>
+      </div>
+    </div>
+    <div style="display:flex; gap: 8px;">
+      <button class="btn-refresh" id="toggleTheme" onclick="toggleDarkMode()" title="Alternar Dark Mode">🌙</button>
+      <button class="btn-refresh" id="btnRefresh" onclick="loadAll()">⟳ Atualizar agora</button>
+    </div>
+  </div>
+  <div class="header-meta">
+    <div class="header-badge">
+      <div class="status-dot loading" id="statusDot"></div>
+      <span id="statusText">Carregando...</span>
+    </div>
+    <div class="header-badge" id="lastUpdate">—</div>
+    <div class="header-badge" id="countdown">Próx. atualização: 60:00</div>
+    <div class="header-badge" id="periodBadge">📅 Últimos 30 dias</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ FILTER BAR ═══════════════════════ -->
+<div class="filter-bar">
+  <span class="filter-label">Período:</span>
+  <button class="preset-btn" onclick="setPreset('today')">Hoje</button>
+  <button class="preset-btn" onclick="setPreset('last_7d')">7 dias</button>
+  <button class="preset-btn" onclick="setPreset('last_14d')">14 dias</button>
+  <button class="preset-btn active" id="btn-last_30d" onclick="setPreset('last_30d')">30 dias</button>
+  <button class="preset-btn" onclick="setPreset('this_month')">Este mês</button>
+  <button class="preset-btn" onclick="setPreset('last_month')">Mês anterior</button>
+  <button class="preset-btn" onclick="setPreset('this_year')">Este ano</button>
+  <div class="filter-sep"></div>
+  <button class="preset-btn" onclick="setPreset('custom')">Personalizado</button>
+  <div class="custom-dates" id="customDates">
+    <label>De</label>
+    <input type="date" class="date-input" id="dateSince">
+    <label>até</label>
+    <input type="date" class="date-input" id="dateUntil">
+    <button class="btn-apply" onclick="applyCustom()">Aplicar</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════ MAIN ═══════════════════════ -->
+<div class="container">
+
+  <div class="error-banner" id="errorBanner"></div>
+
+  <!-- ═══ KPIs ═══ -->
+  <div class="kpi-groups">
+
+    <!-- Grupo: Instagram — Conta -->
+    <div class="kpi-group kpi-group-ig">
+      <div class="kpi-group-label">Instagram (@felipepampolha.rio) — Visão Geral</div>
+      <div class="kpi-card ig-card"> <div class="kpi-label">Seguidores Atuais</div><div class="kpi-value skeleton kpi-skel" id="igFollowers"></div><div class="kpi-sub" id="igFollowersSub"></div></div>
+      <div class="kpi-card ig-card"> <div class="kpi-label">Total de Posts</div><div class="kpi-value skeleton kpi-skel" id="igMedia"></div><div class="kpi-sub" id="igMediaSub"></div></div>
+      <div class="kpi-card ig-card"> <div class="kpi-label">Posts no Período</div><div class="kpi-value skeleton kpi-skel" id="igPostsPeriod"></div><div class="kpi-sub" id="igPostsPeriodSub"></div></div>
+      <div class="kpi-card ig-card"> <div class="kpi-label">Engaj. Médio / Post</div><div class="kpi-value skeleton kpi-skel" id="igAvgEng"></div><div class="kpi-sub" id="igAvgEngSub"></div></div>
+    </div>
+
+    <!-- Grupo: Instagram — Insights Orgânicos -->
+    <div class="kpi-group kpi-group-ig">
+      <div class="kpi-group-label">Instagram — Insights Orgânicos (Período)</div>
+      <div class="kpi-card ig-card"> <div class="kpi-label">Alcance Orgânico</div><div class="kpi-value skeleton kpi-skel" id="igReach"></div><div class="kpi-sub" id="igReachSub"></div></div>
+      <div class="kpi-card ig-card"> <div class="kpi-label">Visitas ao Perfil</div><div class="kpi-value skeleton kpi-skel" id="igProfileViews"></div><div class="kpi-sub" id="igProfileViewsSub"></div></div>
+      <div class="kpi-card ig-card"> <div class="kpi-label">Interações Totais</div><div class="kpi-value skeleton kpi-skel" id="igInteractions"></div><div class="kpi-sub" id="igInteractionsSub"></div></div>
+      <div class="kpi-card ig-card"> <div class="kpi-label">Cliques no Site</div><div class="kpi-value skeleton kpi-skel" id="igWebClicks"></div><div class="kpi-sub" id="igWebClicksSub"></div></div>
+    </div>
+
+    <!-- Grupo: Investimento Meta Ads -->
+    <div class="kpi-group kpi-group-meta">
+      <div class="kpi-group-label">Investimento em Distribuição (Meta Ads)</div>
+      <div class="kpi-card dist-invest"> <div class="kpi-label">Investido Total</div><div class="kpi-value skeleton kpi-skel" id="distSpend"></div><div class="kpi-sub" id="distSpendSub"></div></div>
+      <div class="kpi-card dist-invest"> <div class="kpi-label">Impressões</div><div class="kpi-value skeleton kpi-skel" id="distImps"></div><div class="kpi-sub" id="distImpsSub"></div></div>
+      <div class="kpi-card dist-invest"> <div class="kpi-label">Alcance</div><div class="kpi-value skeleton kpi-skel" id="distReach"></div><div class="kpi-sub" id="distReachSub"></div></div>
+      <div class="kpi-card dist-invest"> <div class="kpi-label">Cliques</div><div class="kpi-value skeleton kpi-skel" id="distClicks"></div><div class="kpi-sub" id="distClicksSub"></div></div>
+    </div>
+
+    <!-- Grupo: Performance -->
+    <div class="kpi-group kpi-group-perf">
+      <div class="kpi-group-label">Performance dos Anúncios</div>
+      <div class="kpi-card teal"> <div class="kpi-label">CTR Médio</div><div class="kpi-value skeleton kpi-skel" id="distCtr"></div><div class="kpi-sub" id="distCtrSub"></div></div>
+      <div class="kpi-card"> <div class="kpi-label">CPC Médio</div><div class="kpi-value skeleton kpi-skel" id="distCpc"></div><div class="kpi-sub" id="distCpcSub"></div></div>
+      <div class="kpi-card red"> <div class="kpi-label">CPM Médio</div><div class="kpi-value skeleton kpi-skel" id="distCpm"></div><div class="kpi-sub" id="distCpmSub"></div></div>
+      <div class="kpi-card orange"> <div class="kpi-label">Custo / Alcance (CPR)</div><div class="kpi-value skeleton kpi-skel" id="distCpr"></div><div class="kpi-sub" id="distCprSub"></div></div>
+    </div>
+  </div>
+
+  <!-- ═══ Detalhamento do Engajamento (IG posts) ═══ -->
+  <div class="section">
+    <div class="section-title" id="igEngTitle">💬 Engajamento dos Posts (últimos 25 posts públicos)</div>
+    <div class="eng-breakdown" id="igEngBreakdown">
+      <div class="kpi-card" style="text-align:center;padding:16px;border-left-color:#ef4444;">
+        <div class="kpi-label" style="color:#ef4444;">Curtidas</div>
+        <div class="kpi-value skeleton kpi-skel" id="igLikes" style="font-size:24px;"></div>
+      </div>
+      <div class="kpi-card" style="text-align:center;padding:16px;border-left-color:#3b82f6;">
+        <div class="kpi-label" style="color:#3b82f6;">Comentários</div>
+        <div class="kpi-value skeleton kpi-skel" id="igComments" style="font-size:24px;"></div>
+      </div>
+      <div class="kpi-card" style="text-align:center;padding:16px;border-left-color:#8b5cf6;">
+        <div class="kpi-label" style="color:#8b5cf6;">Engajamento Total</div>
+        <div class="kpi-value skeleton kpi-skel" id="igTotalEng" style="font-size:24px;"></div>
+      </div>
+      <div class="kpi-card" style="text-align:center;padding:16px;border-left-color:#f59e0b;">
+        <div class="kpi-label" style="color:#f59e0b;">Posts Analisados</div>
+        <div class="kpi-value skeleton kpi-skel" id="igPostsCount" style="font-size:24px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ Demographics (Instagram Followers) ═══ -->
+  <div class="section">
+    <div class="section-title">👥 Demografia dos Seguidores — Instagram</div>
+    <div style="font-size:12px;color:var(--lm-gray);margin-bottom:16px;">Distribuição total dos seguidores por gênero, faixa etária e cidade (dados lifetime)</div>
+    <div class="demo-grid">
+      <div class="demo-block">
+        <div class="demo-title">Gênero</div>
+        <div id="demoGender"><div style="text-align:center;padding:16px;color:#9ca3af;font-size:12px;">Carregando...</div></div>
+      </div>
+      <div class="demo-block">
+        <div class="demo-title">Faixa Etária</div>
+        <div id="demoAge"><div style="text-align:center;padding:16px;color:#9ca3af;font-size:12px;">Carregando...</div></div>
+      </div>
+      <div class="demo-block">
+        <div class="demo-title">Top Cidades</div>
+        <div id="demoCity"><div style="text-align:center;padding:16px;color:#9ca3af;font-size:12px;">Carregando...</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ Evolução Diária (Chart) ═══ -->
+  <div class="section">
+    <div class="section-title" id="chartTitle">📊 Evolução Diária — Investimento Ads & Alcance Orgânico</div>
+    <div class="chart-wrap"><canvas id="chartDaily"></canvas></div>
+  </div>
+
+  <!-- ═══ Campanhas (Table) ═══ -->
+  <div class="section">
+    <div class="section-title" id="campaignsTitle">🎯 Campanhas de Distribuição</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th data-sort="name">Campanha <span class="sort-arrow">▼</span></th>
+          <th class="num" data-sort="spend">Investido <span class="sort-arrow">▼</span></th>
+          <th class="num" data-sort="impressions">Impressões <span class="sort-arrow">▼</span></th>
+          <th class="num" data-sort="reach">Alcance <span class="sort-arrow">▼</span></th>
+          <th class="num" data-sort="clicks">Cliques <span class="sort-arrow">▼</span></th>
+          <th class="num" data-sort="cpc">CPC <span class="sort-arrow">▼</span></th>
+          <th class="num" data-sort="ctr">CTR <span class="sort-arrow">▼</span></th>
+          <th class="num" data-sort="cpm">CPM <span class="sort-arrow">▼</span></th>
+        </tr></thead>
+        <tbody id="tbodyCampaigns">
+          <tr><td colspan="8" style="text-align:center;padding:16px;color:#9ca3af;">Carregando...</td></tr>
+        </tbody>
+        <tfoot id="tfootCampaigns"></tfoot>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══ AdSets (Table) ═══ -->
+  <div class="section">
+    <div class="section-title" id="adsetsTitle">🎯 Conjuntos de Anúncios (Top 20)</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th>Conjunto</th>
+          <th class="num">Investido</th>
+          <th class="num">Impressões</th>
+          <th class="num">Alcance</th>
+          <th class="num">Cliques</th>
+          <th class="num">CPC</th>
+          <th class="num">CTR</th>
+        </tr></thead>
+        <tbody id="tbodyAdsets">
+          <tr><td colspan="7" style="text-align:center;padding:16px;color:#9ca3af;">Carregando...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══ Top Posts Orgânicos ═══ -->
+  <div class="section">
+    <div class="section-title">📱 Top Conteúdos Orgânicos — Instagram</div>
+    <div style="font-size:12px;color:var(--lm-gray);margin-bottom:12px;">Últimos 25 posts públicos ordenados por engajamento</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th style="min-width:320px;">Conteúdo</th>
+          <th class="num">Tipo</th>
+          <th class="num">Data</th>
+          <th class="num">Curtidas</th>
+          <th class="num">Comentários</th>
+          <th class="num">Engajamento</th>
+        </tr></thead>
+        <tbody id="tbodyOrgPosts">
+          <tr><td colspan="6" style="text-align:center;padding:16px;color:#9ca3af;">Carregando posts...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<footer style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:32px 20px 28px;border-top:1px solid var(--lm-border);margin-top:10px;">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <svg viewBox="0 0 44 44" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+      <path d="M26 2 A20 20 0 1 0 26 42" fill="none" stroke="#6B6B7B" stroke-width="6" stroke-linecap="round"/>
+      <rect x="22" y="0" width="16" height="16" rx="2" fill="#0F1B87"/>
+    </svg>
+    <svg viewBox="0 0 180 24" height="16" xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="18" font-family="'Segoe UI',system-ui,sans-serif" font-size="20" font-weight="800" fill="#333333" letter-spacing="-0.5">lorenzo</text>
+      <text x="82" y="18" font-family="'Segoe UI',system-ui,sans-serif" font-size="20" font-weight="400" fill="#6B6B7B" letter-spacing="-0.5">media</text>
+    </svg>
+  </div>
+  <span style="font-size:11px;color:#9ca3af;font-weight:500;">Dashboard Felipe Pampolha · Distribuição de Conteúdo · Atualização automática a cada 60 min · Histórico persistido no Supabase (snapshot diário às 3h BRT)</span>
+</footer>
+
+<!-- ═══════════════════════ SCRIPT ═══════════════════════ -->
+<script>
+// ─── CONFIG ───────────────────────────────────────────────────────────────────
+const TOKEN       = "EAASB7C6gP58BROhRyEANDVOSpnxZBWg455bfF36ZAe8B5MDwphKzQU1vvcLykCLJZC3rwJHaM6fsEqjR7WVorQJbD0GGKmpLciNZCD8blIggJO6xceanLWglEXW0uHz9ZBKe9aAkV7tWHiQ8EvVtk19qvSXaBx64aLGyM9jHTqh75OGNZAW2RkwEYbHA5ZCZAwZDZD";
+const ACCOUNT     = "act_716311018073722";
+const BASE        = "https://graph.facebook.com/v19.0";
+const IG_ACCOUNT_ID = "17841401257663487";
+const FB_PAGE_ID    = "723961930805216";
+const IG_USERNAME   = "felipepampolha.rio";
+const DIST_FILTER = encodeURIComponent(JSON.stringify([{"field":"campaign.name","operator":"CONTAIN","value":"DISTRIBUI"}]));
+
+// ─── SUPABASE (histórico persistido) ──────────────────────────────────────────
+// O Meta API só expõe 30 dias de IG orgânico. Pra ter histórico além disso,
+// uma Edge Function salva snapshots diários no Supabase às 03h BRT.
+const SB_URL  = "https://hojcntkggnwrvbvmcwxe.supabase.co";
+const SB_KEY  = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvamNudGtnZ253cnZidm1jd3hlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUwOTIyODQsImV4cCI6MjA5MDY2ODI4NH0.55PnZswNSKGkK7LfWSj1zS2Hnr-UM_8L00ZPb9AGKaY";
+
+async function sbFetch(path) {
+  const r = await fetch(`${SB_URL}/rest/v1/${path}`, {
+    headers: { apikey: SB_KEY, Authorization: `Bearer ${SB_KEY}` }
+  });
+  if (!r.ok) throw new Error(`Supabase ${r.status}: ${await r.text()}`);
+  return r.json();
+}
+
+// ─── DATE FILTER STATE ────────────────────────────────────────────────────────
+let activePreset = "last_30d";
+let customSince  = "";
+let customUntil  = "";
+
+const PRESET_LABELS = {
+  today:      "Hoje",
+  last_7d:    "Últimos 7 dias",
+  last_14d:   "Últimos 14 dias",
+  last_30d:   "Últimos 30 dias",
+  this_month: "Este mês",
+  last_month: "Mês anterior",
+  this_year:  "Este ano",
+  custom:     "Personalizado"
+};
+
+function toISODate(d) { return d.toISOString().slice(0, 10); }
+
+function getDateParam() {
+  if (activePreset === "this_year") {
+    const year = new Date().getFullYear();
+    const since = `${year}-01-01`;
+    const until = toISODate(new Date());
+    return `time_range=${encodeURIComponent(JSON.stringify({since, until}))}`;
+  }
+  if (activePreset === "custom" && customSince && customUntil) {
+    return `time_range=${encodeURIComponent(JSON.stringify({since: customSince, until: customUntil}))}`;
+  }
+  return `date_preset=${activePreset}`;
+}
+
+// Returns since/until as Date objects for post filtering
+function getDateRange() {
+  const today = new Date(); today.setHours(23,59,59,999);
+  let since, until = today;
+  switch(activePreset) {
+    case 'today':      since = new Date(); since.setHours(0,0,0,0); break;
+    case 'last_7d':    since = new Date(Date.now() - 7*86400000); break;
+    case 'last_14d':   since = new Date(Date.now() - 14*86400000); break;
+    case 'last_30d':   since = new Date(Date.now() - 30*86400000); break;
+    case 'this_month': since = new Date(today.getFullYear(), today.getMonth(), 1); break;
+    case 'last_month':
+      since = new Date(today.getFullYear(), today.getMonth()-1, 1);
+      until = new Date(today.getFullYear(), today.getMonth(), 0, 23, 59, 59);
+      break;
+    case 'this_year':  since = new Date(today.getFullYear(), 0, 1); break;
+    case 'custom':
+      since = customSince ? new Date(customSince + "T00:00:00") : new Date(Date.now() - 30*86400000);
+      until = customUntil ? new Date(customUntil + "T23:59:59") : today;
+      break;
+    default: since = new Date(Date.now() - 30*86400000);
+  }
+  return { since, until };
+}
+
+function getPeriodLabel() {
+  if (activePreset === "custom" && customSince && customUntil) {
+    const fmt = s => s.split("-").reverse().join("/");
+    return `${fmt(customSince)} – ${fmt(customUntil)}`;
+  }
+  return PRESET_LABELS[activePreset] || activePreset;
+}
+
+function setPreset(preset) {
+  activePreset = preset;
+  document.querySelectorAll(".preset-btn").forEach(b => b.classList.remove("active"));
+  const presetMap = { today:0, last_7d:1, last_14d:2, last_30d:3, this_month:4, last_month:5, this_year:6, custom:7 };
+  document.querySelectorAll(".preset-btn")[presetMap[preset]]?.classList.add("active");
+  const customEl = document.getElementById("customDates");
+  if (preset === "custom") {
+    customEl.classList.add("show");
+    const until = document.getElementById("dateUntil");
+    if (!until.value) until.value = toISODate(new Date());
+    return;
+  }
+  customEl.classList.remove("show");
+  loadAll();
+}
+
+function applyCustom() {
+  customSince = document.getElementById("dateSince").value;
+  customUntil = document.getElementById("dateUntil").value;
+  if (!customSince || !customUntil) return alert("Selecione as duas datas.");
+  if (customSince > customUntil) return alert("Data inicial deve ser antes da data final.");
+  loadAll();
+}
+
+// ─── HELPERS ──────────────────────────────────────────────────────────────────
+const brl = v => "R$ " + Number(v).toLocaleString("pt-BR", {minimumFractionDigits:2, maximumFractionDigits:2});
+const num = v => Number(v).toLocaleString("pt-BR");
+const pct = v => Number(v).toLocaleString("pt-BR", {minimumFractionDigits:2, maximumFractionDigits:2}) + "%";
+
+async function apiFetch(url, retries = 3) {
+  const sep = url.includes("?") ? "&" : "?";
+  const res = await fetch(url + sep + "access_token=" + TOKEN);
+  const json = await res.json();
+  if (json.error) {
+    if (retries > 0 && (json.error.code === 32 || json.error.code === 4 || /too many|rate limit|excessivo/i.test(json.error.message || ""))) {
+      const wait = (4 - retries) * 3000;
+      console.log(`Rate limit, retrying in ${wait/1000}s...`);
+      await new Promise(r => setTimeout(r, wait));
+      return apiFetch(url, retries - 1);
+    }
+    throw new Error(json.error.error_user_msg || json.error.message);
+  }
+  return json;
+}
+
+function insightsUrl(params) {
+  return `${BASE}/${ACCOUNT}/insights?${params}`;
+}
+
+// ─── SKELETON RESET ───────────────────────────────────────────────────────────
+function resetSkeletons() {
+  const ids = [
+    "igFollowers","igMedia","igPostsPeriod","igAvgEng",
+    "igReach","igProfileViews","igInteractions","igWebClicks",
+    "distSpend","distImps","distReach","distClicks",
+    "distCtr","distCpc","distCpm","distCpr",
+    "igLikes","igComments","igTotalEng","igPostsCount"
+  ];
+  ids.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) { el.classList.add("skeleton","kpi-skel"); el.textContent = ""; }
+    const sub = document.getElementById(id+"Sub");
+    if (sub) sub.textContent = "";
+  });
+}
+
+function setKpi(id, val, sub) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.classList.remove("skeleton","kpi-skel");
+  el.textContent = val;
+  const s = document.getElementById(id+"Sub");
+  if (s) s.textContent = sub || "";
+}
+
+// ─── CHART ────────────────────────────────────────────────────────────────────
+let _dailyChart = null;
+function renderDailyChart(daily) {
+  const ctx = document.getElementById("chartDaily");
+  if (!ctx) return;
+  if (_dailyChart) _dailyChart.destroy();
+
+  const labels = daily.map(d => {
+    const [y,m,dd] = (d.date_start || "").split("-");
+    return `${dd}/${m}`;
+  });
+  const spend      = daily.map(d => parseFloat(d.spend || 0));
+  const reachAds   = daily.map(d => parseInt(d.reach || 0));
+  const reachOrg   = daily.map(d => parseInt(d.ig_reach || 0));
+  const hasOrgData = reachOrg.some(v => v > 0);
+
+  const isDark = document.documentElement.dataset.theme === 'dark';
+  const textColor = isDark ? '#9CA3AF' : '#6B6B7B';
+  const gridColor = isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.05)';
+
+  const datasets = [
+    {
+      type: "bar",
+      label: "Investido Ads (R$)",
+      data: spend,
+      backgroundColor: "rgba(15,27,135,0.75)",
+      borderColor: "#0F1B87",
+      borderWidth: 1,
+      borderRadius: 4,
+      yAxisID: "y1"
+    },
+    {
+      type: "line",
+      label: "Alcance Ads",
+      data: reachAds,
+      borderColor: "#E1306C",
+      backgroundColor: "rgba(225,48,108,0.1)",
+      fill: true,
+      tension: 0.3,
+      borderWidth: 2,
+      pointRadius: 3,
+      pointBackgroundColor: "#E1306C",
+      yAxisID: "y2"
+    }
+  ];
+
+  if (hasOrgData) {
+    datasets.push({
+      type: "line",
+      label: "Alcance Orgânico IG",
+      data: reachOrg,
+      borderColor: "#0d9488",
+      backgroundColor: "rgba(13,148,136,0.08)",
+      fill: false,
+      tension: 0.3,
+      borderWidth: 2,
+      borderDash: [6,4],
+      pointRadius: 2,
+      pointBackgroundColor: "#0d9488",
+      yAxisID: "y2"
+    });
+  }
+
+  _dailyChart = new Chart(ctx, {
+    data: { labels, datasets },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: true, position: "top", labels: { color: textColor, font: { size: 12, weight: 600 } } }
+      },
+      scales: {
+        y1: {
+          type: 'linear', position: 'left', beginAtZero: true,
+          ticks: { color: textColor, font: { size: 11 }, callback: v => "R$ " + v.toLocaleString("pt-BR") },
+          grid: { color: gridColor }
+        },
+        y2: {
+          type: 'linear', position: 'right', beginAtZero: true,
+          ticks: { color: textColor, font: { size: 11 }, callback: v => v >= 1000 ? (v/1000).toFixed(1)+"k" : v },
+          grid: { drawOnChartArea: false }
+        },
+        x: { ticks: { color: textColor, font: { size: 10 }, maxRotation: 45 }, grid: { color: gridColor } }
+      }
+    }
+  });
+}
+
+// ─── RENDER CAMPAIGNS TABLE ───────────────────────────────────────────────────
+let _rawCampaigns = [];
+let _campSortField = 'spend';
+let _campSortAsc = false;
+
+function renderCampaignsTable() {
+  const tbody = document.getElementById("tbodyCampaigns");
+  const tfoot = document.getElementById("tfootCampaigns");
+  if (!tbody) return;
+
+  const rows = [..._rawCampaigns];
+  const dir = _campSortAsc ? 1 : -1;
+  rows.sort((a,b) => {
+    if (_campSortField === 'name') {
+      return (a.campaign_name || "").localeCompare(b.campaign_name || "") * dir;
+    }
+    const va = parseFloat(a[_campSortField] || 0);
+    const vb = parseFloat(b[_campSortField] || 0);
+    return (va - vb) * dir;
+  });
+
+  let totSpend=0, totImps=0, totReach=0, totClicks=0;
+  let html = "";
+  rows.forEach(c => {
+    const spend = parseFloat(c.spend||0);
+    const imps  = parseInt(c.impressions||0);
+    const reach = parseInt(c.reach||0);
+    const clicks= parseInt(c.clicks||0);
+    const cpc   = parseFloat(c.cpc||0);
+    const ctr   = parseFloat(c.ctr||0);
+    const cpm   = parseFloat(c.cpm||0);
+    totSpend += spend; totImps += imps; totReach += reach; totClicks += clicks;
+
+    let name = (c.campaign_name || "—")
+      .replace(/\[DISTRIBUI[ÇC][ÃA]O( DE CONTE[ÚU]DO)?\]\s*/gi,"")
+      .replace(/\[DISTRIBUI[ÇC][ÃA]O\]\s*/gi,"")
+      .trim();
+    if (name.length > 60) name = name.substring(0,57) + "...";
+
+    html += `<tr>
+      <td style="max-width:260px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="${(c.campaign_name||"").replace(/"/g,'&quot;')}">${name}<\/td>
+      <td class="num">${brl(spend)}<\/td>
+      <td class="num">${num(imps)}<\/td>
+      <td class="num">${num(reach)}<\/td>
+      <td class="num">${num(clicks)}<\/td>
+      <td class="num">${brl(cpc)}<\/td>
+      <td class="num">${pct(ctr)}<\/td>
+      <td class="num">${brl(cpm)}<\/td>
+    <\/tr>`;
+  });
+  tbody.innerHTML = html || `<tr><td colspan="8" style="text-align:center;padding:16px;color:#9ca3af;">Nenhuma campanha encontrada no período<\/td><\/tr>`;
+
+  const avgCpc = totClicks > 0 ? totSpend / totClicks : 0;
+  const avgCtr = totImps > 0 ? (totClicks / totImps * 100) : 0;
+  const avgCpm = totImps > 0 ? (totSpend / totImps * 1000) : 0;
+  tfoot.innerHTML = `<tr style="font-weight:700;background:var(--lm-light);">
+    <td>TOTAL (${rows.length} campanhas)<\/td>
+    <td class="num">${brl(totSpend)}<\/td>
+    <td class="num">${num(totImps)}<\/td>
+    <td class="num">${num(totReach)}<\/td>
+    <td class="num">${num(totClicks)}<\/td>
+    <td class="num">${brl(avgCpc)}<\/td>
+    <td class="num">${pct(avgCtr)}<\/td>
+    <td class="num">${brl(avgCpm)}<\/td>
+  <\/tr>`;
+
+  // update sort arrows
+  document.querySelectorAll('thead th[data-sort]').forEach(th => {
+    const f = th.getAttribute('data-sort');
+    const arrow = th.querySelector('.sort-arrow');
+    if (!arrow) return;
+    if (f === _campSortField) {
+      th.classList.add('sort-active');
+      arrow.textContent = _campSortAsc ? '▲' : '▼';
+    } else {
+      th.classList.remove('sort-active');
+      arrow.textContent = '▼';
+    }
+  });
+}
+
+function attachSortHandlers() {
+  document.querySelectorAll('thead th[data-sort]').forEach(th => {
+    th.addEventListener('click', () => {
+      const f = th.getAttribute('data-sort');
+      if (_campSortField === f) { _campSortAsc = !_campSortAsc; }
+      else { _campSortField = f; _campSortAsc = false; }
+      renderCampaignsTable();
+    });
+  });
+}
+
+// ─── RENDER ADSETS TABLE ──────────────────────────────────────────────────────
+function renderAdsetsTable(rows) {
+  const tbody = document.getElementById("tbodyAdsets");
+  if (!tbody) return;
+  const sorted = [...rows].sort((a,b) => parseFloat(b.spend||0) - parseFloat(a.spend||0)).slice(0, 20);
+  let html = "";
+  sorted.forEach(a => {
+    const spend = parseFloat(a.spend||0);
+    const imps  = parseInt(a.impressions||0);
+    const reach = parseInt(a.reach||0);
+    const clicks= parseInt(a.clicks||0);
+    const cpc   = parseFloat(a.cpc||0);
+    const ctr   = parseFloat(a.ctr||0);
+    let name = (a.adset_name || "—");
+    if (name.length > 70) name = name.substring(0,67) + "...";
+    html += `<tr>
+      <td style="max-width:280px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="${(a.adset_name||"").replace(/"/g,'&quot;')}">${name}<\/td>
+      <td class="num">${brl(spend)}<\/td>
+      <td class="num">${num(imps)}<\/td>
+      <td class="num">${num(reach)}<\/td>
+      <td class="num">${num(clicks)}<\/td>
+      <td class="num">${brl(cpc)}<\/td>
+      <td class="num">${pct(ctr)}<\/td>
+    <\/tr>`;
+  });
+  tbody.innerHTML = html || `<tr><td colspan="7" style="text-align:center;padding:16px;color:#9ca3af;">Nenhum conjunto de an\u00fancios encontrado<\/td><\/tr>`;
+}
+
+// ─── RENDER ORG POSTS TABLE ───────────────────────────────────────────────────
+function renderOrgPostsTable(posts) {
+  const tbody = document.getElementById("tbodyOrgPosts");
+  if (!tbody) return;
+  if (!posts || !posts.length) {
+    tbody.innerHTML = `<tr><td colspan="6" style="text-align:center;padding:16px;color:#9ca3af;">Nenhum post encontrado no per\u00edodo<\/td><\/tr>`;
+    return;
+  }
+
+  const typeIcons = { VIDEO: "🎬", CAROUSEL_ALBUM: "📸", IMAGE: "🖼️" };
+  const typeLabels = { VIDEO: "Reels", CAROUSEL_ALBUM: "Carrossel", IMAGE: "Imagem" };
+
+  const sorted = [...posts].sort((a,b) => {
+    const ea = (a.like_count||0) + (a.comments_count||0);
+    const eb = (b.like_count||0) + (b.comments_count||0);
+    return eb - ea;
+  });
+
+  let html = "";
+  sorted.forEach((p, i) => {
+    const caption = (p.caption || "").replace(/\n/g, " ").substring(0, 80);
+    const displayCaption = caption.length >= 80 ? caption + "..." : (caption || "(sem legenda)");
+    const date = new Date(p.timestamp).toLocaleDateString("pt-BR", {day:"2-digit", month:"short"});
+    const icon = typeIcons[p.media_type] || "📄";
+    const typeLabel = typeLabels[p.media_type] || p.media_type;
+    const eng = (p.like_count||0) + (p.comments_count||0);
+
+    html += `<tr>
+      <td style="max-width:320px;">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <span style="font-size:11px;font-weight:700;color:var(--lm-gray);min-width:20px;">${i+1}<\/span>
+          <span class="post-thumb">${icon}<\/span>
+          <a href="${p.permalink}" target="_blank" rel="noopener" class="post-link" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:240px;display:inline-block;" title="${caption.replace(/"/g,'&quot;')}">${displayCaption}<\/a>
+        <\/div>
+      <\/td>
+      <td class="num" style="font-size:11px;color:var(--lm-gray);">${typeLabel}<\/td>
+      <td class="num" style="font-size:11px;color:var(--lm-gray);">${date}<\/td>
+      <td class="num">${num(p.like_count||0)}<\/td>
+      <td class="num">${num(p.comments_count||0)}<\/td>
+      <td class="num" style="font-weight:700;">${num(eng)}<\/td>
+    <\/tr>`;
+  });
+  tbody.innerHTML = html;
+}
+
+// ─── RENDER DEMOGRAPHICS ──────────────────────────────────────────────────────
+function renderDemoBars(containerId, results, opts = {}) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  if (!results || !results.length) {
+    el.innerHTML = `<div style="text-align:center;padding:16px;color:#9ca3af;font-size:12px;">Sem dados<\/div>`;
+    return;
+  }
+  const labelMap = opts.labelMap || {};
+  const barClass = opts.barClass || "";
+  const maxItems = opts.maxItems || 999;
+  const sortByValue = opts.sortByValue !== false;
+
+  let items = results.map(r => ({
+    label: r.dimension_values?.[0] || "—",
+    value: r.value || 0
+  }));
+  if (sortByValue) items.sort((a,b) => b.value - a.value);
+  items = items.slice(0, maxItems);
+  const total = items.reduce((s,i) => s + i.value, 0);
+  const maxVal = Math.max(...items.map(i => i.value), 1);
+
+  let html = "";
+  items.forEach(item => {
+    const label = labelMap[item.label] || item.label;
+    const pctVal = total > 0 ? ((item.value / total) * 100).toFixed(1) : "0";
+    const barWidth = (item.value / maxVal * 100).toFixed(1);
+    html += `<div class="demo-row">
+      <span class="demo-label" title="${label.replace(/"/g,'&quot;')}">${label.length > 18 ? label.substring(0,16) + "\u2026" : label}<\/span>
+      <div class="demo-bar-wrap"><div class="demo-bar ${barClass}" style="width:${barWidth}%"><\/div><\/div>
+      <span class="demo-val">${num(item.value)} <span style="color:var(--lm-gray);font-weight:500;font-size:10px;">(${pctVal}%)<\/span><\/span>
+    <\/div>`;
+  });
+  el.innerHTML = html;
+}
+
+// ─── LOAD ALL ─────────────────────────────────────────────────────────────────
+async function loadAll() {
+  const errorBanner = document.getElementById("errorBanner");
+  errorBanner.classList.remove("show");
+
+  document.getElementById("statusDot").classList.remove("error");
+  document.getElementById("statusDot").classList.add("loading");
+  document.getElementById("statusText").textContent = "Carregando...";
+  document.getElementById("periodBadge").textContent = "📅 " + getPeriodLabel();
+
+  resetSkeletons();
+
+  const dp = getDateParam();
+  const { since, until } = getDateRange();
+
+  try {
+    // ── Date range in unix seconds for IG insights endpoint ──
+    // IG insights limita o range a no máximo 30 dias (2592000s) entre since e until
+    const sinceTs = Math.floor(since.getTime() / 1000);
+    const untilTs = Math.floor(until.getTime() / 1000);
+    const IG_MAX_RANGE = 30 * 86400 - 3600; // 30 dias com buffer de 1h para evitar overflow
+    const igSinceTs = Math.max(sinceTs, untilTs - IG_MAX_RANGE);
+    const sinceISO = toISODate(since);
+    const untilISO = toISODate(until);
+
+    // Se a data de início do range é ANTERIOR ao window da API live (30 dias),
+    // precisamos do Supabase como fonte. Live API só tem últimos 30d de IG orgânico.
+    // Tolerância de 1h pra evitar que "Últimos 30 dias" caia no caminho histórico.
+    const DAY_MS = 86400000;
+    const liveWindowStart = Date.now() - (30 * DAY_MS) - (60 * 60 * 1000);
+    const useSupabaseAsPrimary = since.getTime() < liveWindowStart;
+
+    // ── Parallel fetches: Meta Ads + IG direct API + Supabase historical ──
+    const results = await Promise.allSettled([
+      apiFetch(insightsUrl(`fields=spend,impressions,reach,clicks,cpm,ctr,cpc&${dp}&level=account&filtering=${DIST_FILTER}`)),
+      apiFetch(insightsUrl(`fields=campaign_name,campaign_id,spend,impressions,reach,clicks,cpm,ctr,cpc&${dp}&level=campaign&filtering=${DIST_FILTER}&limit=100`)),
+      apiFetch(insightsUrl(`fields=adset_name,adset_id,campaign_name,spend,impressions,reach,clicks,cpm,ctr,cpc&${dp}&level=adset&filtering=${DIST_FILTER}&limit=200`)),
+      apiFetch(insightsUrl(`fields=spend,impressions,reach,clicks&${dp}&level=account&filtering=${DIST_FILTER}&time_increment=1`)),
+      // IG profile
+      apiFetch(`${BASE}/${IG_ACCOUNT_ID}?fields=id,followers_count,media_count,name,username,biography,profile_picture_url`),
+      // IG media (last 25)
+      apiFetch(`${BASE}/${IG_ACCOUNT_ID}/media?fields=id,caption,timestamp,comments_count,like_count,media_type,permalink,thumbnail_url,media_url&limit=25`),
+      // IG insights (period aggregates: reach, profile_views, website_clicks, total_interactions, accounts_engaged)
+      apiFetch(`${BASE}/${IG_ACCOUNT_ID}/insights?metric=reach,profile_views,website_clicks,total_interactions,accounts_engaged&metric_type=total_value&period=day&since=${igSinceTs}&until=${untilTs}`),
+      // IG daily reach (time series for chart)
+      apiFetch(`${BASE}/${IG_ACCOUNT_ID}/insights?metric=reach&period=day&since=${igSinceTs}&until=${untilTs}`),
+      // ─── Supabase: histórico persistido ─────────────────────────────────
+      sbFetch(`pampolha_ads_daily_metrics?select=*&date=gte.${sinceISO}&date=lte.${untilISO}&order=date.asc`).catch(e => { console.warn("SB ads failed:", e); return []; }),
+      sbFetch(`pampolha_ig_daily_metrics?select=*&date=gte.${sinceISO}&date=lte.${untilISO}&order=date.asc`).catch(e => { console.warn("SB ig failed:", e); return []; }),
+      // Demografia: sempre o snapshot mais recente
+      sbFetch(`pampolha_ig_demographics?select=breakdown,dimension,value,snapshot_date&order=snapshot_date.desc&limit=500`).catch(e => { console.warn("SB demo failed:", e); return []; })
+    ]);
+
+    const [
+      overviewR, campaignsR, adsetsR, dailyAdsR,
+      igProfileR, igMediaR, igInsightsR, igDailyReachR,
+      sbAdsR, sbIgR, sbDemoR
+    ] = results;
+
+    const get = (r, fallback = {}) => r.status === 'fulfilled' ? r.value : fallback;
+    const overview  = get(overviewR);
+    const campaigns = get(campaignsR);
+    const adsets    = get(adsetsR);
+    const dailyResp = get(dailyAdsR);
+    const igProfile = get(igProfileR);
+    const igMedia   = get(igMediaR);
+    const igInsights = get(igInsightsR);
+    const igDailyReach = get(igDailyReachR);
+    const sbAds     = get(sbAdsR, []) || [];
+    const sbIg      = get(sbIgR, []) || [];
+    const sbDemoAll = get(sbDemoR, []) || [];
+
+    // ── Meta Ads overview ──
+    // Live API do Meta Ads tem 37 meses de histórico e retorna "unique period reach"
+    // correto mesmo para ranges longos. Usamos direto.
+    const ov = overview.data?.[0] || {};
+    const totalSpend  = parseFloat(ov.spend || 0);
+    const totalImps   = parseInt(ov.impressions || 0);
+    const totalReach  = parseInt(ov.reach || 0);
+    const totalClicks = parseInt(ov.clicks || 0);
+    const avgCtr      = parseFloat(ov.ctr || 0);
+    const avgCpc      = parseFloat(ov.cpc || 0);
+    const avgCpm      = parseFloat(ov.cpm || 0);
+    const cpr = totalReach > 0 ? totalSpend / totalReach : 0;
+
+    setKpi("distSpend", brl(totalSpend), `${num(totalImps)} impressões`);
+    setKpi("distImps",  num(totalImps), `distribuídas no período`);
+    setKpi("distReach", num(totalReach), `contas alcançadas`);
+    setKpi("distClicks",num(totalClicks), `cliques no link`);
+    setKpi("distCtr",   pct(avgCtr), `taxa de cliques`);
+    setKpi("distCpc",   brl(avgCpc), `custo por clique`);
+    setKpi("distCpm",   brl(avgCpm), `custo por mil impressões`);
+    setKpi("distCpr",   brl(cpr),    `custo por pessoa alcançada`);
+
+    // ── Instagram profile ──
+    const followers  = igProfile?.followers_count || 0;
+    const mediaCount = igProfile?.media_count || 0;
+    const allPosts   = igMedia?.data || [];
+
+    // Filter posts by period
+    const postsInPeriod = allPosts.filter(p => {
+      const d = new Date(p.timestamp);
+      return d >= since && d <= until;
+    });
+
+    const totalLikes    = allPosts.reduce((s,p) => s + (p.like_count||0), 0);
+    const totalComments = allPosts.reduce((s,p) => s + (p.comments_count||0), 0);
+    const totalPostEng  = totalLikes + totalComments;
+    const avgEng        = allPosts.length > 0 ? totalPostEng / allPosts.length : 0;
+
+    setKpi("igFollowers",   num(followers), `@${IG_USERNAME}`);
+    setKpi("igMedia",       num(mediaCount), `posts na conta`);
+    setKpi("igPostsPeriod", num(postsInPeriod.length), `posts publicados no período`);
+    setKpi("igAvgEng",      num(Math.round(avgEng)), `média dos últimos ${allPosts.length} posts`);
+
+    setKpi("igLikes",      num(totalLikes), "");
+    setKpi("igComments",   num(totalComments), "");
+    setKpi("igTotalEng",   num(totalPostEng), "");
+    setKpi("igPostsCount", num(allPosts.length), "");
+
+    // ── Instagram organic insights (period) ──
+    // Live API só cobre últimos ~30 dias. Estratégia:
+    //   1. Pega o total do live API (cobre últimos 30d com unique reach correto)
+    //   2. Pra ranges > 30d, SOMA Supabase dos dias ANTERIORES à janela live
+    //      (sem overlap = sem dupla contagem)
+    const insightsMap = {};
+    (igInsights?.data || []).forEach(m => {
+      insightsMap[m.name] = m.total_value?.value || 0;
+    });
+    let igReachVal        = insightsMap.reach || 0;
+    let igProfileViewsVal = insightsMap.profile_views || 0;
+    let igInteractionsVal = insightsMap.total_interactions || 0;
+    let igWebClicksVal    = insightsMap.website_clicks || 0;
+
+    if (useSupabaseAsPrimary && sbIg.length) {
+      const cutoffISO = new Date(liveWindowStart).toISOString().slice(0, 10);
+      const oldRows = sbIg.filter(r => r.date < cutoffISO);
+      if (oldRows.length) {
+        igReachVal        += oldRows.reduce((s,r) => s + Number(r.reach || 0), 0);
+        igProfileViewsVal += oldRows.reduce((s,r) => s + Number(r.profile_views || 0), 0);
+        igInteractionsVal += oldRows.reduce((s,r) => s + Number(r.total_interactions || 0), 0);
+        igWebClicksVal    += oldRows.reduce((s,r) => s + Number(r.website_clicks || 0), 0);
+      }
+    }
+
+    setKpi("igReach",         num(igReachVal), `contas únicas alcançadas`);
+    setKpi("igProfileViews",  num(igProfileViewsVal), `visitas ao perfil`);
+    setKpi("igInteractions",  num(igInteractionsVal), `curtidas + comentários + shares`);
+    setKpi("igWebClicks",     num(igWebClicksVal), `cliques no link da bio`);
+
+    // ── Demographics ──
+    // Agora lemos do snapshot Supabase mais recente (persistido, sempre disponível).
+    // A API live também retorna dados atuais, mas usar Supabase garante consistência
+    // e elimina 3 chamadas extras à Graph API.
+    const latestDemoDate = sbDemoAll[0]?.snapshot_date;
+    const latestDemo = sbDemoAll.filter(r => r.snapshot_date === latestDemoDate);
+    const demoByBreakdown = (key) => latestDemo
+      .filter(r => r.breakdown === key)
+      .map(r => ({ dimension_values: [r.dimension], value: r.value }));
+
+    const genderLabels = { F: "Feminino", M: "Masculino", U: "Não informado" };
+    const genderOrder = ["F", "M", "U"];
+    const ageOrder = ["13-17","18-24","25-34","35-44","45-54","55-64","65+"];
+    const sortByKey = (arr, order) => arr.slice().sort((a,b) => {
+      const ia = order.indexOf(a.dimension_values[0]);
+      const ib = order.indexOf(b.dimension_values[0]);
+      return (ia === -1 ? 999 : ia) - (ib === -1 ? 999 : ib);
+    });
+
+    renderDemoBars("demoGender", sortByKey(demoByBreakdown("gender"), genderOrder), { labelMap: genderLabels, barClass: "pink", sortByValue: false });
+    renderDemoBars("demoAge", sortByKey(demoByBreakdown("age"), ageOrder), { sortByValue: false });
+    renderDemoBars("demoCity", demoByBreakdown("city"), { barClass: "teal", maxItems: 10, sortByValue: true });
+
+    // ── Campaigns table ──
+    _rawCampaigns = campaigns.data || [];
+    renderCampaignsTable();
+
+    // ── Adsets table ──
+    renderAdsetsTable(adsets.data || []);
+
+    // ── Daily chart: merge Meta Ads + IG reach from live API + Supabase history ──
+    // Strategy: build a map per date; live API wins when present (most fresh),
+    // Supabase fills historical dates beyond the 30d API window.
+    const dateMap = {};
+    const ensure = (d) => (dateMap[d] = dateMap[d] || { date_start: d, spend: 0, reach: 0, ig_reach: 0 });
+
+    // 1) Supabase historical (base layer)
+    sbAds.forEach(r => {
+      const row = ensure(r.date);
+      row.spend = Number(r.total_spend || 0);
+      row.reach = Number(r.total_reach || 0);
+    });
+    sbIg.forEach(r => {
+      const row = ensure(r.date);
+      row.ig_reach = Number(r.reach || 0);
+    });
+
+    // 2) Live API overrides (most fresh for last 30d)
+    const adsDaily = (dailyResp.data || []).sort((a,b) => (a.date_start||"").localeCompare(b.date_start||""));
+    adsDaily.forEach(d => {
+      const row = ensure(d.date_start);
+      row.spend = Number(d.spend || 0);
+      row.reach = Number(d.reach || 0);
+    });
+    const igReachDaily = igDailyReach?.data?.[0]?.values || [];
+    igReachDaily.forEach(v => {
+      const date = (v.end_time || "").slice(0, 10);
+      if (!date) return;
+      const row = ensure(date);
+      row.ig_reach = Number(v.value || 0);
+    });
+
+    // 3) Sort dates ascending and render
+    const dailyMerged = Object.values(dateMap).sort((a,b) => a.date_start.localeCompare(b.date_start));
+    renderDailyChart(dailyMerged);
+
+    // ── Organic posts table ──
+    renderOrgPostsTable(allPosts);
+
+    // ── Status ──
+    document.getElementById("statusDot").classList.remove("loading","error");
+    document.getElementById("statusText").textContent = "Dados atualizados";
+    document.getElementById("lastUpdate").textContent = "Atualizado " + new Date().toLocaleTimeString("pt-BR", {hour:"2-digit",minute:"2-digit"});
+    secondsLeft = 3600;
+
+  } catch (err) {
+    errorBanner.textContent = "⚠️ Erro ao buscar dados: " + err.message;
+    errorBanner.classList.add("show");
+    document.getElementById("statusDot").classList.remove("loading");
+    document.getElementById("statusDot").classList.add("error");
+    document.getElementById("statusText").textContent = "Erro ao carregar";
+    console.error("Dashboard error:", err);
+  }
+}
+
+// ─── DARK MODE ────────────────────────────────────────────────────────────────
+function toggleDarkMode() {
+  const root = document.documentElement;
+  const isDark = root.getAttribute("data-theme") === "dark";
+  root.setAttribute("data-theme", isDark ? "" : "dark");
+  document.getElementById("toggleTheme").textContent = isDark ? "🌙" : "☀️";
+  localStorage.setItem("dashboard_theme", isDark ? "light" : "dark");
+  // Re-render chart with new theme colors
+  if (_dailyChart && _dailyChart.data.labels.length) {
+    const daily = _dailyChart.data.labels.map((label, i) => ({
+      date_start: "2000-01-" + String(i+1).padStart(2,"0"),
+      spend: _dailyChart.data.datasets[0].data[i],
+      reach: _dailyChart.data.datasets[1].data[i]
+    }));
+    // Simpler approach: just re-fetch via loadAll is overkill; update chart colors directly
+    const isDark2 = document.documentElement.dataset.theme === 'dark';
+    const textColor = isDark2 ? '#9CA3AF' : '#6B6B7B';
+    const gridColor = isDark2 ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.05)';
+    _dailyChart.options.scales.y1.ticks.color = textColor;
+    _dailyChart.options.scales.y2.ticks.color = textColor;
+    _dailyChart.options.scales.x.ticks.color = textColor;
+    _dailyChart.options.scales.y1.grid.color = gridColor;
+    _dailyChart.options.scales.x.grid.color = gridColor;
+    _dailyChart.options.plugins.legend.labels.color = textColor;
+    _dailyChart.update();
+  }
+}
+
+// ─── COUNTDOWN / AUTO REFRESH ─────────────────────────────────────────────────
+let secondsLeft = 3600;
+let timerInterval = null;
+
+function updateCountdown() {
+  secondsLeft--;
+  if (secondsLeft <= 0) { loadAll(); return; }
+  const m = String(Math.floor(secondsLeft / 60)).padStart(2, "0");
+  const s = String(secondsLeft % 60).padStart(2, "0");
+  document.getElementById("countdown").textContent = `Próx. atualização: ${m}:${s}`;
+}
+
+// ─── INIT ─────────────────────────────────────────────────────────────────────
+document.addEventListener("DOMContentLoaded", () => {
+  if (localStorage.getItem("dashboard_theme") === "dark") {
+    document.documentElement.setAttribute("data-theme", "dark");
+    document.getElementById("toggleTheme").textContent = "☀️";
+  }
+  attachSortHandlers();
+  loadAll();
+  timerInterval = setInterval(updateCountdown, 1000);
+});
+</script>
+</body>
+</html>
