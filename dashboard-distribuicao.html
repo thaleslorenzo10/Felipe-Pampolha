@@ -1130,20 +1130,18 @@ async function loadAll() {
       // IG insights (period aggregates: reach, profile_views, website_clicks, total_interactions, accounts_engaged)
       apiFetch(`${BASE}/${IG_ACCOUNT_ID}/insights?metric=reach,profile_views,website_clicks,total_interactions,accounts_engaged&metric_type=total_value&period=day&since=${igSinceTs}&until=${untilTs}`),
       // IG daily reach (time series for chart)
-      apiFetch(`${BASE}/${IG_ACCOUNT_ID}/insights?metric=reach&period=day&since=${igSinceTs}&until=${untilTs}`),
+      apiFetch(`${BASE}/${IG_ACCOUNT_ID}/insights?metric=reach,follower_count&period=day&since=${igSinceTs}&until=${untilTs}`),
       // ─── Supabase: histórico persistido ─────────────────────────────────
       sbFetch(`pampolha_ads_daily_metrics?select=*&date=gte.${sinceISO}&date=lte.${untilISO}&order=date.asc`).catch(e => { console.warn("SB ads failed:", e); return []; }),
       sbFetch(`pampolha_ig_daily_metrics?select=*&date=gte.${sinceISO}&date=lte.${untilISO}&order=date.asc`).catch(e => { console.warn("SB ig failed:", e); return []; }),
       // Demografia: sempre o snapshot mais recente
-      sbFetch(`pampolha_ig_demographics?select=breakdown,dimension,value,snapshot_date&order=snapshot_date.desc&limit=500`).catch(e => { console.warn("SB demo failed:", e); return []; }),
-      // Baseline de seguidores: último snapshot ANTES do período (pra calcular o delta do primeiro dia)
-      sbFetch(`pampolha_ig_daily_metrics?select=date,followers_count&date=lt.${sinceISO}&followers_count=not.is.null&order=date.desc&limit=1`).catch(e => { console.warn("SB baseline failed:", e); return []; })
+      sbFetch(`pampolha_ig_demographics?select=breakdown,dimension,value,snapshot_date&order=snapshot_date.desc&limit=500`).catch(e => { console.warn("SB demo failed:", e); return []; })
     ]);
 
     const [
       overviewR, campaignsR, adsetsR, dailyAdsR,
       igProfileR, igMediaR, igInsightsR, igDailyReachR,
-      sbAdsR, sbIgR, sbDemoR, sbBaselineR
+      sbAdsR, sbIgR, sbDemoR
     ] = results;
 
     const get = (r, fallback = {}) => r.status === 'fulfilled' ? r.value : fallback;
@@ -1158,7 +1156,6 @@ async function loadAll() {
     const sbAds      = get(sbAdsR, []) || [];
     const sbIg       = get(sbIgR, []) || [];
     const sbDemoAll  = get(sbDemoR, []) || [];
-    const sbBaseline = get(sbBaselineR, []) || [];
 
     // ── Meta Ads overview ──
     // Live API do Meta Ads tem 37 meses de histórico e retorna "unique period reach"
@@ -1200,54 +1197,46 @@ async function loadAll() {
 
     setKpi("igFollowers",   num(followers), `@${IG_USERNAME}`);
 
-    // ── Novos seguidores no período (baseado em snapshots Supabase + live API) ──
-    // Estratégia:
-    //   1. Monta série [{date, count}] com o baseline (dia anterior ao período) + dias do período
-    //   2. Adiciona o valor atual da API live como "hoje" se ainda não estiver na série
-    //   3. Delta diário = count[d] - count[d-1]
-    //   4. KPI = soma dos deltas (ou seja, count[fim] - count[baseline])
+    // ── Novos seguidores no período ──
+    // Estratégia (seguindo referência Telma):
+    //   1. Usa a métrica `follower_count` do IG Insights (net daily new followers) — cobre últimos 30d
+    //   2. Mitigação do lag de reporte (API retorna 0 nos últimos 3-5 dias): preenche dias com
+    //      valor 0 usando o delta dos snapshots de `followers_count` do Supabase (quando positivo)
+    //   3. Soma dos daily values = total do período (KPI)
+    //   4. Chart = values diários (com fill)
+    const followerMetric = (igDailyReach?.data || []).find(m => m.name === "follower_count");
+    const followerValues = (followerMetric?.values || []).map(v => ({ ...v })); // clone para não mutar
+
+    // Monta mapa date → followers_count pra lag mitigation
+    const snapshotByDate = {};
+    sbIg.forEach(r => { if (r.followers_count != null) snapshotByDate[r.date] = Number(r.followers_count); });
     const todayISO = new Date().toISOString().slice(0, 10);
-    const followersSeries = [];
-    const seen = new Set();
+    if (followers > 0) snapshotByDate[todayISO] = followers; // ancora hoje com valor live
 
-    if (sbBaseline.length && sbBaseline[0].followers_count != null) {
-      followersSeries.push({ date: sbBaseline[0].date, count: Number(sbBaseline[0].followers_count), isBaseline: true });
-      seen.add(sbBaseline[0].date);
-    }
-    sbIg.forEach(r => {
-      if (r.followers_count == null || seen.has(r.date)) return;
-      followersSeries.push({ date: r.date, count: Number(r.followers_count) });
-      seen.add(r.date);
-    });
-    // Ancorar o "hoje" com o valor da API live (sobrescreve o snapshot da madrugada)
-    if (followers > 0 && todayISO <= untilISO && todayISO >= sinceISO) {
-      const existingIdx = followersSeries.findIndex(r => r.date === todayISO);
-      if (existingIdx >= 0) {
-        followersSeries[existingIdx].count = followers;
-      } else {
-        followersSeries.push({ date: todayISO, count: followers });
-        seen.add(todayISO);
+    // Preenche dias com valor 0 usando o delta dos snapshots (apenas quando o delta é positivo)
+    let prevCount = null;
+    for (let i = 0; i < followerValues.length; i++) {
+      const v = followerValues[i];
+      const dateKey = (v.end_time || "").slice(0, 10);
+      const count = snapshotByDate[dateKey];
+      if ((v.value || 0) === 0 && count != null && prevCount != null) {
+        const delta = count - prevCount;
+        if (delta > 0) v.value = delta;
       }
+      if (count != null) prevCount = count;
     }
-    followersSeries.sort((a, b) => a.date.localeCompare(b.date));
 
-    // Deltas só entram na timeline se a data estiver DENTRO do período (exclui o baseline)
-    const followersDaily = [];
-    for (let i = 1; i < followersSeries.length; i++) {
-      const cur = followersSeries[i];
-      if (cur.date < sinceISO || cur.date > untilISO) continue;
-      followersDaily.push({ date: cur.date, new_followers: cur.count - followersSeries[i - 1].count });
-    }
+    const followersDaily = followerValues.map(v => ({
+      date: (v.end_time || "").slice(0, 10),
+      new_followers: Number(v.value || 0)
+    })).filter(d => d.date);
     const newFollowersTotal = followersDaily.reduce((s, d) => s + d.new_followers, 0);
 
     let newFollowersDisplay = "—";
-    let newFollowersSub = "aguardando snapshots diários";
+    let newFollowersSub = "aguardando dados do Instagram";
     if (followersDaily.length > 0) {
       newFollowersDisplay = (newFollowersTotal >= 0 ? "+" : "") + num(newFollowersTotal);
-      const first = followersSeries[0].count;
-      const last  = followersSeries[followersSeries.length - 1].count;
-      const days  = followersDaily.length;
-      newFollowersSub = `${num(first)} → ${num(last)} em ${days} dia${days > 1 ? "s" : ""}`;
+      newFollowersSub = "novos seguidores no período (orgânico + pago)";
     }
     setKpi("igNewFollowers", newFollowersDisplay, newFollowersSub);
     renderFollowersChart(followersDaily);
@@ -1345,7 +1334,7 @@ async function loadAll() {
       row.spend = Number(d.spend || 0);
       row.reach = Number(d.reach || 0);
     });
-    const igReachDaily = igDailyReach?.data?.[0]?.values || [];
+    const igReachDaily = (igDailyReach?.data || []).find(m => m.name === "reach")?.values || [];
     igReachDaily.forEach(v => {
       const date = (v.end_time || "").slice(0, 10);
       if (!date) return;
