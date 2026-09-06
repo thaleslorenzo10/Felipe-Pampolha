@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Felipe Pampolha 11123 — Deputado Estadual</title>
+<meta name="description" content="Felipe Pampolha, candidato a deputado estadual pelo Rio de Janeiro. Segurança, saúde e qualidade de vida com dignidade, eficiência e resultados. É 11123.">
+<meta name="theme-color" content="#0A1747">
+<link rel="canonical" href="https://felipe-pampolha.vercel.app/home">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Felipe Pampolha 11123 — Deputado Estadual">
+<meta property="og:description" content="Política não se faz com promessas, se faz com escuta e respeito.">
+<meta property="og:url" content="https://felipe-pampolha.vercel.app/home">
+<meta property="og:image" content="https://felipe-pampolha.vercel.app/assets/fotos/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Felipe Pampolha agachado numa rua, segurando as mãos de uma senhora sentada.">
+<meta property="og:site_name" content="Felipe Pampolha 11123">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="assets/fotos/maos.webp" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Poppins:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<style>
+/* ══ Tokens — amostrados da peça oficial da campanha ══ */
+:root{
+  --navy-900:#0A1747; --navy-800:#0D1F63; --navy-700:#122E86; --navy-500:#2A55C9;
+  --gold:#F7B500; --gold-deep:#C98F00;
+  --green:#00A551; --cyan:#29ABE2; --orange:#F7941D;
+  --paper:#F1F3F8; --paper-2:#DEE3EE; --ink:#14161C; --ink-soft:#4A4F5C;
+  --white:#fff;
+  --on-navy-soft:#B9C4E8;
+
+  --display:'Poppins',system-ui,sans-serif;
+  --text:'Source Sans 3',system-ui,-apple-system,sans-serif;
+
+  --s1:.5rem; --s2:1rem; --s3:1.5rem; --s4:2.5rem; --s5:3.5rem;
+  --s6:clamp(3.5rem,8vw,5.5rem); --s7:clamp(4.5rem,10vw,7rem);
+  --edge:clamp(1.25rem,5vw,5rem);
+  --measure:64ch;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+
+body{
+  font-family:var(--text); font-size:1.19rem; line-height:1.62;
+  color:var(--ink); background:var(--paper);
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+
+/* ── superfícies do navegador: parte do design, não default ── */
+::selection{background:var(--gold);color:var(--navy-900)}
+:root{scrollbar-color:var(--navy-500) var(--paper-2);scrollbar-width:thin}
+::-webkit-scrollbar{width:11px;height:11px}
+::-webkit-scrollbar-track{background:var(--paper-2)}
+::-webkit-scrollbar-thumb{background:var(--navy-700);border:3px solid var(--paper-2);border-radius:99px}
+::-webkit-scrollbar-thumb:hover{background:var(--navy-500)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:2px}
+[id]{scroll-margin-top:5.5rem}
+a{color:inherit}
+
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.08;letter-spacing:-.035em;text-wrap:balance}
+p{text-wrap:pretty}
+
+/* ══ Faixa tricolor — assinatura gráfica da campanha ══ */
+.faixa{display:block;width:100%;height:clamp(30px,5.5vw,64px);flex:none}
+
+/* ══ Barra fixa ══ */
+.topo{
+  position:fixed;inset:0 0 auto;z-index:50;
+  display:flex;align-items:center;gap:var(--s3);
+  padding:.7rem var(--edge);
+  background:color-mix(in srgb,var(--navy-900) 88%,transparent);
+  backdrop-filter:saturate(1.4) blur(14px);
+  border-bottom:1px solid rgb(255 255 255/.1);
+  transform:translateY(-100%);transition:transform .45s var(--ease);
+}
+.topo.on{transform:none}
+.topo-marca{font-family:var(--display);font-weight:800;font-size:1.05rem;color:var(--white);letter-spacing:-.02em;line-height:1;text-decoration:none;display:inline-flex;align-items:center;min-height:44px}
+.topo-marca b{color:var(--gold);font-weight:900;letter-spacing:.01em}
+.topo nav{margin-left:auto;display:flex;gap:var(--s3);align-items:center}
+.topo nav a:not(.btn){color:var(--on-navy-soft);text-decoration:none;font-size:.9rem;font-weight:600;transition:color .2s}
+.topo nav a:not(.btn):hover{color:var(--white)}
+@media (max-width:860px){.topo nav a:not(.btn){display:none}}
+
+/* ══ Botões ══ */
+.btn{
+  --bg:var(--gold);--fg:var(--navy-900);
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  min-height:52px;padding:.85rem 1.5rem;
+  font-family:var(--display);font-weight:700;font-size:1rem;letter-spacing:-.01em;
+  color:var(--fg);background:var(--bg);border:none;border-radius:99px;
+  text-decoration:none;cursor:pointer;white-space:nowrap;
+  box-shadow:0 3px 0 var(--gold-deep),0 10px 22px -10px rgb(0 0 0/.45);
+  transition:transform .18s var(--ease),box-shadow .18s var(--ease),background .18s;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 5px 0 var(--gold-deep),0 18px 30px -12px rgb(0 0 0/.5)}
+.btn:active{transform:translateY(1px);box-shadow:0 1px 0 var(--gold-deep),0 6px 12px -8px rgb(0 0 0/.45)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-ghost{--bg:transparent;--fg:var(--white);box-shadow:inset 0 0 0 2px rgb(255 255 255/.35)}
+.btn-ghost:hover{--bg:rgb(255 255 255/.1);box-shadow:inset 0 0 0 2px rgb(255 255 255/.6)}
+.topo .btn{min-height:44px;padding:.5rem 1.15rem;font-size:.92rem}
+
+/* ══ Hero ══ */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate;background:var(--navy-900)}
+.hero-img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:48% 38%}
+@media (min-width:760px){.hero-img{object-position:62% 44%}}
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:
+    linear-gradient(to top,var(--navy-900) 2%,rgb(10 23 71/.88) 20%,rgb(10 23 71/.2) 52%,rgb(10 23 71/.34) 100%),
+    linear-gradient(100deg,rgb(10 23 71/.82) 0%,rgb(10 23 71/.5) 34%,transparent 58%);
+}
+.hero-corpo{padding:var(--s6) var(--edge) var(--s4);color:var(--white);max-width:1500px;width:100%;margin-inline:auto}
+/* no retrato o texto ocupa quase toda a largura: precisa de mais base sob ele */
+@media (max-width:759px){
+  .hero::after{background:linear-gradient(to top,var(--navy-900) 6%,rgb(10 23 71/.94) 42%,rgb(10 23 71/.55) 72%,rgb(10 23 71/.35) 100%)}
+}
+.hero h1{
+  font-size:clamp(2.9rem,10.5vw,8.2rem);font-weight:900;letter-spacing:-.045em;line-height:1.06;
+  text-transform:uppercase;max-width:15ch;
+}
+.hero h1 em{font-style:italic;color:var(--gold);display:block}
+.hero-sub{
+  margin-top:var(--s3);max-width:46ch;font-size:clamp(1.05rem,2.4vw,1.3rem);
+  color:#E4E9F8;line-height:1.5;
+}
+.hero-acao{margin-top:var(--s4);display:flex;flex-wrap:wrap;gap:.9rem}
+.hero-cred{
+  margin-top:var(--s4);padding-top:var(--s3);border-top:1px solid rgb(255 255 255/.18);
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:.6rem 1.5rem;
+  font-size:.95rem;color:var(--on-navy-soft);
+}
+.hero-cred strong{font-family:var(--display);font-weight:900;font-size:1.6rem;color:var(--gold);letter-spacing:.01em}
+
+/* ══ Seções ══ */
+.sec{padding:var(--s6) var(--edge)}
+.sec-esc{background:var(--navy-800);color:var(--white)}
+.wrap{max-width:1180px;margin-inline:auto}
+.wrap-estreito{max-width:var(--measure);margin-inline:auto}
+
+h2{font-size:clamp(2rem,5.2vw,3.9rem);font-weight:800}
+h3{font-size:clamp(1.3rem,2.4vw,1.7rem);font-weight:700;letter-spacing:-.02em}
+.sec p{margin-top:var(--s2);max-width:var(--measure)}
+.sec-esc p{color:#D4DBF2}
+
+/* ── Citação: o método, nas palavras dele ── */
+.tese{background:var(--paper);padding-block:var(--s7)}
+blockquote{
+  font-family:var(--display);font-weight:700;font-style:italic;
+  font-size:clamp(1.55rem,4.4vw,3.1rem);line-height:1.2;letter-spacing:-.035em;
+  color:var(--navy-700);max-width:19ch;text-wrap:balance;
+}
+blockquote span{
+  background:linear-gradient(transparent 62%,var(--gold) 62%,var(--gold) 92%,transparent 92%);
+}
+.tese-fonte{margin-top:var(--s3);font-size:.92rem;color:var(--ink-soft);font-weight:500}
+.tese-grade{display:grid;gap:var(--s5);align-items:center;grid-template-columns:1fr}
+@media (min-width:900px){.tese-grade{grid-template-columns:1.05fr .95fr;gap:var(--s6)}}
+.tese-foto{width:100%;border-radius:4px;box-shadow:0 30px 60px -30px rgb(0 0 0/.42);display:block}
+
+/* ── Bandeiras: bloco editorial, não grade de cards ── */
+.band{counter-reset:b}
+.band-lista{margin-top:var(--s5);border-top:1px solid rgb(255 255 255/.18)}
+.band-item{
+  display:grid;grid-template-columns:auto 1fr;gap:var(--s2) var(--s3);
+  align-items:start;padding:var(--s4) 0;border-bottom:1px solid rgb(255 255 255/.18);
+}
+@media (min-width:820px){
+  .band-item{grid-template-columns:auto 15rem 1fr;gap:var(--s4);align-items:center}
+}
+.band-icone{width:44px;height:44px;color:var(--gold);flex:none}
+.band-item h3{color:var(--white);grid-column:2/-1}
+@media (min-width:820px){.band-item h3{grid-column:auto}}
+.band-item p{margin:0;grid-column:1/-1;color:#CBD4EF;font-size:1.05rem}
+@media (min-width:820px){.band-item p{grid-column:auto}}
+.band-nota{margin-top:var(--s3);font-size:.92rem;color:var(--on-navy-soft);max-width:62ch}
+.band-fala{
+  margin-top:var(--s5);font-size:clamp(1.35rem,3.4vw,2.2rem);line-height:1.3;
+  color:var(--white);max-width:24ch;border-left:none;padding-left:0;
+}
+.band-fala::before{content:"“"}
+.band-fala::after{content:"”"}
+
+/* ── Território ── */
+.terr-grade{margin-top:var(--s5);display:grid;gap:2px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.terr{position:relative;isolation:isolate;min-height:19rem;display:flex;align-items:flex-end;padding:var(--s3);overflow:hidden;background:var(--navy-900)}
+.terr img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.terr::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgb(10 23 71/.94) 6%,rgb(10 23 71/.15) 62%)}
+.terr:hover img,.terr:focus-within img{transform:scale(1.05)}
+.terr h3{color:var(--white);font-size:1.45rem}
+.terr p{margin-top:.35rem;color:#C3CDEC;font-size:.95rem;max-width:30ch}
+
+/* ── Quem é ── */
+.quem{display:grid;gap:var(--s5);grid-template-columns:1fr;align-items:start}
+@media (min-width:900px){.quem{grid-template-columns:.9fr 1.1fr;gap:var(--s6)}}
+.quem-foto{width:100%;border-radius:4px;display:block;box-shadow:0 26px 52px -28px rgb(0 0 0/.4)}
+.quem-fatos{margin-top:var(--s4);display:grid;gap:0;border-top:1px solid var(--paper-2)}
+.quem-fatos div{display:flex;flex-wrap:wrap;gap:.3rem 1rem;padding:.9rem 0;border-bottom:1px solid var(--paper-2)}
+.quem-fatos dt{font-weight:600;color:var(--ink-soft);font-size:.9rem;min-width:9rem;text-transform:uppercase;letter-spacing:.06em}
+.quem-fatos dd{font-weight:500}
+
+/* ── Galeria ── */
+.gal{display:grid;gap:2px;margin-top:var(--s5);grid-template-columns:repeat(2,1fr)}
+@media (min-width:760px){.gal{grid-template-columns:repeat(4,1fr)}}
+.gal figure{position:relative;margin:0;aspect-ratio:1;overflow:hidden;background:var(--navy-900)}
+.gal img,.gal video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s var(--ease)}
+.gal figure:hover img,.gal figure:hover video{transform:scale(1.06)}
+.gal video::cue{font-family:var(--text);font-size:.78em;background:rgb(10 23 71/.9)}
+/* nos vídeos o rodapé é da legenda: o rótulo sobe para o topo, longe do botão de som */
+.gal figure:has(video) figcaption{
+  inset:0 0 auto;padding:.7rem 3.4rem .9rem .8rem;
+  background:linear-gradient(to bottom,rgb(10 23 71/.92),rgb(10 23 71/.55) 62%,transparent);
+}
+.gal .alta{grid-row:span 2;aspect-ratio:1/2.006}
+@media (max-width:759px){.gal .alta{grid-row:span 1;aspect-ratio:1}}
+.gal figcaption{
+  position:absolute;inset:auto 0 0;padding:2.2rem .8rem .7rem;
+  font-size:.82rem;font-weight:600;color:var(--white);
+  background:linear-gradient(to top,rgb(10 23 71/.9),transparent);
+}
+.som{
+  position:absolute;top:.6rem;right:.6rem;z-index:2;
+  width:44px;height:44px;display:grid;place-items:center;
+  border:none;border-radius:99px;cursor:pointer;
+  color:var(--navy-900);background:var(--gold);
+  box-shadow:0 4px 10px -4px rgb(0 0 0/.5);transition:transform .18s var(--ease)
+}
+.som:hover{transform:scale(1.09)}
+.som svg{width:18px;height:18px}
+
+/* ══ Voto — o momento autoral ══ */
+.voto{background:var(--navy-900);color:var(--white);padding:var(--s7) var(--edge);text-align:center;position:relative;overflow:hidden}
+.voto::before{
+  content:"";position:absolute;inset:0;z-index:0;opacity:.5;
+  background:repeating-conic-gradient(from 0deg at 50% 34%,rgb(255 255 255/.045) 0deg 2.2deg,transparent 2.2deg 6.4deg);
+  mask-image:radial-gradient(circle at 50% 34%,#000 12%,transparent 68%);
+}
+.voto>*{position:relative;z-index:1}
+.voto h2{max-width:16ch;margin-inline:auto}
+.urna{
+  margin:var(--s5) auto 0;max-width:min(560px,92vw);
+  background:#F7F5F0;color:var(--navy-900);
+  border-radius:6px;padding:1.4rem 1.6rem 1.7rem;text-align:left;
+  box-shadow:0 40px 80px -40px #000,0 0 0 1px rgb(255 255 255/.14);
+}
+.urna-rot{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
+.urna-cargo{font-family:var(--display);font-weight:800;font-size:1.15rem;letter-spacing:-.02em;margin-top:.15rem}
+.digitos{display:flex;gap:.5rem;margin-top:1rem}
+.dig{
+  flex:1;aspect-ratio:3/4;max-height:104px;
+  display:grid;place-items:center;
+  font-family:var(--display);font-weight:900;font-size:clamp(2rem,8.5vw,3.4rem);
+  color:var(--navy-900);background:#fff;
+  border:2px solid #C9C4B8;border-radius:3px;
+  box-shadow:inset 0 -3px 0 #E4E0D6;
+}
+.dig span{display:block;opacity:0}
+.dig.on{border-color:var(--navy-700);box-shadow:inset 0 -3px 0 #DCD8CE,0 0 0 3px rgb(42 85 201/.16)}
+.dig.on span{opacity:1}
+@media (prefers-reduced-motion:no-preference){
+  .dig.on span{animation:pousa .34s var(--ease) both}
+}
+@keyframes pousa{from{opacity:0;transform:translateY(-.42em) scale(.86)}to{opacity:1;transform:none}}
+.urna-nome{margin-top:1rem;padding-top:.9rem;border-top:1px solid #DBD6CA;display:flex;align-items:center;gap:.9rem}
+.urna-nome img{width:56px;height:56px;object-fit:cover;object-position:50% 22%;border-radius:3px;flex:none;background:var(--navy-700)}
+.urna-nome b{font-family:var(--display);font-weight:800;font-size:1.15rem;letter-spacing:-.02em;display:block;line-height:1.15}
+.urna-nome small{font-size:.85rem;color:var(--ink-soft);font-weight:500}
+.voto .btn{margin-top:var(--s4)}
+.voto-nota{margin-top:var(--s3);font-size:.9rem;color:var(--on-navy-soft)}
+
+/* ══ Rodapé ══ */
+.rod{background:var(--navy-900);color:var(--on-navy-soft);padding:var(--s5) var(--edge) var(--s4);border-top:1px solid rgb(255 255 255/.13);font-size:.92rem}
+.rod-topo{display:flex;flex-wrap:wrap;gap:var(--s3);align-items:center;justify-content:space-between}
+.rod-marca{font-family:var(--display);font-weight:900;color:var(--white);font-size:1.5rem;letter-spacing:-.02em}
+.rod-marca b{color:var(--gold)}
+.rod-social{display:flex;gap:.7rem}
+.rod-social a{width:46px;height:46px;display:grid;place-items:center;border-radius:99px;color:var(--white);background:rgb(255 255 255/.1);transition:background .2s,transform .2s var(--ease)}
+.rod-social a:hover{background:var(--gold);color:var(--navy-900);transform:translateY(-2px)}
+.rod-social svg{width:22px;height:22px}
+.rod-legal{margin-top:var(--s4);padding-top:var(--s3);border-top:1px solid rgb(255 255 255/.13);line-height:1.7;font-size:.85rem}
+.rod-legal b{color:#E4E9F8;font-weight:600}
+
+/* ══ Entrada discreta ══ */
+@media (prefers-reduced-motion:no-preference){
+  .rev{opacity:0;transform:translateY(20px);transition:opacity .75s var(--ease),transform .75s var(--ease)}
+  .rev.vis{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="topo" id="topo">
+  <a class="topo-marca" href="#inicio">Felipe Pampolha <b>11123</b></a>
+  <nav>
+    <a href="#escuta">Como ele trabalha</a>
+    <a href="#compromissos">Compromissos</a>
+    <a href="#quem">Quem é</a>
+    <a class="btn" href="https://www.instagram.com/felipepampolha.rio/" target="_blank" rel="noopener">Seguir</a>
+  </nav>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<main id="inicio">
+<section class="hero">
+  <img class="hero-img" src="assets/fotos/maos.webp" alt="Felipe Pampolha agachado numa rua de terra, segurando as mãos de uma senhora sentada em uma cadeira de madeira, enquanto moradores acompanham a conversa." fetchpriority="high" width="1400" height="932">
+  <div class="hero-corpo">
+    <h1>O cara que <em>resolve.</em></h1>
+    <p class="hero-sub">Mas antes de resolver, ele senta, escuta e anota. É assim que Felipe Pampolha tem percorrido o Rio de Janeiro De Madureira à Rocinha, do Ponto Chic à Zona Oeste onde nasceu.</p>
+    <div class="hero-acao">
+      <a class="btn" href="https://www.instagram.com/felipepampolha.rio/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+        Seguir no Instagram
+      </a>
+      <a class="btn btn-ghost" href="#voto">Ver o número</a>
+    </div>
+    <p class="hero-cred"><strong>11123</strong> <span>Deputado Estadual · Rio de Janeiro</span></p>
+  </div>
+</section>
+
+<svg class="faixa" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <rect width="1200" height="60" fill="#0A1747"/>
+  <path d="M0,40 C300,4 900,56 1200,16 L1200,60 L0,60 Z" fill="#00A551"/>
+  <path d="M0,48 C300,12 900,64 1200,24 L1200,60 L0,60 Z" fill="#29ABE2"/>
+  <path d="M0,56 C300,20 900,72 1200,32 L1200,60 L0,60 Z" fill="#F7941D"/>
+</svg>
+
+<!-- ═══ A TESE ═══ -->
+<section class="sec tese" id="escuta">
+  <div class="wrap tese-grade">
+    <div class="rev">
+      <blockquote>Política não se faz com promessas, se faz com <span>escuta</span> e <span>respeito</span>.</blockquote>
+      <p style="margin-top:var(--s3)">“Estar perto das pessoas, ouvir suas histórias e entender suas reais necessidades é a única forma de construir um trabalho de verdade.”</p>
+      <p class="tese-fonte">— Felipe Pampolha, 3 de setembro de 2026</p>
+    </div>
+    <img class="tese-foto rev" src="assets/fotos/escuta-roda.webp" alt="Felipe Pampolha agachado ao lado de moradoras sentadas em cadeiras, ouvindo uma senhora falar durante um encontro comunitário." loading="lazy" width="1170" height="878">
+  </div>
+</section>
+
+<svg class="faixa" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <rect width="1200" height="60" fill="#F1F3F8"/>
+  <path d="M0,40 C300,4 900,56 1200,16 L1200,60 L0,60 Z" fill="#00A551"/>
+  <path d="M0,48 C300,12 900,64 1200,24 L1200,60 L0,60 Z" fill="#29ABE2"/>
+  <path d="M0,56 C300,20 900,72 1200,32 L1200,60 L0,60 Z" fill="#F7941D"/>
+</svg>
+
+<!-- ═══ COMPROMISSOS ═══ -->
+<section class="sec sec-esc band" id="compromissos">
+  <div class="wrap">
+    <h2 class="rev">O que não deveria ser<br>privilégio de ninguém.</h2>
+    <p class="rev" style="margin-top:var(--s3);font-size:1.15rem">O compromisso que ele assumiu publicamente é curto e sem rodeio: garantir que a população tenha acesso a tudo isso <strong style="color:var(--gold)">com dignidade, eficiência e resultados</strong>.</p>
+
+    <div class="band-lista">
+      <article class="band-item rev">
+        <svg class="band-icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        <h3>Segurança</h3>
+        <p>Poder ir e voltar do trabalho, deixar o filho na escola e abrir o comércio sem medo. Segurança não é discurso de campanha: é a condição para todo o resto funcionar.</p>
+      </article>
+      <article class="band-item rev">
+        <svg class="band-icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg>
+        <h3>Saúde</h3>
+        <p>Atendimento que chega antes de virar emergência, posto que abre, consulta que sai da fila. O estado precisa cuidar de quem sempre esperou mais do que devia.</p>
+      </article>
+      <article class="band-item rev">
+        <svg class="band-icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l9-7 9 7v11"/><path d="M9 21v-6h6v6"/></svg>
+        <h3>Qualidade de vida</h3>
+        <p>Praça cuidada, quadra aberta, lazer perto de casa. É o que transforma um endereço em um lugar onde dá gosto de viver e criar os filhos.</p>
+      </article>
+      <article class="band-item rev">
+        <svg class="band-icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v4.2M12 16.8V21M3 12h4.2M16.8 12H21"/><circle cx="12" cy="12" r="3.2"/></svg>
+        <h3>Esporte e capacitação</h3>
+        <p>“Acesso ao esporte e oportunidade por meio da capacitação”: o caminho que ele aponta para quem está começando. Quadra aberta e curso que vira emprego.</p>
+      </article>
+    </div>
+
+    <blockquote class="band-fala rev">Quero trabalhar por um Estado mais seguro, mais justo e mais preparado para o futuro.</blockquote>
+    <p class="band-nota rev">Palavras do próprio candidato, em vídeo publicado em 2 de setembro de 2026. Estes são os compromissos assumidos publicamente até aqui. O programa completo é divulgado pela campanha ao longo do período eleitoral.</p>
+  </div>
+</section>
+
+<!-- ═══ TERRITÓRIO ═══ -->
+<section class="sec">
+  <div class="wrap">
+    <h2 class="rev">A campanha acontece na rua.</h2>
+    <p class="rev">Não em estúdio, não em palanque. Nos encontros de idosos, nas quadras, nas ruas sem asfalto e nas festas de bairro, onde as pessoas contam o que está faltando.</p>
+  </div>
+  <div class="terr-grade rev">
+    <article class="terr">
+      <img src="assets/fotos/praca-idosas.webp" alt="Felipe Pampolha rindo ao lado de uma senhora que gesticula enquanto fala, diante de uma plateia de moradoras sentadas." loading="lazy" width="1079" height="721">
+      <div><h3>Zona Oeste</h3><p>“Tenho orgulho de ser cria daqui. É por vocês e com vocês que eu sigo nessa caminhada.”</p></div>
+    </article>
+    <article class="terr">
+      <img src="assets/fotos/quadra-cumprimento.webp" alt="Felipe Pampolha sorrindo e cumprimentando moradoras em uma quadra poliesportiva." loading="lazy" width="1170" height="780">
+      <div><h3>Madureira e Rocinha</h3><p>Zona Norte de manhã, Rocinha ao fim do dia. “Território feito de gente guerreira e trabalhadora.”</p></div>
+    </article>
+    <article class="terr">
+      <img src="assets/fotos/vila-olimpica.webp" alt="Felipe Pampolha em foto de grupo com dezenas de participantes de atividades esportivas na Vila Olímpica do Sampaio." loading="lazy" width="1170" height="780">
+      <div><h3>Vila Olímpica do Sampaio</h3><p>Esporte, saúde, lazer e inclusão no mesmo endereço. O tipo de equipamento público que ele quer ver funcionando.</p></div>
+    </article>
+  </div>
+</section>
+
+<!-- ═══ QUEM É ═══ -->
+<section class="sec tese" id="quem">
+  <div class="wrap quem">
+    <img class="quem-foto rev" src="assets/fotos/familia.webp" alt="Felipe Pampolha agachado ao lado da esposa Roberta e dos filhos Arthur e Duda, em uma festa infantil." loading="lazy" width="618" height="618">
+    <div class="rev">
+      <h2>Antes de candidato,<br>pai de dois.</h2>
+      <p>Felipe Pampolha se apresenta em três linhas: marido da Roberta, pai do Arthur e da Duda, gestor público e empreendedor movido por propósito. Não é uma biografia longa. É a de alguém que passou a vida resolvendo problema dos outros e resolveu se candidatar para resolver em escala maior.</p>
+      <p>É essa a origem do apelido que virou slogan: <strong>o cara que resolve</strong>.</p>
+      <dl class="quem-fatos">
+        <div><dt>Nome na urna</dt><dd>Felipe Pampolha</dd></div>
+        <div><dt>Cargo</dt><dd>Deputado Estadual, Rio de Janeiro</dd></div>
+        <div><dt>Número</dt><dd><strong style="font-family:var(--display);font-weight:900;letter-spacing:.02em">11123</strong></dd></div>
+        <div><dt>Família</dt><dd>Roberta, Arthur e Duda</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GALERIA ═══ -->
+<section class="sec sec-esc">
+  <div class="wrap">
+    <h2 class="rev">O #TimePampolha.</h2>
+    <p class="rev">Quase vinte mil pessoas acompanham a caminhada pelo Instagram. Estas são algumas paradas dela.</p>
+  </div>
+  <div class="gal rev">
+    <figure class="alta">
+      <video src="assets/video/seguranca-saude.mp4" poster="assets/video/seguranca-saude-poster.webp" muted loop playsinline preload="none" aria-label="Vídeo em que Felipe Pampolha apresenta suas propostas de segurança, saúde, esporte e capacitação." crossorigin="anonymous">
+        <track kind="captions" src="assets/video/seguranca-saude.vtt" srclang="pt" label="Português" default>
+      </video>
+      <button class="som" type="button" aria-label="Ativar som: o programa na voz dele">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><line x1="22" y1="9" x2="16" y2="15"/><line x1="16" y1="9" x2="22" y2="15"/></svg>
+      </button>
+      <figcaption>O que ele defende</figcaption>
+    </figure>
+    <figure><img src="assets/fotos/abraco-sorriso.webp" alt="Felipe Pampolha abraçado a uma senhora de camisa da seleção brasileira, os dois sorrindo." loading="lazy"><figcaption>Encontro de idosos</figcaption></figure>
+    <figure><img src="assets/fotos/abraco-junina.webp" alt="Felipe Pampolha abraça uma apoiadora emocionada durante uma festa junina." loading="lazy"><figcaption>Festa junina</figcaption></figure>
+    <figure><img src="assets/fotos/roda-senhoras.webp" alt="Felipe Pampolha cercado por um grupo de senhoras vestidas de verde e amarelo." loading="lazy"><figcaption>Roda de conversa</figcaption></figure>
+    <figure class="alta">
+      <video src="assets/video/zona-norte.mp4" poster="assets/video/zona-norte-poster.webp" muted loop playsinline preload="none" aria-label="Vídeo da caminhada na Zona Norte, com o jingle da campanha." crossorigin="anonymous">
+        <track kind="captions" src="assets/video/zona-norte.vtt" srclang="pt" label="Português" default>
+      </video>
+      <button class="som" type="button" aria-label="Ativar som: jingle da campanha na Zona Norte">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><line x1="22" y1="9" x2="16" y2="15"/><line x1="16" y1="9" x2="22" y2="15"/></svg>
+      </button>
+      <figcaption>Caminhada na Zona Norte</figcaption>
+    </figure>
+    <figure><img src="assets/fotos/microfone.webp" alt="Felipe Pampolha falando ao microfone em um ginásio, ao lado de um apoiador." loading="lazy"><figcaption>Reunião de bairro</figcaption></figure>
+    <figure><img src="assets/fotos/casal-idosos.webp" alt="Felipe Pampolha conversando com um casal de idosos sentados a uma mesa." loading="lazy"><figcaption>Café da manhã</figcaption></figure>
+    <figure><img src="assets/fotos/roda-moradores.webp" alt="Felipe Pampolha ouvindo um morador em uma roda de conversa na calçada." loading="lazy"><figcaption>Escuta na calçada</figcaption></figure>
+    <figure><img src="assets/fotos/junina-senhora.webp" alt="Felipe Pampolha com a mão no ombro de uma senhora durante uma festa de bairro." loading="lazy"><figcaption>Festa de bairro</figcaption></figure>
+    <figure><img src="assets/fotos/reuniao-noite.webp" alt="Felipe Pampolha falando em uma reunião comunitária à noite." loading="lazy"><figcaption>Reunião à noite</figcaption></figure>
+  </div>
+  <div class="wrap" style="margin-top:var(--s4);text-align:center">
+    <a class="btn btn-ghost rev" href="https://www.instagram.com/felipepampolha.rio/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+      Ver tudo no Instagram
+    </a>
+  </div>
+</section>
+
+<svg class="faixa" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <rect width="1200" height="60" fill="#0D1F63"/>
+  <path d="M0,40 C300,4 900,56 1200,16 L1200,60 L0,60 Z" fill="#00A551"/>
+  <path d="M0,48 C300,12 900,64 1200,24 L1200,60 L0,60 Z" fill="#29ABE2"/>
+  <path d="M0,56 C300,20 900,72 1200,32 L1200,60 L0,60 Z" fill="#F7941D"/>
+</svg>
+
+<!-- ═══ VOTO ═══ -->
+<section class="voto" id="voto">
+  <h2>No dia da eleição,<br>é só digitar.</h2>
+  <div class="urna" id="urna" role="img" aria-label="Simulação da tela da urna eletrônica com o número 11123 digitado para o cargo de Deputado Estadual.">
+    <p class="urna-rot">Seu voto para</p>
+    <p class="urna-cargo">Deputado Estadual</p>
+    <div class="digitos" aria-hidden="true">
+      <div class="dig"><span>1</span></div>
+      <div class="dig"><span>1</span></div>
+      <div class="dig"><span>1</span></div>
+      <div class="dig"><span>2</span></div>
+      <div class="dig"><span>3</span></div>
+    </div>
+    <div class="urna-nome">
+      <img src="assets/fotos/peca-oficial.webp" alt="">
+      <span><b>FELIPE PAMPOLHA</b><small>Deputado Estadual · Rio de Janeiro</small></span>
+    </div>
+  </div>
+  <a class="btn" href="https://www.instagram.com/felipepampolha.rio/" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+    Seguir @felipepampolha.rio
+  </a>
+  <p class="voto-nota">Confira e confirme. É 11123.</p>
+</section>
+</main>
+
+<footer class="rod">
+  <div class="rod-topo">
+    <p class="rod-marca">Felipe Pampolha <b>11123</b></p>
+    <div class="rod-social">
+      <a href="https://www.instagram.com/felipepampolha.rio/" target="_blank" rel="noopener" aria-label="Instagram de Felipe Pampolha">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+      </a>
+    </div>
+  </div>
+  <p class="rod-legal">
+    <b>Felipe Pampolha — Deputado Estadual — 11123 — Rio de Janeiro.</b><br>
+    ELEIÇÃO 2026 FELIPE MENDES GONCALVES DE OLIVEIRA DEPUTADO ESTADUAL — CNPJ 68.461.856/0001-06.<br>
+    Propaganda eleitoral gratuita, nos termos da legislação eleitoral vigente.
+  </p>
+</footer>
+
+<script>
+(() => {
+  const reduz = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Barra fixa aparece depois do hero */
+  const topo = document.getElementById('topo');
+  const hero = document.querySelector('.hero');
+  new IntersectionObserver(
+    ([e]) => topo.classList.toggle('on', !e.isIntersecting),
+    {rootMargin: '-70% 0px 0px 0px'}
+  ).observe(hero);
+
+  /* Entrada discreta */
+  const revs = document.querySelectorAll('.rev');
+  if (reduz) {
+    revs.forEach(el => el.classList.add('vis'));
+  } else {
+    const io = new IntersectionObserver((es) => {
+      es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); io.unobserve(e.target); } });
+    }, {threshold: .12, rootMargin: '0px 0px -8%'});
+    revs.forEach(el => io.observe(el));
+  }
+
+  /* O momento autoral: o número entra dígito a dígito, como na urna */
+  const digs = [...document.querySelectorAll('.dig')];
+  let digitado = false;
+  new IntersectionObserver((es) => {
+    if (!es[0].isIntersecting || digitado) return;
+    digitado = true;
+    digs.forEach((d, i) => setTimeout(() => d.classList.add('on'), reduz ? 0 : 170 + i * 260));
+  }, {threshold: .55}).observe(document.getElementById('urna'));
+
+  /* Vídeos: tocam mudos quando visíveis, pausam quando saem, som sob demanda */
+  document.querySelectorAll('.gal video').forEach(v => {
+    new IntersectionObserver((es) => {
+      if (es[0].isIntersecting) { v.play().catch(() => {}); } else { v.pause(); }
+    }, {threshold: .3}).observe(v);
+
+    const btn = v.parentElement.querySelector('.som');
+    btn.addEventListener('click', () => {
+      const ligar = v.muted;
+      document.querySelectorAll('.gal video').forEach(o => { o.muted = true; });
+      v.muted = !ligar;
+      document.querySelectorAll('.gal .som').forEach(b => {
+        const vid = b.parentElement.querySelector('video');
+        b.setAttribute('aria-label', (vid.muted ? 'Ativar' : 'Desativar') + ' som do vídeo');
+      });
+      if (ligar) v.play().catch(() => {});
+    });
+  });
+})();
+</script>
+</body>
+</html>
