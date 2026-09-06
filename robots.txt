@@ -1,7 +1,6 @@
 # A landing é pública e deve ser indexada.
 User-agent: *
 Allow: /$
-Allow: /home
 Allow: /assets/
 
 # O dashboard é ferramenta interna, com métricas da conta de Ads.

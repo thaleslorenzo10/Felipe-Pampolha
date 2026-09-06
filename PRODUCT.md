@@ -2,12 +2,12 @@
 
 ## O que é
 
-No ar em **https://www.felipemendespampolha.com.br** — a raiz redireciona para `/home`, e o apex
-sem `www` redireciona para o `www`. O endereço `felipe-pampolha.vercel.app` continua respondendo,
-mas não é mais o canônico.
+No ar em **https://www.felipemendespampolha.com.br** — a página é a própria raiz, sem sub-rota.
+O apex sem `www` redireciona para o `www`, e `/home` (endereço da primeira publicação) redireciona
+para a raiz. O `felipe-pampolha.vercel.app` continua respondendo, mas não é mais o canônico.
 
 Página única de apresentação de **Felipe Pampolha**, candidato a **deputado estadual pelo Rio de
-Janeiro**, número **11123**, nas eleições de 2026. Servida em `/home` do mesmo projeto Vercel que
+Janeiro**, número **11123**, nas eleições de 2026. Servida na raiz do mesmo projeto Vercel que
 hospeda o dashboard de distribuição.
 
 Nome de registro: Felipe Mendes Gonçalves de Oliveira.

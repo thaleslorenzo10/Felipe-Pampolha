@@ -13,14 +13,15 @@
 
 | Arquivo | Rota | O que é |
 |---|---|---|
-| [home.html](home.html) | `/home` | Landing de apresentação do candidato. Público externo. Domínio: `www.felipemendespampolha.com.br`. |
+| [index.html](index.html) | `/` | Landing de apresentação do candidato. Público externo. Domínio: `www.felipemendespampolha.com.br`. |
 | [dashboard-distribuicao.html](dashboard-distribuicao.html) | `/dashboard-distribuicao` | Painel interno de métricas de Ads e orgânico. |
 
-Não existe `index.html`: a raiz não serve nada. As duas páginas são independentes e não
-compartilham CSS nem JS — de propósito, já que uma é pública e a outra é ferramenta interna.
+A landing é o `index.html` da raiz: `/home` existe só como redirect 301 do endereço da primeira
+publicação. As duas páginas são independentes e não compartilham CSS nem JS — de propósito, já que
+uma é pública e a outra é ferramenta interna.
 
 Contexto e regras da landing: [PRODUCT.md](PRODUCT.md) e [DESIGN.md](DESIGN.md). **Nada de
-biografia, proposta ou número entra na `/home` sem fonte primária** — o PRODUCT.md lista o que já
+biografia, proposta ou número entra na landing sem fonte primária** — o PRODUCT.md lista o que já
 foi verificado e o que está barrado por falta de confirmação.
 
 ## Stack
@@ -41,12 +42,12 @@ Não há `package.json` nem `Makefile`. Os comandos abaixo são a verdade deste 
 - **Typecheck:** não há
 - **Test:** não há
 - **Build:** não há — o arquivo servido é o arquivo do repositório
-- **Run/Dev:** `python3 -m http.server 8000`, depois `/home.html` ou `/dashboard-distribuicao.html`
+- **Run/Dev:** `python3 -m http.server 8000`, depois `/` ou `/dashboard-distribuicao.html`
 
 ## O que um agente erraria sem saber
 
 - **Cada página é um arquivo só** — CSS, markup e JS juntos. Criar `src/`, módulos ou etapa de build muda o modelo de deploy e não foi pedido.
-- **Os assets da `/home` vivem em [assets/](assets/)**: `fotos/*.webp` (material de campanha cedido pelo cliente, já convertido e renomeado por assunto) e `video/*.mp4` com `.vtt` de legenda e `-poster.webp`. As legendas foram transcritas por Whisper e revisadas à mão — se trocar um vídeo, gere a legenda junto: sem ela o axe acusa violação crítica.
+- **Os assets da landing vivem em [assets/](assets/)**: `fotos/*.webp` (material de campanha cedido pelo cliente, já convertido e renomeado por assunto) e `video/*.mp4` com `.vtt` de legenda e `-poster.webp`. As legendas foram transcritas por Whisper e revisadas à mão — se trocar um vídeo, gere a legenda junto: sem ela o axe acusa violação crítica.
 - **Credenciais estão hardcoded no HTML público** (`TOKEN` do Meta Graph API na linha 537, `SB_KEY` anon do Supabase na linha 549). É deliberado dentro do modelo atual — página estática sem backend, chamando as APIs direto do browser —, mas significa que qualquer visitante lê o token de Ads. Tratar como dívida conhecida: **não trocar por variável de ambiente sem antes definir onde o proxy vai rodar**, senão o dashboard simplesmente para de carregar.
 - **Duas fontes de dados, propósitos diferentes:**
   - **Meta Graph API v19.0** (`graph.facebook.com`) — ao vivo. Ads via `act_716311018073722`, filtrado por campanha contendo `DISTRIBUI`; orgânico via IG `17841401257663487` / FB Page `723961930805216`.
@@ -67,6 +68,6 @@ Toda mudança aqui gera tela, então nenhuma está pronta sem passar pelo navega
 |---|---|
 | `frontend-design` / `impeccable` | Mudança de layout, tipografia ou hierarquia visual do dashboard. |
 | `dataviz` | Qualquer alteração nos gráficos Chart.js do dashboard — escala, eixo, série, legenda. |
-| `impeccable` | Mudança visual na `/home`. Rode o detector depois: `node ~/.claude/skills/impeccable/scripts/detect.mjs --json home.html`. As supressões já justificadas ficam em `.impeccable/config.json`. |
+| `impeccable` | Mudança visual na landing. Rode o detector depois: `node ~/.claude/skills/impeccable/scripts/detect.mjs --json index.html`. As supressões já justificadas ficam em `.impeccable/config.json`. |
 | `code-reviewer` | Depois de editar o JS de fetch, cálculo de KPI ou renderização de tabela. |
 | `ads-meta` / `ads-attribution` | Dúvida sobre a semântica das métricas do Meta Ads (CPC, CPM, alcance, atribuição) antes de mudar como o número é calculado ou rotulado. |
