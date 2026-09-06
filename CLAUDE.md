@@ -13,7 +13,7 @@
 
 | Arquivo | Rota | O que é |
 |---|---|---|
-| [home.html](home.html) | `/home` | Landing de apresentação do candidato. Público externo. |
+| [home.html](home.html) | `/home` | Landing de apresentação do candidato. Público externo. Domínio: `www.felipemendespampolha.com.br`. |
 | [dashboard-distribuicao.html](dashboard-distribuicao.html) | `/dashboard-distribuicao` | Painel interno de métricas de Ads e orgânico. |
 
 Não existe `index.html`: a raiz não serve nada. As duas páginas são independentes e não
