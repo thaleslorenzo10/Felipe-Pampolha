@@ -534,7 +534,20 @@
 <!-- ═══════════════════════ SCRIPT ═══════════════════════ -->
 <script>
 // ─── CONFIG ───────────────────────────────────────────────────────────────────
-const TOKEN       = "EAASB7C6gP58BROhRyEANDVOSpnxZBWg455bfF36ZAe8B5MDwphKzQU1vvcLykCLJZC3rwJHaM6fsEqjR7WVorQJbD0GGKmpLciNZCD8blIggJO6xceanLWglEXW0uHz9ZBKe9aAkV7tWHiQ8EvVtk19qvSXaBx64aLGyM9jHTqh75OGNZAW2RkwEYbHA5ZCZAwZDZD";
+// O token do Meta NÃO fica no código: esta página é pública na Vercel e qualquer
+// visitante leria a credencial da conta de Ads. Ele vive no localStorage deste
+// navegador. Para gravar (uma vez por navegador):
+//   /dashboard-distribuicao?token=SEU_TOKEN
+// A URL é limpa logo depois, para o token não ficar no histórico nem no Referer.
+const TOKEN = (() => {
+  const q = new URLSearchParams(location.search).get("token");
+  if (q) {
+    localStorage.setItem("meta_token", q);
+    history.replaceState(null, "", location.pathname);
+    return q;
+  }
+  return localStorage.getItem("meta_token") || "";
+})();
 const ACCOUNT     = "act_716311018073722";
 const BASE        = "https://graph.facebook.com/v19.0";
 const IG_ACCOUNT_ID = "17841401257663487";
@@ -1072,6 +1085,16 @@ function renderDemoBars(containerId, results, opts = {}) {
 async function loadAll() {
   const errorBanner = document.getElementById("errorBanner");
   errorBanner.classList.remove("show");
+
+  if (!TOKEN) {
+    errorBanner.textContent = "Token do Meta não configurado neste navegador. "
+      + "Abra esta página uma vez com ?token=SEU_TOKEN no fim da URL para gravá-lo.";
+    errorBanner.classList.add("show");
+    document.getElementById("statusDot").classList.remove("loading");
+    document.getElementById("statusDot").classList.add("error");
+    document.getElementById("statusText").textContent = "Sem token";
+    return;
+  }
 
   document.getElementById("statusDot").classList.remove("error");
   document.getElementById("statusDot").classList.add("loading");
