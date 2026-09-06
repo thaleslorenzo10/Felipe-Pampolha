@@ -5,3 +5,6 @@ node_modules/
 .env
 .env.local
 .vercel
+
+# artefatos locais de ferramenta
+.impeccable/

@@ -23,5 +23,27 @@
     "ui-ux-pro-max@ui-ux-pro-max-skill": true,
     "superpowers@claude-plugins-official": true,
     "claude-ads@ai-marketing-hub-claude-ads": true
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Grep",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/thaleslorenzo/.local/bin/graphify hook-guard search"
+          }
+        ]
+      },
+      {
+        "matcher": "Read|Glob",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/thaleslorenzo/.local/bin/graphify hook-guard read"
+          }
+        ]
+      }
+    ]
   }
 }
