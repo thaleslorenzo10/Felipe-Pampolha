@@ -2,6 +2,8 @@
 
 ## O que é
 
+No ar em **https://felipe-pampolha.vercel.app/home** (a raiz redireciona para lá).
+
 Página única de apresentação de **Felipe Pampolha**, candidato a **deputado estadual pelo Rio de
 Janeiro**, número **11123**, nas eleições de 2026. Servida em `/home` do mesmo projeto Vercel que
 hospeda o dashboard de distribuição.
