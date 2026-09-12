@@ -305,11 +305,13 @@
     .preset-btn { padding: 4px 8px; font-size: 9px; }
   }
 </style>
+<link rel="stylesheet" href="assets/css/admin-dashboard.css">
+  <link rel="icon" href="/logo.png" type="image/png">
 </head>
-<body>
+<body class="admin-dashboard">
 
 <!-- ═══════════════════════ HEADER ═══════════════════════ -->
-<div class="header">
+<div class="header" role="banner">
   <div class="header-top">
     <div class="header-logo">
       <img src="logo.png" alt="Lorenzo Media" style="height:32px;opacity:.95">
@@ -320,7 +322,7 @@
       </div>
     </div>
     <div style="display:flex; gap: 8px;">
-      <button class="btn-refresh" id="toggleTheme" onclick="toggleDarkMode()" title="Alternar Dark Mode">🌙</button>
+      <button class="btn-refresh" id="toggleTheme" onclick="toggleDarkMode()" title="Alternar tema" aria-label="Alternar tema claro e escuro">🌙</button>
       <button class="btn-refresh" id="btnRefresh" onclick="loadAll()">⟳ Atualizar agora</button>
     </div>
   </div>
@@ -336,7 +338,7 @@
 </div>
 
 <!-- ═══════════════════════ FILTER BAR ═══════════════════════ -->
-<div class="filter-bar">
+<div class="filter-bar" role="region" aria-label="Filtros de período">
   <span class="filter-label">Período:</span>
   <button class="preset-btn" onclick="setPreset('today')">Hoje</button>
   <button class="preset-btn" onclick="setPreset('last_7d')">7 dias</button>
@@ -348,16 +350,16 @@
   <div class="filter-sep"></div>
   <button class="preset-btn" onclick="setPreset('custom')">Personalizado</button>
   <div class="custom-dates" id="customDates">
-    <label>De</label>
+    <label for="dateSince">De</label>
     <input type="date" class="date-input" id="dateSince">
-    <label>até</label>
+    <label for="dateUntil">até</label>
     <input type="date" class="date-input" id="dateUntil">
     <button class="btn-apply" onclick="applyCustom()">Aplicar</button>
   </div>
 </div>
 
 <!-- ═══════════════════════ MAIN ═══════════════════════ -->
-<div class="container">
+<div class="container" role="main">
 
   <div class="error-banner" id="errorBanner"></div>
 
@@ -461,7 +463,7 @@
   <!-- ═══ Campanhas (Table) ═══ -->
   <div class="section">
     <div class="section-title" id="campaignsTitle">🎯 Campanhas de Distribuição</div>
-    <div class="table-wrap">
+    <div class="table-wrap" role="region" aria-label="Campanhas de distribuição" tabindex="0">
       <table>
         <thead><tr>
           <th data-sort="name">Campanha <span class="sort-arrow">▼</span></th>
@@ -484,7 +486,7 @@
   <!-- ═══ AdSets (Table) ═══ -->
   <div class="section">
     <div class="section-title" id="adsetsTitle">🎯 Conjuntos de Anúncios (Top 20)</div>
-    <div class="table-wrap">
+    <div class="table-wrap" role="region" aria-label="Conjuntos de anúncios" tabindex="0">
       <table>
         <thead><tr>
           <th>Conjunto</th>
@@ -506,7 +508,7 @@
   <div class="section">
     <div class="section-title">📱 Top Conteúdos Orgânicos — Instagram</div>
     <div style="font-size:12px;color:var(--lm-gray);margin-bottom:12px;">Últimos 25 posts públicos ordenados por engajamento</div>
-    <div class="table-wrap">
+    <div class="table-wrap" role="region" aria-label="Conteúdos publicados" tabindex="0">
       <table>
         <thead><tr>
           <th style="min-width:320px;">Conteúdo</th>
