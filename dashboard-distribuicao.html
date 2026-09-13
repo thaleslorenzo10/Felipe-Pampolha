@@ -307,8 +307,22 @@
 </style>
 <link rel="stylesheet" href="assets/css/admin-dashboard.css">
   <link rel="icon" href="/logo.png" type="image/png">
+<link rel="stylesheet" href="assets/css/admin-sidebar.css">
+<script src="assets/admin-sidebar.js" defer></script>
 </head>
-<body class="admin-dashboard">
+<body class="admin-dashboard admin-side-layout">
+<aside class="admin-sidebar" data-admin-sidebar aria-label="Navegação principal">
+  <div class="admin-sidebar-brand"><img src="/logo.png" alt="Lorenzo Media" width="156" height="67"><strong>Felipe Pampolha</strong></div>
+  <button class="admin-menu-toggle" type="button" aria-expanded="false" aria-controls="admin-sidebar-menu">Abrir menu</button>
+  <nav id="admin-sidebar-menu" class="admin-sidebar-menu" aria-label="Áreas do painel">
+    <a href="#resumo">Visão geral</a>
+    <a href="#igEngTitle">Engajamento</a>
+    <a href="#publico">Público</a>
+    <a href="#chartTitle">Evolução diária</a>
+    <a href="#campaignsTitle">Campanhas</a>
+    <a href="#conteudos">Conteúdos orgânicos</a>
+  </nav>
+</aside>
 
 <!-- ═══════════════════════ HEADER ═══════════════════════ -->
 <div class="header" role="banner">
@@ -364,7 +378,7 @@
   <div class="error-banner" id="errorBanner"></div>
 
   <!-- ═══ KPIs ═══ -->
-  <div class="kpi-groups">
+  <div class="kpi-groups" id="resumo">
 
     <!-- Grupo: Instagram — Conta -->
     <div class="kpi-group kpi-group-ig">
@@ -429,7 +443,7 @@
 
   <!-- ═══ Demographics (Instagram Followers) ═══ -->
   <div class="section">
-    <div class="section-title">👥 Demografia dos Seguidores — Instagram</div>
+    <div class="section-title" id="publico">👥 Demografia dos Seguidores — Instagram</div>
     <div style="font-size:12px;color:var(--lm-gray);margin-bottom:16px;">Distribuição total dos seguidores por gênero, faixa etária e cidade (dados lifetime)</div>
     <div class="demo-grid">
       <div class="demo-block">
@@ -506,7 +520,7 @@
 
   <!-- ═══ Top Posts Orgânicos ═══ -->
   <div class="section">
-    <div class="section-title">📱 Top Conteúdos Orgânicos — Instagram</div>
+    <div class="section-title" id="conteudos">📱 Top Conteúdos Orgânicos — Instagram</div>
     <div style="font-size:12px;color:var(--lm-gray);margin-bottom:12px;">Últimos 25 posts públicos ordenados por engajamento</div>
     <div class="table-wrap" role="region" aria-label="Conteúdos publicados" tabindex="0">
       <table>
