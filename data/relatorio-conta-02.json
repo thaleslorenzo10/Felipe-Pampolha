@@ -1,0 +1,578 @@
+{
+  "meta": {
+    "title": "Felipe Pampolha 02 · Relatório de campanhas",
+    "start": "2026-08-17",
+    "end": "2026-10-06",
+    "days": 51,
+    "account": {
+      "id": "act_2174013390129316",
+      "name": "Felipe Mendes 02",
+      "label": "Felipe Pampolha 02",
+      "businessId": "1270499364534184",
+      "currency": "BRL",
+      "createdTime": "2026-08-17T13:36:13-0300"
+    },
+    "timezone": "America/Sao_Paulo",
+    "extractedAt": "2026-10-07T23:21:06.884268+00:00",
+    "sources": [
+      "Meta Marketing API v24.0 — conta completa, sem filtro por nome · Felipe Pampolha 02 (act_2174013390129316)"
+    ],
+    "status": "complete",
+    "notes": [
+      "Histórico de mídia por conta, sem filtro por nome/status de campanha. Moeda: BRL.",
+      "Valores podem ser revisados posteriormente pela plataforma; este é um snapshot fixo.",
+      "Instagram não incluído: o histórico orgânico disponível não cobre todo este período."
+    ]
+  },
+  "ads": {
+    "source": "Meta Marketing API v24.0 — conta completa, sem filtro por nome · Felipe Pampolha 02 (act_2174013390129316)",
+    "totals": {
+      "spend": 9663.54,
+      "impressions": 1494360.0,
+      "reach": 579922.0,
+      "clicks": 24007.0,
+      "linkClicks": 24429.0,
+      "engagements": 155994.0,
+      "videoViews": 839242.0
+    },
+    "daily": [
+      {
+        "date": "2026-09-01",
+        "spend": 2.78,
+        "impressions": 361.0,
+        "clicks": 14.0
+      },
+      {
+        "date": "2026-09-02",
+        "spend": 0.16,
+        "impressions": 11.0,
+        "clicks": 2.0
+      },
+      {
+        "date": "2026-09-03",
+        "spend": 24.21,
+        "impressions": 3593.0,
+        "clicks": 114.0
+      },
+      {
+        "date": "2026-09-07",
+        "spend": 8.15,
+        "impressions": 1555.0,
+        "clicks": 32.0
+      },
+      {
+        "date": "2026-09-08",
+        "spend": 119.74,
+        "impressions": 17558.0,
+        "clicks": 433.0
+      },
+      {
+        "date": "2026-09-09",
+        "spend": 98.08,
+        "impressions": 14146.0,
+        "clicks": 322.0
+      },
+      {
+        "date": "2026-09-10",
+        "spend": 128.19,
+        "impressions": 18685.0,
+        "clicks": 377.0
+      },
+      {
+        "date": "2026-09-11",
+        "spend": 324.65,
+        "impressions": 52135.0,
+        "clicks": 834.0
+      },
+      {
+        "date": "2026-09-12",
+        "spend": 467.09,
+        "impressions": 75428.0,
+        "clicks": 1268.0
+      },
+      {
+        "date": "2026-09-13",
+        "spend": 708.33,
+        "impressions": 122967.0,
+        "clicks": 1867.0
+      },
+      {
+        "date": "2026-09-14",
+        "spend": 520.43,
+        "impressions": 83375.0,
+        "clicks": 1426.0
+      },
+      {
+        "date": "2026-09-15",
+        "spend": 329.45,
+        "impressions": 53035.0,
+        "clicks": 825.0
+      },
+      {
+        "date": "2026-09-16",
+        "spend": 284.04,
+        "impressions": 41727.0,
+        "clicks": 634.0
+      },
+      {
+        "date": "2026-09-17",
+        "spend": 322.9,
+        "impressions": 52315.0,
+        "clicks": 735.0
+      },
+      {
+        "date": "2026-09-18",
+        "spend": 273.22,
+        "impressions": 46459.0,
+        "clicks": 688.0
+      },
+      {
+        "date": "2026-09-19",
+        "spend": 294.71,
+        "impressions": 49053.0,
+        "clicks": 785.0
+      },
+      {
+        "date": "2026-09-20",
+        "spend": 740.35,
+        "impressions": 138199.0,
+        "clicks": 1888.0
+      },
+      {
+        "date": "2026-09-21",
+        "spend": 577.13,
+        "impressions": 104855.0,
+        "clicks": 1401.0
+      },
+      {
+        "date": "2026-09-22",
+        "spend": 663.64,
+        "impressions": 119935.0,
+        "clicks": 1633.0
+      },
+      {
+        "date": "2026-09-23",
+        "spend": 699.97,
+        "impressions": 115363.0,
+        "clicks": 1668.0
+      },
+      {
+        "date": "2026-09-24",
+        "spend": 652.0,
+        "impressions": 101563.0,
+        "clicks": 1415.0
+      },
+      {
+        "date": "2026-09-25",
+        "spend": 401.49,
+        "impressions": 55311.0,
+        "clicks": 886.0
+      },
+      {
+        "date": "2026-09-26",
+        "spend": 205.55,
+        "impressions": 23262.0,
+        "clicks": 545.0
+      },
+      {
+        "date": "2026-09-27",
+        "spend": 308.08,
+        "impressions": 40479.0,
+        "clicks": 763.0
+      },
+      {
+        "date": "2026-09-28",
+        "spend": 233.76,
+        "impressions": 28506.0,
+        "clicks": 636.0
+      },
+      {
+        "date": "2026-09-29",
+        "spend": 193.33,
+        "impressions": 20832.0,
+        "clicks": 478.0
+      },
+      {
+        "date": "2026-09-30",
+        "spend": 443.83,
+        "impressions": 44262.0,
+        "clicks": 950.0
+      },
+      {
+        "date": "2026-10-01",
+        "spend": 638.28,
+        "impressions": 69390.0,
+        "clicks": 1388.0
+      }
+    ],
+    "campaigns": [
+      {
+        "id": "52605679799264",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+        "objective": "LINK_CLICKS",
+        "spend": 1440.34,
+        "impressions": 221502.0,
+        "reach": 112692.0,
+        "clicks": 2552.0,
+        "linkClicks": 2593.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "52605680811464",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Eu não entrei na política",
+        "objective": "LINK_CLICKS",
+        "spend": 1398.16,
+        "impressions": 214440.0,
+        "reach": 112990.0,
+        "clicks": 4463.0,
+        "linkClicks": 4548.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "52605680383464",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+        "objective": "LINK_CLICKS",
+        "spend": 1392.51,
+        "impressions": 200938.0,
+        "reach": 110713.0,
+        "clicks": 2965.0,
+        "linkClicks": 3030.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "52605679798664",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+        "objective": "LINK_CLICKS",
+        "spend": 1282.44,
+        "impressions": 317264.0,
+        "reach": 141558.0,
+        "clicks": 4157.0,
+        "linkClicks": 4244.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "52610279401064",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Ufc",
+        "objective": "LINK_CLICKS",
+        "spend": 802.94,
+        "impressions": 94442.0,
+        "reach": 65092.0,
+        "clicks": 1851.0,
+        "linkClicks": 1873.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "52610668414464",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Eu acredito no esporte",
+        "objective": "LINK_CLICKS",
+        "spend": 699.97,
+        "impressions": 92670.0,
+        "reach": 54896.0,
+        "clicks": 1340.0,
+        "linkClicks": 1362.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "52608367469864",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]  Política, pra mim, nunca foi sobre cargo",
+        "objective": "LINK_CLICKS",
+        "spend": 687.31,
+        "impressions": 108818.0,
+        "reach": 67340.0,
+        "clicks": 1429.0,
+        "linkClicks": 1460.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "52605679798464",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+        "objective": "LINK_CLICKS",
+        "spend": 391.21,
+        "impressions": 65301.0,
+        "reach": 47876.0,
+        "clicks": 1438.0,
+        "linkClicks": 1470.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "52605679798064",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+        "objective": "LINK_CLICKS",
+        "spend": 372.63,
+        "impressions": 48213.0,
+        "reach": 32882.0,
+        "clicks": 716.0,
+        "linkClicks": 743.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "52611755097064",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Leo Moura",
+        "objective": "LINK_CLICKS",
+        "spend": 307.08,
+        "impressions": 34799.0,
+        "reach": 31476.0,
+        "clicks": 1058.0,
+        "linkClicks": 1058.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "52613263199864",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Eu entro para dar 100%",
+        "objective": "LINK_CLICKS",
+        "spend": 214.88,
+        "impressions": 28349.0,
+        "reach": 20972.0,
+        "clicks": 631.0,
+        "linkClicks": 643.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "52614084827264",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] José Aldo 2 - Quando quem acredita",
+        "objective": "LINK_CLICKS",
+        "spend": 145.51,
+        "impressions": 16450.0,
+        "reach": 14758.0,
+        "clicks": 406.0,
+        "linkClicks": 410.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "52613661985664",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Bangu",
+        "objective": "LINK_CLICKS",
+        "spend": 134.49,
+        "impressions": 13783.0,
+        "reach": 10330.0,
+        "clicks": 277.0,
+        "linkClicks": 278.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "52614080294464",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Política pra mim é propósito",
+        "objective": "LINK_CLICKS",
+        "spend": 129.02,
+        "impressions": 13514.0,
+        "reach": 10909.0,
+        "clicks": 233.0,
+        "linkClicks": 234.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "52613261638664",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Eu não entrei na política",
+        "objective": "LINK_CLICKS",
+        "spend": 126.45,
+        "impressions": 9090.0,
+        "reach": 8269.0,
+        "clicks": 170.0,
+        "linkClicks": 162.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "52614370214464",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Força do esporte",
+        "objective": "LINK_CLICKS",
+        "spend": 58.13,
+        "impressions": 5716.0,
+        "reach": 5432.0,
+        "clicks": 111.0,
+        "linkClicks": 108.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "52614369251864",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Não estou por necessidade",
+        "objective": "LINK_CLICKS",
+        "spend": 53.32,
+        "impressions": 5106.0,
+        "reach": 4802.0,
+        "clicks": 80.0,
+        "linkClicks": 81.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "52604748514664",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+        "objective": "LINK_CLICKS",
+        "spend": 6.59,
+        "impressions": 994.0,
+        "reach": 934.0,
+        "clicks": 41.0,
+        "linkClicks": 43.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "52604748546064",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+        "objective": "LINK_CLICKS",
+        "spend": 6.23,
+        "impressions": 1150.0,
+        "reach": 1103.0,
+        "clicks": 29.0,
+        "linkClicks": 29.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "52604748406864",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+        "objective": "LINK_CLICKS",
+        "spend": 5.81,
+        "impressions": 741.0,
+        "reach": 693.0,
+        "clicks": 21.0,
+        "linkClicks": 20.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "52604748005064",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+        "objective": "LINK_CLICKS",
+        "spend": 5.58,
+        "impressions": 707.0,
+        "reach": 656.0,
+        "clicks": 23.0,
+        "linkClicks": 25.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "52604213893064",
+        "name": "Post do Instagram: O #TimePampolha só cresce! Vem...",
+        "objective": "LINK_CLICKS",
+        "spend": 2.94,
+        "impressions": 372.0,
+        "reach": 343.0,
+        "clicks": 16.0,
+        "linkClicks": 15.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "52604737774864",
+        "name": "Post do Instagram: Política não se faz com...",
+        "objective": "LINK_CLICKS",
+        "spend": 0.0,
+        "impressions": 1.0,
+        "reach": 1.0,
+        "clicks": 0.0,
+        "linkClicks": 0.0,
+        "results": null,
+        "resultType": null
+      }
+    ],
+    "highlights": [
+      {
+        "id": "52605679799064",
+        "name": "AD01",
+        "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+        "impressions": 317264.0,
+        "reach": 141558.0,
+        "spend": 1282.44,
+        "engagements": 4869.0,
+        "link": null
+      },
+      {
+        "id": "52605679798264",
+        "name": "AD01",
+        "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+        "impressions": 221502.0,
+        "reach": 112692.0,
+        "spend": 1440.34,
+        "engagements": 25331.0,
+        "link": null
+      },
+      {
+        "id": "52605680811064",
+        "name": "AD01 - Eu não entrei na política",
+        "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Eu não entrei na política",
+        "impressions": 214440.0,
+        "reach": 112990.0,
+        "spend": 1398.16,
+        "engagements": 5596.0,
+        "link": null
+      },
+      {
+        "id": "52605680383664",
+        "name": "AD01",
+        "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+        "impressions": 200938.0,
+        "reach": 110713.0,
+        "spend": 1392.51,
+        "engagements": 28473.0,
+        "link": null
+      },
+      {
+        "id": "52608367470064",
+        "name": "AD01",
+        "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]  Política, pra mim, nunca foi sobre cargo",
+        "impressions": 108818.0,
+        "reach": 67340.0,
+        "spend": 687.31,
+        "engagements": 17100.0,
+        "link": null
+      }
+    ],
+    "notes": [
+      "Campanhas com entrega reportada no intervalo, incluindo campanhas hoje pausadas/arquivadas; nenhuma filtragem por nome.",
+      "Alcance do período consultado no nível da conta: não é a soma do alcance diário ou das campanhas.",
+      "Destaques: cinco anúncios com mais impressões no intervalo; links públicos não coletados.",
+      "Resultados/conversões por objetivo não consolidados; engagements representa post_engagement e videoViews representa reproduções de vídeo.",
+      "Dias sem linha foram consultados novamente com sucesso: sem entrega reportada, distintos de falhas de coleta. A série preserva apenas observações retornadas; não preenche zeros.",
+      "Consulta dos 51 dias retornou 28 linhas diárias, de 2026-09-01 a 2026-10-01; a soma de investimento, impressões e cliques concilia com o total da conta no período.",
+      "A API reporta mais inline_link_clicks que clicks no mesmo período. Valores preservados sem ajuste; CPC e CTR usam clicks. Não tratar as duas contagens como um funil reconciliado.",
+      "Histórico consultado desde a criação da conta em 2026-08-17, até 2026-10-06 (último dia completo do recorte).",
+      "Primeira/última linha diária reportada: 2026-09-01 / 2026-10-01."
+    ],
+    "coverageDays": 51,
+    "missingDates": [],
+    "noDeliveryDates": [
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-22",
+      "2026-08-23",
+      "2026-08-24",
+      "2026-08-25",
+      "2026-08-26",
+      "2026-08-27",
+      "2026-08-28",
+      "2026-08-29",
+      "2026-08-30",
+      "2026-08-31",
+      "2026-09-04",
+      "2026-09-05",
+      "2026-09-06",
+      "2026-10-02",
+      "2026-10-03",
+      "2026-10-04",
+      "2026-10-05",
+      "2026-10-06"
+    ],
+    "accountId": "act_2174013390129316"
+  }
+}

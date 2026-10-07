@@ -1,0 +1,799 @@
+{
+  "meta": {
+    "title": "Felipe Pampolha · Relatório de campanha",
+    "start": "2026-08-08",
+    "end": "2026-10-06",
+    "days": 60,
+    "extractedAt": "2026-10-07T22:57:25.202634+00:00",
+    "timezone": "America/Sao_Paulo",
+    "profile": "@felipepampolha.rio",
+    "sources": [
+      "Meta Marketing API v24.0 — conta completa, sem filtro por nome",
+      "Supabase pampolha_ig_daily_metrics · coletor pampolha-snapshot v3"
+    ],
+    "status": "partial",
+    "notes": [
+      "Moeda: BRL. Extração fixa de 60 dias; valores podem ser revisados posteriormente pela plataforma.",
+      "Instagram com lacunas em 10/09 e 13/09; crescimento líquido usa os snapshots base/final disponíveis."
+    ]
+  },
+  "ads": {
+    "source": "Meta Marketing API v24.0 — conta completa, sem filtro por nome",
+    "totals": {
+      "spend": 735.68,
+      "impressions": 80551.0,
+      "reach": 54327.0,
+      "clicks": 1871.0,
+      "linkClicks": 1918.0,
+      "engagements": 19941.0,
+      "videoViews": 77902.0
+    },
+    "daily": [
+      {
+        "date": "2026-08-08",
+        "spend": 88.38,
+        "impressions": 8956.0,
+        "clicks": 221.0
+      },
+      {
+        "date": "2026-08-09",
+        "spend": 104.47,
+        "impressions": 11878.0,
+        "clicks": 281.0
+      },
+      {
+        "date": "2026-08-10",
+        "spend": 90.37,
+        "impressions": 10424.0,
+        "clicks": 237.0
+      },
+      {
+        "date": "2026-08-11",
+        "spend": 71.14,
+        "impressions": 7825.0,
+        "clicks": 196.0
+      },
+      {
+        "date": "2026-08-12",
+        "spend": 84.4,
+        "impressions": 8089.0,
+        "clicks": 189.0
+      },
+      {
+        "date": "2026-08-13",
+        "spend": 75.77,
+        "impressions": 8038.0,
+        "clicks": 171.0
+      },
+      {
+        "date": "2026-08-14",
+        "spend": 85.02,
+        "impressions": 8844.0,
+        "clicks": 175.0
+      },
+      {
+        "date": "2026-08-15",
+        "spend": 75.93,
+        "impressions": 8452.0,
+        "clicks": 190.0
+      },
+      {
+        "date": "2026-08-16",
+        "spend": 60.2,
+        "impressions": 8045.0,
+        "clicks": 211.0
+      }
+    ],
+    "campaigns": [
+      {
+        "id": "120251598416400790",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 23.06",
+        "objective": "LINK_CLICKS",
+        "spend": 212.36,
+        "impressions": 22155.0,
+        "reach": 17583.0,
+        "clicks": 592.0,
+        "linkClicks": 601.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "120250881665290790",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 17.06",
+        "objective": "LINK_CLICKS",
+        "spend": 105.67,
+        "impressions": 7793.0,
+        "reach": 6395.0,
+        "clicks": 330.0,
+        "linkClicks": 334.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "120253121753300790",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 27.07",
+        "objective": "LINK_CLICKS",
+        "spend": 80.2,
+        "impressions": 9377.0,
+        "reach": 7432.0,
+        "clicks": 179.0,
+        "linkClicks": 184.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "120252577764970790",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 07.07",
+        "objective": "LINK_CLICKS",
+        "spend": 79.44,
+        "impressions": 7816.0,
+        "reach": 7043.0,
+        "clicks": 231.0,
+        "linkClicks": 234.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "120253417118920790",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 05.08",
+        "objective": "LINK_CLICKS",
+        "spend": 79.39,
+        "impressions": 11220.0,
+        "reach": 8887.0,
+        "clicks": 187.0,
+        "linkClicks": 196.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "120252800273830790",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 14.07",
+        "objective": "LINK_CLICKS",
+        "spend": 79.13,
+        "impressions": 12842.0,
+        "reach": 10032.0,
+        "clicks": 194.0,
+        "linkClicks": 202.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "120242974198750790",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - Dark Posts",
+        "objective": "LINK_CLICKS",
+        "spend": 51.17,
+        "impressions": 5079.0,
+        "reach": 4569.0,
+        "clicks": 113.0,
+        "linkClicks": 122.0,
+        "results": null,
+        "resultType": null
+      },
+      {
+        "id": "120253505093300790",
+        "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - Sampaio",
+        "objective": "LINK_CLICKS",
+        "spend": 48.32,
+        "impressions": 4269.0,
+        "reach": 2800.0,
+        "clicks": 45.0,
+        "linkClicks": 45.0,
+        "results": null,
+        "resultType": null
+      }
+    ],
+    "highlights": [
+      {
+        "id": "120251598416420790",
+        "name": "AD01",
+        "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 23.06",
+        "impressions": 22155.0,
+        "reach": 17583.0,
+        "spend": 212.36,
+        "engagements": 4661.0,
+        "link": null
+      },
+      {
+        "id": "120252800273840790",
+        "name": "AD01",
+        "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 14.07",
+        "impressions": 12842.0,
+        "reach": 10032.0,
+        "spend": 79.13,
+        "engagements": 1851.0,
+        "link": null
+      },
+      {
+        "id": "120253417118940790",
+        "name": "AD01",
+        "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 05.08",
+        "impressions": 11220.0,
+        "reach": 8887.0,
+        "spend": 79.39,
+        "engagements": 1731.0,
+        "link": null
+      },
+      {
+        "id": "120253121753280790",
+        "name": "AD01",
+        "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 27.07",
+        "impressions": 9377.0,
+        "reach": 7432.0,
+        "spend": 80.2,
+        "engagements": 1935.0,
+        "link": null
+      },
+      {
+        "id": "120252577764990790",
+        "name": "AD01",
+        "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 07.07",
+        "impressions": 7816.0,
+        "reach": 7043.0,
+        "spend": 79.44,
+        "engagements": 3516.0,
+        "link": null
+      }
+    ],
+    "notes": [
+      "Campanhas com entrega reportada no intervalo, incluindo campanhas hoje pausadas/arquivadas; nenhuma filtragem por nome.",
+      "Alcance do período consultado no nível da conta: não é a soma do alcance diário ou das campanhas.",
+      "Destaques: cinco anúncios com mais impressões no intervalo; links públicos não coletados.",
+      "Resultados/conversões por objetivo não consolidados; engagements representa post_engagement e videoViews representa reproduções de vídeo.",
+      "Dias sem linha foram consultados novamente com sucesso: sem entrega reportada, distintos de falhas de coleta. A série preserva apenas observações retornadas; não preenche zeros.",
+      "Consulta dos 60 dias retornou 9 linhas diárias, de 2026-08-08 a 2026-08-16; a soma de investimento, impressões e cliques concilia com o total da conta no período.",
+      "A API reporta mais inline_link_clicks que clicks no mesmo período. Valores preservados sem ajuste; CPC e CTR usam clicks. Não tratar as duas contagens como um funil reconciliado.",
+      "Conferência com histórico Supabase (58 dias, filtro DISTRIBUI): R$735.45 e 80530 impressões; API atual: R$735.68 e 80551 impressões. Diferenças de R$0.23 e 21 impressões; fontes coletadas em momentos distintos e histórico filtrado. O relatório usa a API atual."
+    ],
+    "coverageDays": 60,
+    "missingDates": [],
+    "noDeliveryDates": [
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-22",
+      "2026-08-23",
+      "2026-08-24",
+      "2026-08-25",
+      "2026-08-26",
+      "2026-08-27",
+      "2026-08-28",
+      "2026-08-29",
+      "2026-08-30",
+      "2026-08-31",
+      "2026-09-01",
+      "2026-09-02",
+      "2026-09-03",
+      "2026-09-04",
+      "2026-09-05",
+      "2026-09-06",
+      "2026-09-07",
+      "2026-09-08",
+      "2026-09-09",
+      "2026-09-10",
+      "2026-09-11",
+      "2026-09-12",
+      "2026-09-13",
+      "2026-09-14",
+      "2026-09-15",
+      "2026-09-16",
+      "2026-09-17",
+      "2026-09-18",
+      "2026-09-19",
+      "2026-09-20",
+      "2026-09-21",
+      "2026-09-22",
+      "2026-09-23",
+      "2026-09-24",
+      "2026-09-25",
+      "2026-09-26",
+      "2026-09-27",
+      "2026-09-28",
+      "2026-09-29",
+      "2026-09-30",
+      "2026-10-01",
+      "2026-10-02",
+      "2026-10-03",
+      "2026-10-04",
+      "2026-10-05",
+      "2026-10-06"
+    ]
+  },
+  "instagram": {
+    "source": "Supabase pampolha_ig_daily_metrics · coletor pampolha-snapshot v3",
+    "coverageDays": 58,
+    "missingDates": [
+      "2026-09-10",
+      "2026-09-13"
+    ],
+    "baseline": {
+      "date": "2026-08-07",
+      "followers": 17562,
+      "capturedAt": "2026-08-08T06:00:11.021084+00:00"
+    },
+    "end": {
+      "date": "2026-10-06",
+      "followers": 22732,
+      "capturedAt": "2026-10-07T06:00:06.910593+00:00"
+    },
+    "daily": [
+      {
+        "date": "2026-08-08",
+        "followers": 17603,
+        "reach": 14676,
+        "profileViews": 533,
+        "interactions": 1470,
+        "capturedAt": "2026-08-09T06:00:13.381617+00:00"
+      },
+      {
+        "date": "2026-08-09",
+        "followers": 17617,
+        "reach": 17299,
+        "profileViews": 460,
+        "interactions": 1342,
+        "capturedAt": "2026-08-10T06:00:10.836681+00:00"
+      },
+      {
+        "date": "2026-08-10",
+        "followers": 17654,
+        "reach": 15998,
+        "profileViews": 610,
+        "interactions": 1191,
+        "capturedAt": "2026-08-11T06:00:12.229478+00:00"
+      },
+      {
+        "date": "2026-08-11",
+        "followers": 17749,
+        "reach": 21573,
+        "profileViews": 778,
+        "interactions": 2966,
+        "capturedAt": "2026-08-12T06:00:12.011139+00:00"
+      },
+      {
+        "date": "2026-08-12",
+        "followers": 17842,
+        "reach": 24134,
+        "profileViews": 711,
+        "interactions": 1816,
+        "capturedAt": "2026-08-13T06:00:12.039156+00:00"
+      },
+      {
+        "date": "2026-08-13",
+        "followers": 17903,
+        "reach": 16065,
+        "profileViews": 725,
+        "interactions": 1748,
+        "capturedAt": "2026-08-14T06:00:11.283647+00:00"
+      },
+      {
+        "date": "2026-08-14",
+        "followers": 17976,
+        "reach": 21484,
+        "profileViews": 753,
+        "interactions": 2724,
+        "capturedAt": "2026-08-15T06:00:12.338013+00:00"
+      },
+      {
+        "date": "2026-08-15",
+        "followers": 18051,
+        "reach": 24578,
+        "profileViews": 1167,
+        "interactions": 5103,
+        "capturedAt": "2026-08-16T06:00:10.56772+00:00"
+      },
+      {
+        "date": "2026-08-16",
+        "followers": 18177,
+        "reach": 53127,
+        "profileViews": 1806,
+        "interactions": 7584,
+        "capturedAt": "2026-08-17T06:00:12.183064+00:00"
+      },
+      {
+        "date": "2026-08-17",
+        "followers": 18296,
+        "reach": 22802,
+        "profileViews": 1237,
+        "interactions": 3249,
+        "capturedAt": "2026-08-18T06:00:14.70762+00:00"
+      },
+      {
+        "date": "2026-08-18",
+        "followers": 18444,
+        "reach": 22224,
+        "profileViews": 1206,
+        "interactions": 4572,
+        "capturedAt": "2026-08-19T06:00:12.701186+00:00"
+      },
+      {
+        "date": "2026-08-19",
+        "followers": 18560,
+        "reach": 19401,
+        "profileViews": 887,
+        "interactions": 3353,
+        "capturedAt": "2026-08-20T06:00:12.534567+00:00"
+      },
+      {
+        "date": "2026-08-20",
+        "followers": 18666,
+        "reach": 19687,
+        "profileViews": 758,
+        "interactions": 2882,
+        "capturedAt": "2026-08-21T06:00:11.939103+00:00"
+      },
+      {
+        "date": "2026-08-21",
+        "followers": 18731,
+        "reach": 17330,
+        "profileViews": 695,
+        "interactions": 4341,
+        "capturedAt": "2026-08-22T06:00:16.725838+00:00"
+      },
+      {
+        "date": "2026-08-22",
+        "followers": 18776,
+        "reach": 20651,
+        "profileViews": 765,
+        "interactions": 3288,
+        "capturedAt": "2026-08-23T06:00:12.3887+00:00"
+      },
+      {
+        "date": "2026-08-23",
+        "followers": 18814,
+        "reach": 20745,
+        "profileViews": 760,
+        "interactions": 3158,
+        "capturedAt": "2026-08-24T06:00:08.919323+00:00"
+      },
+      {
+        "date": "2026-08-24",
+        "followers": 18896,
+        "reach": 18089,
+        "profileViews": 773,
+        "interactions": 2508,
+        "capturedAt": "2026-08-25T06:00:12.98417+00:00"
+      },
+      {
+        "date": "2026-08-25",
+        "followers": 18968,
+        "reach": 14858,
+        "profileViews": 808,
+        "interactions": 7093,
+        "capturedAt": "2026-08-26T06:00:17.295457+00:00"
+      },
+      {
+        "date": "2026-08-26",
+        "followers": 19070,
+        "reach": 31326,
+        "profileViews": 1051,
+        "interactions": 5861,
+        "capturedAt": "2026-08-27T06:00:10.258716+00:00"
+      },
+      {
+        "date": "2026-08-27",
+        "followers": 19155,
+        "reach": 21950,
+        "profileViews": 826,
+        "interactions": 3488,
+        "capturedAt": "2026-08-28T06:00:10.169279+00:00"
+      },
+      {
+        "date": "2026-08-28",
+        "followers": 19211,
+        "reach": 20503,
+        "profileViews": 726,
+        "interactions": 3347,
+        "capturedAt": "2026-08-29T06:00:10.290232+00:00"
+      },
+      {
+        "date": "2026-08-29",
+        "followers": 19238,
+        "reach": 16767,
+        "profileViews": 570,
+        "interactions": 4761,
+        "capturedAt": "2026-08-30T06:00:10.728552+00:00"
+      },
+      {
+        "date": "2026-08-30",
+        "followers": 19296,
+        "reach": 25664,
+        "profileViews": 739,
+        "interactions": 4846,
+        "capturedAt": "2026-08-31T06:00:11.589025+00:00"
+      },
+      {
+        "date": "2026-08-31",
+        "followers": 19377,
+        "reach": 25297,
+        "profileViews": 1013,
+        "interactions": 3911,
+        "capturedAt": "2026-09-01T06:00:12.307314+00:00"
+      },
+      {
+        "date": "2026-09-01",
+        "followers": 19454,
+        "reach": 21701,
+        "profileViews": 920,
+        "interactions": 4805,
+        "capturedAt": "2026-09-02T06:00:12.041022+00:00"
+      },
+      {
+        "date": "2026-09-02",
+        "followers": 19544,
+        "reach": 21839,
+        "profileViews": 796,
+        "interactions": 3375,
+        "capturedAt": "2026-09-03T06:00:13.013919+00:00"
+      },
+      {
+        "date": "2026-09-03",
+        "followers": 19631,
+        "reach": 19740,
+        "profileViews": 902,
+        "interactions": 2976,
+        "capturedAt": "2026-09-04T06:00:14.678882+00:00"
+      },
+      {
+        "date": "2026-09-04",
+        "followers": 19718,
+        "reach": 29006,
+        "profileViews": 1170,
+        "interactions": 6391,
+        "capturedAt": "2026-09-05T06:00:10.887268+00:00"
+      },
+      {
+        "date": "2026-09-05",
+        "followers": 19760,
+        "reach": 27141,
+        "profileViews": 659,
+        "interactions": 3362,
+        "capturedAt": "2026-09-06T06:00:15.314079+00:00"
+      },
+      {
+        "date": "2026-09-06",
+        "followers": 19803,
+        "reach": 26343,
+        "profileViews": 640,
+        "interactions": 3746,
+        "capturedAt": "2026-09-07T06:00:15.790707+00:00"
+      },
+      {
+        "date": "2026-09-07",
+        "followers": 19855,
+        "reach": 35484,
+        "profileViews": 819,
+        "interactions": 5021,
+        "capturedAt": "2026-09-08T06:00:12.72514+00:00"
+      },
+      {
+        "date": "2026-09-08",
+        "followers": 19925,
+        "reach": 34831,
+        "profileViews": 1250,
+        "interactions": 5219,
+        "capturedAt": "2026-09-09T06:00:07.277492+00:00"
+      },
+      {
+        "date": "2026-09-09",
+        "followers": 20017,
+        "reach": 34485,
+        "profileViews": 1280,
+        "interactions": 6574,
+        "capturedAt": "2026-09-10T06:00:07.84423+00:00"
+      },
+      {
+        "date": "2026-09-11",
+        "followers": 20179,
+        "reach": 71957,
+        "profileViews": 1822,
+        "interactions": 5685,
+        "capturedAt": "2026-09-12T06:00:25.73188+00:00"
+      },
+      {
+        "date": "2026-09-12",
+        "followers": 20253,
+        "reach": 86166,
+        "profileViews": 2169,
+        "interactions": 4190,
+        "capturedAt": "2026-09-13T06:00:21.101919+00:00"
+      },
+      {
+        "date": "2026-09-14",
+        "followers": 20423,
+        "reach": 84533,
+        "profileViews": 2305,
+        "interactions": 4416,
+        "capturedAt": "2026-09-15T06:00:06.273663+00:00"
+      },
+      {
+        "date": "2026-09-15",
+        "followers": 20523,
+        "reach": 64663,
+        "profileViews": 1604,
+        "interactions": 5807,
+        "capturedAt": "2026-09-16T06:00:05.538606+00:00"
+      },
+      {
+        "date": "2026-09-16",
+        "followers": 20645,
+        "reach": 56731,
+        "profileViews": 1545,
+        "interactions": 4487,
+        "capturedAt": "2026-09-17T06:00:05.958757+00:00"
+      },
+      {
+        "date": "2026-09-17",
+        "followers": 20707,
+        "reach": 62099,
+        "profileViews": 1588,
+        "interactions": 3926,
+        "capturedAt": "2026-09-18T06:00:06.118723+00:00"
+      },
+      {
+        "date": "2026-09-18",
+        "followers": 20823,
+        "reach": 57169,
+        "profileViews": 1575,
+        "interactions": 4195,
+        "capturedAt": "2026-09-19T06:00:08.56475+00:00"
+      },
+      {
+        "date": "2026-09-19",
+        "followers": 20889,
+        "reach": 68857,
+        "profileViews": 1690,
+        "interactions": 5114,
+        "capturedAt": "2026-09-20T06:00:05.662339+00:00"
+      },
+      {
+        "date": "2026-09-20",
+        "followers": 20947,
+        "reach": 135397,
+        "profileViews": 2874,
+        "interactions": 5927,
+        "capturedAt": "2026-09-21T06:00:04.938316+00:00"
+      },
+      {
+        "date": "2026-09-21",
+        "followers": 21021,
+        "reach": 100363,
+        "profileViews": 2477,
+        "interactions": 4142,
+        "capturedAt": "2026-09-22T06:00:05.316569+00:00"
+      },
+      {
+        "date": "2026-09-22",
+        "followers": 21112,
+        "reach": 118143,
+        "profileViews": 2658,
+        "interactions": 5395,
+        "capturedAt": "2026-09-23T06:00:05.228006+00:00"
+      },
+      {
+        "date": "2026-09-23",
+        "followers": 21218,
+        "reach": 118589,
+        "profileViews": 2710,
+        "interactions": 5334,
+        "capturedAt": "2026-09-24T06:00:06.158043+00:00"
+      },
+      {
+        "date": "2026-09-24",
+        "followers": 21276,
+        "reach": 108088,
+        "profileViews": 2317,
+        "interactions": 3647,
+        "capturedAt": "2026-09-25T06:00:07.604099+00:00"
+      },
+      {
+        "date": "2026-09-25",
+        "followers": 21364,
+        "reach": 61360,
+        "profileViews": 1702,
+        "interactions": 5318,
+        "capturedAt": "2026-09-26T06:00:06.91914+00:00"
+      },
+      {
+        "date": "2026-09-26",
+        "followers": 21437,
+        "reach": 46955,
+        "profileViews": 1529,
+        "interactions": 4494,
+        "capturedAt": "2026-09-27T06:00:06.777326+00:00"
+      },
+      {
+        "date": "2026-09-27",
+        "followers": 21510,
+        "reach": 62324,
+        "profileViews": 2070,
+        "interactions": 5644,
+        "capturedAt": "2026-09-28T06:00:09.900873+00:00"
+      },
+      {
+        "date": "2026-09-28",
+        "followers": 21591,
+        "reach": 49093,
+        "profileViews": 2191,
+        "interactions": 5128,
+        "capturedAt": "2026-09-29T06:00:04.492345+00:00"
+      },
+      {
+        "date": "2026-09-29",
+        "followers": 21676,
+        "reach": 55891,
+        "profileViews": 1891,
+        "interactions": 6674,
+        "capturedAt": "2026-09-30T06:00:05.905274+00:00"
+      },
+      {
+        "date": "2026-09-30",
+        "followers": 21754,
+        "reach": 84490,
+        "profileViews": 2306,
+        "interactions": 6469,
+        "capturedAt": "2026-10-01T06:00:05.583007+00:00"
+      },
+      {
+        "date": "2026-10-01",
+        "followers": 21867,
+        "reach": 84014,
+        "profileViews": 2620,
+        "interactions": 4861,
+        "capturedAt": "2026-10-02T06:00:05.552529+00:00"
+      },
+      {
+        "date": "2026-10-02",
+        "followers": 22016,
+        "reach": 39485,
+        "profileViews": 1469,
+        "interactions": 7438,
+        "capturedAt": "2026-10-03T06:00:08.294198+00:00"
+      },
+      {
+        "date": "2026-10-03",
+        "followers": 22235,
+        "reach": 65548,
+        "profileViews": 3345,
+        "interactions": 11402,
+        "capturedAt": "2026-10-04T06:00:05.178216+00:00"
+      },
+      {
+        "date": "2026-10-04",
+        "followers": 22577,
+        "reach": 87489,
+        "profileViews": 8576,
+        "interactions": 11777,
+        "capturedAt": "2026-10-05T06:00:06.162527+00:00"
+      },
+      {
+        "date": "2026-10-05",
+        "followers": 22722,
+        "reach": 102669,
+        "profileViews": 4272,
+        "interactions": 5950,
+        "capturedAt": "2026-10-06T06:00:06.001747+00:00"
+      },
+      {
+        "date": "2026-10-06",
+        "followers": 22732,
+        "reach": 18834,
+        "profileViews": 870,
+        "interactions": 3529,
+        "capturedAt": "2026-10-07T06:00:06.910593+00:00"
+      }
+    ],
+    "totals": {
+      "profileViews": 88968,
+      "interactions": 269020
+    },
+    "notes": [
+      "Seguidores são snapshots atuais na coleta, não fechamento do dia nominal. Base nominal 07/08 coletada em 08/08 às 03h; final nominal 06/10 coletado em 07/10 às 03h (Brasília). capturedAt registra o horário de persistência, próximo da coleta.",
+      "Variação líquida entre esses snapshots; não mede seguidores atribuídos aos anúncios.",
+      "Insights diários do Instagram consultados pelo coletor em janela UTC (00:00–23:59:59), diferente do dia de mídia em America/Sao_Paulo.",
+      "Totais de visitas e interações somam somente os dias presentes; lacunas não são zeros.",
+      "Coletor legado converte falhas/ausências em zero. Zeros sem comprovação ficam null neste relatório.",
+      "Qualidade dos snapshots: 0 zeros de seguidores; 0 quedas entre coletas consecutivas."
+    ]
+  }
+}
