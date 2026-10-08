@@ -1,5 +1,7 @@
 'use strict';
+const accountIds = ['act_716311018073722', 'act_2174013390129316'];
 const sources = {
+  'data/relatorio-unificado.json': { unified: true, label: 'Contas 01 e 02', key: 'consolidado' },
   'data/relatorio-campanha.json': { id: 'act_716311018073722', name: 'Felipe Mendes Pampolha', label: 'Conta 01', legacy: true, key: 'relatorio-inicial-conta-01' },
   'data/relatorio-conta-01.json': { id: 'act_716311018073722', name: 'Felipe Mendes Pampolha', label: 'Conta 01', legacy: false, key: 'historico-conta-01' },
   'data/relatorio-conta-02.json': { id: 'act_2174013390129316', name: 'Felipe Mendes 02', label: 'Conta 02', legacy: false, key: 'historico-conta-02' }
@@ -19,7 +21,7 @@ const captured = (row, withTime = true) => row?.capturedAt && Number.isFinite(Da
 const pointTime = row => row.capturedAt && Number.isFinite(Date.parse(row.capturedAt)) ? Date.parse(row.capturedAt) : dayTime(row.date);
 const text = (id, value) => { $(id).textContent = value; };
 const cell = (tag, value) => { const element = document.createElement(tag); element.textContent = value; return element; };
-let report;
+let report, snapshot;
 
 function notes(id, values) {
   $(id).replaceChildren(...values.filter(Boolean).map(value => cell('li', value)));
@@ -33,7 +35,7 @@ function svgElement(tag, attributes, content) {
   return element;
 }
 
-function chart(id, rows, key, title, fromZero) {
+function chart(id, rows, key, title, fromZero, period = report.meta) {
   const target = $(id);
   target.replaceChildren();
   const data = rows.filter(row => Number.isFinite(dayTime(row.date))).sort((a, b) => pointTime(a) - pointTime(b));
@@ -42,8 +44,8 @@ function chart(id, rows, key, title, fromZero) {
   const values = available.map(row => row[key]);
   const lower = Math.min(...values), upper = Math.max(...values), padding = Math.max((upper - lower) * .12, 1);
   const min = fromZero ? 0 : Math.max(0, lower - padding), max = Math.max(upper + padding, min + 1);
-  const start = Math.min(dayTime(report.meta.start), pointTime(data[0]));
-  const end = Math.max(dayTime(report.meta.end), pointTime(data[data.length - 1]), start + 86400000);
+  const start = Math.min(dayTime(period.start), pointTime(data[0]));
+  const end = Math.max(dayTime(period.end), pointTime(data[data.length - 1]), start + 86400000);
   const x = row => 68 + (pointTime(row) - start) / (end - start) * 720;
   const y = value => 220 - (value - min) / (max - min) * 190;
   const svg = svgElement('svg', { viewBox: '0 0 810 264', class: 'chart', role: 'img', 'aria-labelledby': `${id}-title ${id}-desc` });
@@ -88,9 +90,11 @@ function renderCampaigns() {
   $('result-heading').hidden = !hasResults;
   text('campaign-note', hasResults ? 'CPC calculado sobre todos os cliques. Resultados dependem do objetivo e não são somados entre tipos distintos.' : 'CPC calculado sobre todos os cliques. Resultado por objetivo não disponível; a tabela mostra métricas de entrega.');
   const query = $('search').value.toLocaleLowerCase('pt-BR'), key = $('sort').value;
-  const rows = report.ads.campaigns.filter(row => `${row.name || ''} ${row.id || ''}`.toLocaleLowerCase('pt-BR').includes(query)).sort((a, b) => key === 'name' ? String(a.name).localeCompare(String(b.name), 'pt-BR') : (valid(b[key]) ? b[key] : -Infinity) - (valid(a[key]) ? a[key] : -Infinity));
+  const account = $('campaign-account')?.value || 'all';
+  const rows = report.ads.campaigns.filter(row => (account === 'all' || row.accountId === account)).filter(row => `${row.name || ''} ${row.id || ''}`.toLocaleLowerCase('pt-BR').includes(query)).sort((a, b) => key === 'name' ? String(a.name).localeCompare(String(b.name), 'pt-BR') : (valid(b[key]) ? b[key] : -Infinity) - (valid(a[key]) ? a[key] : -Infinity));
   $('campaign-rows').replaceChildren(...rows.map(row => {
     const tr = document.createElement('tr'), name = cell('td', row.name || 'Campanha sem nome');
+    if (config.unified) { name.append(cell('small', `${row.accountLabel} · ${row.accountName}`)); tr.dataset.accountId = row.accountId; }
     name.append(cell('small', row.objective === 'LINK_CLICKS' ? 'Tráfego / cliques no link' : row.objective || 'Objetivo indisponível'));
     name.append(cell('small', `ID: ${row.id || 'indisponível'}`)); tr.dataset.campaignId = row.id || '';
     tr.append(name);
@@ -112,6 +116,7 @@ function renderHighlights() {
   report.ads.highlights.forEach(item => {
     const article = document.createElement('article'); article.className = 'highlight';
     article.append(cell('h3', item.name || 'Anúncio sem nome'));
+    if (config.unified) article.append(cell('p', `${item.accountLabel} · ${item.accountName}`));
     if (item.campaignName) article.append(cell('p', item.campaignName));
     article.append(cell('p', `${number(item.impressions)} impressões · ${number(item.reach)} de alcance`));
     article.append(cell('p', `Investimento: ${money(item.spend)} · Interações: ${number(item.engagements)}`));
@@ -127,10 +132,10 @@ function renderAdsChart() {
 }
 
 function renderInstagram(ig) {
-  const meta = report.meta;
+  const meta = ig.period || report.meta;
   const growth = valid(ig.baseline?.followers) && valid(ig.end?.followers) ? ig.end.followers - ig.baseline.followers : null;
   text('growth', signed(growth));
-  text('profile', meta.profile);
+  text('profile', `${ig.profile || report.meta.profile} · ${date(meta.start)} a ${date(meta.end)} · ${meta.days} dias`);
   text('growth-window', `Coletas: ${captured(ig.baseline, false)} a ${captured(ig.end, false)}`);
   text('baseline-followers', number(ig.baseline?.followers)); text('end-followers', number(ig.end?.followers));
   text('baseline-date', captured(ig.baseline)); text('end-date', captured(ig.end));
@@ -138,7 +143,7 @@ function renderInstagram(ig) {
   text('ig-days', `${number(ig.coverageDays)} / ${meta.days}`); text('ig-coverage', `${number(ig.coverageDays)} de ${meta.days} dias nominais com registros. ${ig.missingDates.length ? `Datas nominais ausentes: ${ig.missingDates.map(date).join(', ')}.` : ''}`);
   notes('ig-notes', [...ig.notes, ig.missingDates.length ? `Datas sem registro: ${ig.missingDates.map(date).join(', ')}.` : null]);
   const history = ig.baseline && !ig.daily.some(row => row.date === ig.baseline.date) ? [ig.baseline, ...ig.daily] : ig.daily;
-  chart('ig-chart', history, 'followers', 'Histórico de seguidores do Instagram', false);
+  chart('ig-chart', history, 'followers', 'Histórico de seguidores do Instagram', false, meta);
   dataRows('ig-rows', history, ['date', 'followers']);
 }
 
@@ -147,10 +152,11 @@ function render() {
   const period = `${date(meta.start)} a ${date(meta.end)}`;
   text('coverage', `${period} · ${meta.days} dias`); text('period-badge', period);
   text('footer-period', `${config.label} · ${period}`);
-  text('account-title', `${config.label} · ${meta.account?.name || config.name}`);
-  text('account-id', `ID da conta: ${config.id} · Meta Ads · BRL`);
-  text('account-source', `Fonte: ${ads.source}. Mídia exclusiva desta conta; não inclui nem soma a outra conta.`);
-  text('spend', money(totals.spend)); text('impressions', number(totals.impressions)); text('reach', number(totals.reach));
+  text('account-title', config.unified ? 'Contas 01 e 02 · Mídia consolidada' : `${config.label} · ${meta.account?.name || config.name}`);
+  text('account-id', config.unified ? `IDs: ${accountIds.join(' · ')} · Meta Ads · BRL` : `ID da conta: ${config.id} · Meta Ads · BRL`);
+  text('account-source', config.unified ? `Fonte: ${ads.source}. Investimento, impressões e cliques consolidados. Alcance exibido separadamente por conta.` : `Fonte: ${ads.source}. Mídia exclusiva desta conta; não inclui nem soma a outra conta.`);
+  text('spend', money(totals.spend)); text('impressions', number(totals.impressions)); text('reach', number(config.unified ? totals.clicks : totals.reach));
+  if (config.unified) renderAccounts();
   if (ig) renderInstagram(ig); else text('summary-clicks', number(totals.clicks));
   text('ads-coverage', `${ads.daily.length} dias com entrega reportada · ${number(ads.coverageDays)} dias consultados`);
   const noDelivery = ads.noDeliveryDates || [];
@@ -165,8 +171,9 @@ function render() {
   renderAdsChart(); dataRows('ads-rows', ads.daily, ['date', 'spend', 'impressions', 'clicks']); renderCampaigns(); renderHighlights();
   const partial = meta.status !== 'complete';
   $('status').className = `status${partial ? ' partial' : ''}`;
-  const coverage = `${ig ? `Instagram: ${number(ig.coverageDays)} de ${meta.days} dias com registros. ` : ''}Mídia: ${number(ads.coverageDays)} de ${meta.days} dias consultados.`;
+  const coverage = `${ig ? `Instagram: ${number(ig.coverageDays)} de ${ig.period?.days || meta.days} dias com registros. ` : ''}Mídia: ${number(ads.coverageDays)} de ${meta.days} dias consultados.`;
   text('status-text', `${coverage} ${partial ? 'Cobertura parcial; consulte as ressalvas em cada seção.' : 'Consulta concluída; critérios e fontes ao final do relatório.'}`);
+  if ($('download-pdf')) $('download-pdf').hidden = false;
   $('report').hidden = false; $('export').disabled = !ads.campaigns.length; $('print').disabled = false;
 }
 
@@ -179,7 +186,7 @@ function csvField(value) {
 
 function campaignCSV() {
   const header = ['ID da conta', 'Conta', 'ID da campanha', 'Fonte', 'Período inicial', 'Período final', 'Campanha', 'Objetivo', 'Investimento BRL', 'Impressões', 'Alcance', 'Cliques', 'Cliques no link', 'CPC BRL', 'CPM BRL', 'Resultado', 'Tipo de resultado'];
-  const rows = report.ads.campaigns.map(row => [config.id, report.meta.account?.name || config.name, row.id, report.ads.source, report.meta.start, report.meta.end, row.name, row.objective, row.spend, row.impressions, row.reach, row.clicks, row.linkClicks, ratio(row.spend, row.clicks), ratio(row.spend, row.impressions, 1000), row.results, row.resultType]);
+  const rows = report.ads.campaigns.map(row => [row.accountId || config.id, row.accountName || report.meta.account?.name || config.name, row.id, report.ads.source, report.meta.start, report.meta.end, row.name, row.objective, row.spend, row.impressions, row.reach, row.clicks, row.linkClicks, ratio(row.spend, row.clicks), ratio(row.spend, row.impressions, 1000), row.results, row.resultType]);
   return [header, ...rows].map(row => row.map(csvField).join(';')).join('\r\n');
 }
 
@@ -189,14 +196,60 @@ function exportCSV() {
   const link = document.createElement('a'); link.href = url; link.download = `felipe-pampolha-${config.key}-${report.meta.start}-a-${report.meta.end}.csv`; document.body.append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
+function renderAccounts() {
+  $('account-rows').replaceChildren(...report.accounts.map(account => {
+    const row = document.createElement('tr'), label = cell('td', `${account.label} · ${account.name}`);
+    label.append(cell('small', `${date(account.start)} a ${date(account.end)} · ${account.days} dias`), cell('small', `ID: ${account.id}`));
+    row.append(label, ...[money(account.totals.spend), number(account.totals.impressions), number(account.totals.reach), number(account.totals.clicks)].map(value => cell('td', value)));
+    return row;
+  }));
+  const recent = snapshot.views.recent.ads.totals;
+  $('recent-summary').hidden = $('view').value !== 'history';
+  text('recent-summary-values', `${money(recent.spend)} investidos · ${number(recent.impressions)} impressões · ${number(recent.clicks)} cliques · ${snapshot.views.recent.ads.campaigns.length} campanhas com entrega. Instagram: ${signed(snapshot.views.recent.instagram.end.followers - snapshot.views.recent.instagram.baseline.followers)} seguidores entre as coletas disponíveis.`);
+}
+
+function selectView() {
+  report = snapshot.views[$('view').value];
+  $('search').value = ''; $('campaign-account').value = 'all';
+  render();
+}
+
+function validateUnified(data) {
+  const meta = data?.meta;
+  if (meta?.version !== 1 || meta.businessId !== '1270499364534184' || meta.currency !== 'BRL' || meta.timezone !== 'America/Sao_Paulo') throw new Error('wrong-business');
+  const validPeriod = period => period && [period.start, period.end].every(value => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value) && Number.isFinite(dayTime(value)) && new Date(dayTime(value)).toISOString().slice(0, 10) === value) && period.end >= period.start && period.days === (dayTime(period.end) - dayTime(period.start)) / 86400000 + 1;
+  for (const key of ['recent', 'history']) {
+    const view = data.views?.[key], ads = view?.ads, ig = view?.instagram;
+    if (!validPeriod(view?.meta) || view.meta.start !== (key === 'recent' ? '2026-08-08' : '2025-08-19') || view.meta.end !== '2026-10-06' || !ads?.totals || ads.totals.reach !== null) throw new Error('invalid-view');
+    if (!Array.isArray(view.accounts) || view.accounts.length !== 2 || accountIds.some(id => view.accounts.filter(account => account.id === id).length !== 1)) throw new Error('wrong-account');
+    if (!ig?.totals || !validPeriod(ig.period) || ig.period.start !== '2026-08-08' || ig.period.end !== '2026-10-06' || ig.profile !== '@felipepampolha.rio') throw new Error('invalid-instagram');
+    for (const [object, keys] of [[view.meta, ['sources', 'notes']], [ads, ['daily', 'campaigns', 'highlights', 'missingDates', 'noDeliveryDates']], [ig, ['daily', 'notes', 'missingDates']]]) {
+      if (keys.some(name => !Array.isArray(object[name]))) throw new Error('invalid-series');
+    }
+    for (const account of view.accounts) {
+      if (!validPeriod(account) || !account.totals || !['spend', 'impressions', 'clicks'].every(name => valid(account.totals[name]) && account.totals[name] >= 0)) throw new Error('invalid-account');
+    }
+    for (const row of [...ads.campaigns, ...ads.highlights]) {
+      const account = view.accounts.find(item => item.id === row.accountId);
+      if (!account || row.accountName !== account.name || row.accountLabel !== account.label || !row.id) throw new Error('wrong-campaign-account');
+    }
+    if (new Set(ads.campaigns.map(row => `${row.accountId}:${row.id}`)).size !== ads.campaigns.length) throw new Error('duplicate-campaign');
+    for (const name of ['spend', 'impressions', 'clicks']) {
+      const total = ads.totals[name], sum = view.accounts.reduce((value, account) => value + account.totals[name], 0);
+      if (!valid(total) || total < 0 || Math.abs(total - sum) > .011) throw new Error('invalid-total');
+    }
+  }
+}
+
 async function load() {
-  $('retry').hidden = true; $('report').hidden = true; $('print').disabled = true; $('export').disabled = true;
+  $('retry').hidden = true; $('report').hidden = true; if ($('download-pdf')) $('download-pdf').hidden = true; $('print').disabled = true; $('export').disabled = true;
   document.querySelector('main').setAttribute('aria-busy', 'true'); $('status').className = 'status'; text('status-text', 'Carregando os dados do relatório…');
   try {
-    if (!config || config.id !== document.body.dataset.expectedAccount) throw new Error('invalid-source');
+    if (!config || (!config.unified && config.id !== document.body.dataset.expectedAccount)) throw new Error('invalid-source');
     const response = await fetch(source, { cache: 'no-store' });
     if (!response.ok) throw new Error('snapshot-unavailable');
     const data = await response.json();
+    if (config.unified) { validateUnified(data); snapshot = data; $('view').value = new URLSearchParams(location.search).get('view') === 'history' ? 'history' : 'recent'; selectView(); return; }
     const meta = data.meta, account = meta?.account;
     const validDate = value => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value) && Number.isFinite(dayTime(value)) && new Date(dayTime(value)).toISOString().slice(0, 10) === value;
     if (!validDate(meta?.start) || !validDate(meta?.end) || meta.end < meta.start || meta.days !== (dayTime(meta.end) - dayTime(meta.start)) / 86400000 + 1 || !data.ads?.totals) throw new Error('invalid-report');
@@ -214,6 +267,8 @@ async function load() {
 }
 window.addEventListener('beforeprint', () => document.querySelectorAll('.data-notes').forEach(detail => { if (!detail.hasAttribute('data-was-open')) detail.dataset.wasOpen = String(detail.open); detail.open = true; }));
 window.addEventListener('afterprint', () => document.querySelectorAll('.data-notes').forEach(detail => { detail.open = detail.dataset.wasOpen === 'true'; delete detail.dataset.wasOpen; }));
+$('view')?.addEventListener('change', selectView);
+$('campaign-account')?.addEventListener('change', renderCampaigns);
 $('metric').addEventListener('change', renderAdsChart);
 $('search').addEventListener('input', renderCampaigns); $('sort').addEventListener('change', renderCampaigns);
 $('export').addEventListener('click', exportCSV); $('print').addEventListener('click', () => window.print()); $('retry').addEventListener('click', load);

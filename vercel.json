@@ -5,6 +5,26 @@
       "source": "/home",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/relatorio-conta-01",
+      "destination": "/relatorio-campanha?view=history",
+      "permanent": false
+    },
+    {
+      "source": "/relatorio-conta-01.html",
+      "destination": "/relatorio-campanha?view=history",
+      "permanent": false
+    },
+    {
+      "source": "/relatorio-conta-02",
+      "destination": "/relatorio-campanha?view=history",
+      "permanent": false
+    },
+    {
+      "source": "/relatorio-conta-02.html",
+      "destination": "/relatorio-campanha?view=history",
+      "permanent": false
     }
   ],
   "headers": [
@@ -27,6 +47,15 @@
         {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
+    {
+      "source": "/relatorios/relatorio-consolidado.pdf",
+      "headers": [
+        {
+          "key": "Content-Disposition",
+          "value": "attachment; filename=\"felipe-pampolha-relatorio-consolidado.pdf\""
         }
       ]
     }

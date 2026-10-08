@@ -1,0 +1,5931 @@
+{
+  "meta": {
+    "version": 1,
+    "businessId": "1270499364534184",
+    "currency": "BRL",
+    "timezone": "America/Sao_Paulo",
+    "extractedAt": "2026-10-07T23:21:06.884268+00:00",
+    "provenance": {
+      "relatorio-campanha.json": {
+        "sha256": "90b4b8492af8820580d956bd799d3f6c62bf2d49b6459ec54733b9db6f09bbff",
+        "extractedAt": "2026-10-07T22:57:25.202634+00:00"
+      },
+      "relatorio-conta-01.json": {
+        "sha256": "2ce2691a9fe2e941c989b958c9b6f39603643941f45541d7e0671d1a03b205da",
+        "extractedAt": "2026-10-07T23:21:01.397769+00:00"
+      },
+      "relatorio-conta-02.json": {
+        "sha256": "8ed789cb159c759e6c97c6d927d796cd5cb8fa453e9a9e46b5a01e79e096dd0e",
+        "extractedAt": "2026-10-07T23:21:06.884268+00:00"
+      }
+    }
+  },
+  "views": {
+    "recent": {
+      "meta": {
+        "title": "Felipe Pampolha · 60 dias e Instagram",
+        "start": "2026-08-08",
+        "end": "2026-10-06",
+        "days": 60,
+        "timezone": "America/Sao_Paulo",
+        "extractedAt": "2026-10-07T23:21:06.884268+00:00",
+        "profile": "@felipepampolha.rio",
+        "sources": [
+          "Meta Marketing API v24.0 — conta completa, sem filtro por nome · Felipe Pampolha 01 (act_716311018073722)",
+          "Meta Marketing API v24.0 — conta completa, sem filtro por nome · Felipe Pampolha 02 (act_2174013390129316)",
+          "Supabase pampolha_ig_daily_metrics · coletor pampolha-snapshot v3"
+        ],
+        "status": "partial",
+        "notes": [
+          "As duas contas estão reunidas; cada campanha e anúncio mantém sua conta de origem.",
+          "Alcance único entre contas indisponível: públicos podem se sobrepor. O alcance é exibido separadamente por conta e não é somado.",
+          "CPC, CPM e CTR são calculados pelos totais correspondentes, nunca pela média das taxas.",
+          "Instagram corresponde somente a 08/08/2026–06/10/2026, com 58 de 60 dias disponíveis; não representa o histórico completo da mídia."
+        ]
+      },
+      "ads": {
+        "source": "Meta Marketing API v24.0 · contas Felipe Pampolha 01 e 02",
+        "totals": {
+          "spend": 10399.22,
+          "impressions": 1574911.0,
+          "clicks": 25878.0,
+          "linkClicks": 26347.0,
+          "engagements": 175935.0,
+          "videoViews": 917144.0,
+          "reach": null
+        },
+        "daily": [
+          {
+            "date": "2026-08-08",
+            "spend": 88.38,
+            "impressions": 8956.0,
+            "clicks": 221.0
+          },
+          {
+            "date": "2026-08-09",
+            "spend": 104.47,
+            "impressions": 11878.0,
+            "clicks": 281.0
+          },
+          {
+            "date": "2026-08-10",
+            "spend": 90.37,
+            "impressions": 10424.0,
+            "clicks": 237.0
+          },
+          {
+            "date": "2026-08-11",
+            "spend": 71.14,
+            "impressions": 7825.0,
+            "clicks": 196.0
+          },
+          {
+            "date": "2026-08-12",
+            "spend": 84.4,
+            "impressions": 8089.0,
+            "clicks": 189.0
+          },
+          {
+            "date": "2026-08-13",
+            "spend": 75.77,
+            "impressions": 8038.0,
+            "clicks": 171.0
+          },
+          {
+            "date": "2026-08-14",
+            "spend": 85.02,
+            "impressions": 8844.0,
+            "clicks": 175.0
+          },
+          {
+            "date": "2026-08-15",
+            "spend": 75.93,
+            "impressions": 8452.0,
+            "clicks": 190.0
+          },
+          {
+            "date": "2026-08-16",
+            "spend": 60.2,
+            "impressions": 8045.0,
+            "clicks": 211.0
+          },
+          {
+            "date": "2026-09-01",
+            "spend": 2.78,
+            "impressions": 361.0,
+            "clicks": 14.0
+          },
+          {
+            "date": "2026-09-02",
+            "spend": 0.16,
+            "impressions": 11.0,
+            "clicks": 2.0
+          },
+          {
+            "date": "2026-09-03",
+            "spend": 24.21,
+            "impressions": 3593.0,
+            "clicks": 114.0
+          },
+          {
+            "date": "2026-09-07",
+            "spend": 8.15,
+            "impressions": 1555.0,
+            "clicks": 32.0
+          },
+          {
+            "date": "2026-09-08",
+            "spend": 119.74,
+            "impressions": 17558.0,
+            "clicks": 433.0
+          },
+          {
+            "date": "2026-09-09",
+            "spend": 98.08,
+            "impressions": 14146.0,
+            "clicks": 322.0
+          },
+          {
+            "date": "2026-09-10",
+            "spend": 128.19,
+            "impressions": 18685.0,
+            "clicks": 377.0
+          },
+          {
+            "date": "2026-09-11",
+            "spend": 324.65,
+            "impressions": 52135.0,
+            "clicks": 834.0
+          },
+          {
+            "date": "2026-09-12",
+            "spend": 467.09,
+            "impressions": 75428.0,
+            "clicks": 1268.0
+          },
+          {
+            "date": "2026-09-13",
+            "spend": 708.33,
+            "impressions": 122967.0,
+            "clicks": 1867.0
+          },
+          {
+            "date": "2026-09-14",
+            "spend": 520.43,
+            "impressions": 83375.0,
+            "clicks": 1426.0
+          },
+          {
+            "date": "2026-09-15",
+            "spend": 329.45,
+            "impressions": 53035.0,
+            "clicks": 825.0
+          },
+          {
+            "date": "2026-09-16",
+            "spend": 284.04,
+            "impressions": 41727.0,
+            "clicks": 634.0
+          },
+          {
+            "date": "2026-09-17",
+            "spend": 322.9,
+            "impressions": 52315.0,
+            "clicks": 735.0
+          },
+          {
+            "date": "2026-09-18",
+            "spend": 273.22,
+            "impressions": 46459.0,
+            "clicks": 688.0
+          },
+          {
+            "date": "2026-09-19",
+            "spend": 294.71,
+            "impressions": 49053.0,
+            "clicks": 785.0
+          },
+          {
+            "date": "2026-09-20",
+            "spend": 740.35,
+            "impressions": 138199.0,
+            "clicks": 1888.0
+          },
+          {
+            "date": "2026-09-21",
+            "spend": 577.13,
+            "impressions": 104855.0,
+            "clicks": 1401.0
+          },
+          {
+            "date": "2026-09-22",
+            "spend": 663.64,
+            "impressions": 119935.0,
+            "clicks": 1633.0
+          },
+          {
+            "date": "2026-09-23",
+            "spend": 699.97,
+            "impressions": 115363.0,
+            "clicks": 1668.0
+          },
+          {
+            "date": "2026-09-24",
+            "spend": 652.0,
+            "impressions": 101563.0,
+            "clicks": 1415.0
+          },
+          {
+            "date": "2026-09-25",
+            "spend": 401.49,
+            "impressions": 55311.0,
+            "clicks": 886.0
+          },
+          {
+            "date": "2026-09-26",
+            "spend": 205.55,
+            "impressions": 23262.0,
+            "clicks": 545.0
+          },
+          {
+            "date": "2026-09-27",
+            "spend": 308.08,
+            "impressions": 40479.0,
+            "clicks": 763.0
+          },
+          {
+            "date": "2026-09-28",
+            "spend": 233.76,
+            "impressions": 28506.0,
+            "clicks": 636.0
+          },
+          {
+            "date": "2026-09-29",
+            "spend": 193.33,
+            "impressions": 20832.0,
+            "clicks": 478.0
+          },
+          {
+            "date": "2026-09-30",
+            "spend": 443.83,
+            "impressions": 44262.0,
+            "clicks": 950.0
+          },
+          {
+            "date": "2026-10-01",
+            "spend": 638.28,
+            "impressions": 69390.0,
+            "clicks": 1388.0
+          }
+        ],
+        "campaigns": [
+          {
+            "id": "120251598416400790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 23.06",
+            "objective": "LINK_CLICKS",
+            "spend": 212.36,
+            "impressions": 22155.0,
+            "reach": 17583.0,
+            "clicks": 592.0,
+            "linkClicks": 601.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120250881665290790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 17.06",
+            "objective": "LINK_CLICKS",
+            "spend": 105.67,
+            "impressions": 7793.0,
+            "reach": 6395.0,
+            "clicks": 330.0,
+            "linkClicks": 334.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120253121753300790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 27.07",
+            "objective": "LINK_CLICKS",
+            "spend": 80.2,
+            "impressions": 9377.0,
+            "reach": 7432.0,
+            "clicks": 179.0,
+            "linkClicks": 184.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120252577764970790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 07.07",
+            "objective": "LINK_CLICKS",
+            "spend": 79.44,
+            "impressions": 7816.0,
+            "reach": 7043.0,
+            "clicks": 231.0,
+            "linkClicks": 234.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120253417118920790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 05.08",
+            "objective": "LINK_CLICKS",
+            "spend": 79.39,
+            "impressions": 11220.0,
+            "reach": 8887.0,
+            "clicks": 187.0,
+            "linkClicks": 196.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120252800273830790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 14.07",
+            "objective": "LINK_CLICKS",
+            "spend": 79.13,
+            "impressions": 12842.0,
+            "reach": 10032.0,
+            "clicks": 194.0,
+            "linkClicks": 202.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120242974198750790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - Dark Posts",
+            "objective": "LINK_CLICKS",
+            "spend": 51.17,
+            "impressions": 5079.0,
+            "reach": 4569.0,
+            "clicks": 113.0,
+            "linkClicks": 122.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120253505093300790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - Sampaio",
+            "objective": "LINK_CLICKS",
+            "spend": 48.32,
+            "impressions": 4269.0,
+            "reach": 2800.0,
+            "clicks": 45.0,
+            "linkClicks": 45.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "52605679799264",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+            "objective": "LINK_CLICKS",
+            "spend": 1440.34,
+            "impressions": 221502.0,
+            "reach": 112692.0,
+            "clicks": 2552.0,
+            "linkClicks": 2593.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52605680811464",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Eu não entrei na política",
+            "objective": "LINK_CLICKS",
+            "spend": 1398.16,
+            "impressions": 214440.0,
+            "reach": 112990.0,
+            "clicks": 4463.0,
+            "linkClicks": 4548.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52605680383464",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+            "objective": "LINK_CLICKS",
+            "spend": 1392.51,
+            "impressions": 200938.0,
+            "reach": 110713.0,
+            "clicks": 2965.0,
+            "linkClicks": 3030.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52605679798664",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+            "objective": "LINK_CLICKS",
+            "spend": 1282.44,
+            "impressions": 317264.0,
+            "reach": 141558.0,
+            "clicks": 4157.0,
+            "linkClicks": 4244.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52610279401064",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Ufc",
+            "objective": "LINK_CLICKS",
+            "spend": 802.94,
+            "impressions": 94442.0,
+            "reach": 65092.0,
+            "clicks": 1851.0,
+            "linkClicks": 1873.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52610668414464",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Eu acredito no esporte",
+            "objective": "LINK_CLICKS",
+            "spend": 699.97,
+            "impressions": 92670.0,
+            "reach": 54896.0,
+            "clicks": 1340.0,
+            "linkClicks": 1362.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52608367469864",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]  Política, pra mim, nunca foi sobre cargo",
+            "objective": "LINK_CLICKS",
+            "spend": 687.31,
+            "impressions": 108818.0,
+            "reach": 67340.0,
+            "clicks": 1429.0,
+            "linkClicks": 1460.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52605679798464",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+            "objective": "LINK_CLICKS",
+            "spend": 391.21,
+            "impressions": 65301.0,
+            "reach": 47876.0,
+            "clicks": 1438.0,
+            "linkClicks": 1470.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52605679798064",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+            "objective": "LINK_CLICKS",
+            "spend": 372.63,
+            "impressions": 48213.0,
+            "reach": 32882.0,
+            "clicks": 716.0,
+            "linkClicks": 743.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52611755097064",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Leo Moura",
+            "objective": "LINK_CLICKS",
+            "spend": 307.08,
+            "impressions": 34799.0,
+            "reach": 31476.0,
+            "clicks": 1058.0,
+            "linkClicks": 1058.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52613263199864",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Eu entro para dar 100%",
+            "objective": "LINK_CLICKS",
+            "spend": 214.88,
+            "impressions": 28349.0,
+            "reach": 20972.0,
+            "clicks": 631.0,
+            "linkClicks": 643.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52614084827264",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] José Aldo 2 - Quando quem acredita",
+            "objective": "LINK_CLICKS",
+            "spend": 145.51,
+            "impressions": 16450.0,
+            "reach": 14758.0,
+            "clicks": 406.0,
+            "linkClicks": 410.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52613661985664",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Bangu",
+            "objective": "LINK_CLICKS",
+            "spend": 134.49,
+            "impressions": 13783.0,
+            "reach": 10330.0,
+            "clicks": 277.0,
+            "linkClicks": 278.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52614080294464",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Política pra mim é propósito",
+            "objective": "LINK_CLICKS",
+            "spend": 129.02,
+            "impressions": 13514.0,
+            "reach": 10909.0,
+            "clicks": 233.0,
+            "linkClicks": 234.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52613261638664",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Eu não entrei na política",
+            "objective": "LINK_CLICKS",
+            "spend": 126.45,
+            "impressions": 9090.0,
+            "reach": 8269.0,
+            "clicks": 170.0,
+            "linkClicks": 162.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52614370214464",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Força do esporte",
+            "objective": "LINK_CLICKS",
+            "spend": 58.13,
+            "impressions": 5716.0,
+            "reach": 5432.0,
+            "clicks": 111.0,
+            "linkClicks": 108.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52614369251864",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Não estou por necessidade",
+            "objective": "LINK_CLICKS",
+            "spend": 53.32,
+            "impressions": 5106.0,
+            "reach": 4802.0,
+            "clicks": 80.0,
+            "linkClicks": 81.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52604748514664",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+            "objective": "LINK_CLICKS",
+            "spend": 6.59,
+            "impressions": 994.0,
+            "reach": 934.0,
+            "clicks": 41.0,
+            "linkClicks": 43.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52604748546064",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+            "objective": "LINK_CLICKS",
+            "spend": 6.23,
+            "impressions": 1150.0,
+            "reach": 1103.0,
+            "clicks": 29.0,
+            "linkClicks": 29.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52604748406864",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+            "objective": "LINK_CLICKS",
+            "spend": 5.81,
+            "impressions": 741.0,
+            "reach": 693.0,
+            "clicks": 21.0,
+            "linkClicks": 20.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52604748005064",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+            "objective": "LINK_CLICKS",
+            "spend": 5.58,
+            "impressions": 707.0,
+            "reach": 656.0,
+            "clicks": 23.0,
+            "linkClicks": 25.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52604213893064",
+            "name": "Post do Instagram: O #TimePampolha só cresce! Vem...",
+            "objective": "LINK_CLICKS",
+            "spend": 2.94,
+            "impressions": 372.0,
+            "reach": 343.0,
+            "clicks": 16.0,
+            "linkClicks": 15.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52604737774864",
+            "name": "Post do Instagram: Política não se faz com...",
+            "objective": "LINK_CLICKS",
+            "spend": 0.0,
+            "impressions": 1.0,
+            "reach": 1.0,
+            "clicks": 0.0,
+            "linkClicks": 0.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          }
+        ],
+        "highlights": [
+          {
+            "id": "120251598416420790",
+            "name": "AD01",
+            "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 23.06",
+            "impressions": 22155.0,
+            "reach": 17583.0,
+            "spend": 212.36,
+            "engagements": 4661.0,
+            "link": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120252800273840790",
+            "name": "AD01",
+            "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 14.07",
+            "impressions": 12842.0,
+            "reach": 10032.0,
+            "spend": 79.13,
+            "engagements": 1851.0,
+            "link": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120253417118940790",
+            "name": "AD01",
+            "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 05.08",
+            "impressions": 11220.0,
+            "reach": 8887.0,
+            "spend": 79.39,
+            "engagements": 1731.0,
+            "link": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120253121753280790",
+            "name": "AD01",
+            "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 27.07",
+            "impressions": 9377.0,
+            "reach": 7432.0,
+            "spend": 80.2,
+            "engagements": 1935.0,
+            "link": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120252577764990790",
+            "name": "AD01",
+            "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 07.07",
+            "impressions": 7816.0,
+            "reach": 7043.0,
+            "spend": 79.44,
+            "engagements": 3516.0,
+            "link": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "52605679799064",
+            "name": "AD01",
+            "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+            "impressions": 317264.0,
+            "reach": 141558.0,
+            "spend": 1282.44,
+            "engagements": 4869.0,
+            "link": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52605679798264",
+            "name": "AD01",
+            "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+            "impressions": 221502.0,
+            "reach": 112692.0,
+            "spend": 1440.34,
+            "engagements": 25331.0,
+            "link": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52605680811064",
+            "name": "AD01 - Eu não entrei na política",
+            "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Eu não entrei na política",
+            "impressions": 214440.0,
+            "reach": 112990.0,
+            "spend": 1398.16,
+            "engagements": 5596.0,
+            "link": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52605680383664",
+            "name": "AD01",
+            "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+            "impressions": 200938.0,
+            "reach": 110713.0,
+            "spend": 1392.51,
+            "engagements": 28473.0,
+            "link": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52608367470064",
+            "name": "AD01",
+            "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]  Política, pra mim, nunca foi sobre cargo",
+            "impressions": 108818.0,
+            "reach": 67340.0,
+            "spend": 687.31,
+            "engagements": 17100.0,
+            "link": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          }
+        ],
+        "notes": [
+          "As duas contas estão reunidas; cada campanha e anúncio mantém sua conta de origem.",
+          "Alcance único entre contas indisponível: públicos podem se sobrepor. O alcance é exibido separadamente por conta e não é somado.",
+          "CPC, CPM e CTR são calculados pelos totais correspondentes, nunca pela média das taxas.",
+          "Instagram corresponde somente a 08/08/2026–06/10/2026, com 58 de 60 dias disponíveis; não representa o histórico completo da mídia.",
+          "Felipe Pampolha 01: Campanhas com entrega reportada no intervalo, incluindo campanhas hoje pausadas/arquivadas; nenhuma filtragem por nome.",
+          "Felipe Pampolha 01: Alcance do período consultado no nível da conta: não é a soma do alcance diário ou das campanhas.",
+          "Felipe Pampolha 01: Destaques: cinco anúncios com mais impressões no intervalo; links públicos não coletados.",
+          "Felipe Pampolha 01: Resultados/conversões por objetivo não consolidados; engagements representa post_engagement e videoViews representa reproduções de vídeo.",
+          "Felipe Pampolha 01: Dias sem linha foram consultados novamente com sucesso: sem entrega reportada, distintos de falhas de coleta. A série preserva apenas observações retornadas; não preenche zeros.",
+          "Felipe Pampolha 01: Consulta dos 60 dias retornou 9 linhas diárias, de 2026-08-08 a 2026-08-16; a soma de investimento, impressões e cliques concilia com o total da conta no período.",
+          "Felipe Pampolha 01: A API reporta mais inline_link_clicks que clicks no mesmo período. Valores preservados sem ajuste; CPC e CTR usam clicks. Não tratar as duas contagens como um funil reconciliado.",
+          "Felipe Pampolha 01: Conferência com histórico Supabase (58 dias, filtro DISTRIBUI): R$735.45 e 80530 impressões; API atual: R$735.68 e 80551 impressões. Diferenças de R$0.23 e 21 impressões; fontes coletadas em momentos distintos e histórico filtrado. O relatório usa a API atual.",
+          "Felipe Pampolha 01: datas anteriores à criação em 2025-08-19 não têm atividade possível nesta conta.",
+          "Felipe Pampolha 02: Campanhas com entrega reportada no intervalo, incluindo campanhas hoje pausadas/arquivadas; nenhuma filtragem por nome.",
+          "Felipe Pampolha 02: Alcance do período consultado no nível da conta: não é a soma do alcance diário ou das campanhas.",
+          "Felipe Pampolha 02: Destaques: cinco anúncios com mais impressões no intervalo; links públicos não coletados.",
+          "Felipe Pampolha 02: Resultados/conversões por objetivo não consolidados; engagements representa post_engagement e videoViews representa reproduções de vídeo.",
+          "Felipe Pampolha 02: Dias sem linha foram consultados novamente com sucesso: sem entrega reportada, distintos de falhas de coleta. A série preserva apenas observações retornadas; não preenche zeros.",
+          "Felipe Pampolha 02: Consulta dos 51 dias retornou 28 linhas diárias, de 2026-09-01 a 2026-10-01; a soma de investimento, impressões e cliques concilia com o total da conta no período.",
+          "Felipe Pampolha 02: A API reporta mais inline_link_clicks que clicks no mesmo período. Valores preservados sem ajuste; CPC e CTR usam clicks. Não tratar as duas contagens como um funil reconciliado.",
+          "Felipe Pampolha 02: Histórico consultado desde a criação da conta em 2026-08-17, até 2026-10-06 (último dia completo do recorte).",
+          "Felipe Pampolha 02: Primeira/última linha diária reportada: 2026-09-01 / 2026-10-01.",
+          "Felipe Pampolha 02: datas anteriores à criação em 2026-08-17 não têm atividade possível nesta conta."
+        ],
+        "coverageDays": 60,
+        "missingDates": [],
+        "noDeliveryDates": [
+          "2026-08-17",
+          "2026-08-18",
+          "2026-08-19",
+          "2026-08-20",
+          "2026-08-21",
+          "2026-08-22",
+          "2026-08-23",
+          "2026-08-24",
+          "2026-08-25",
+          "2026-08-26",
+          "2026-08-27",
+          "2026-08-28",
+          "2026-08-29",
+          "2026-08-30",
+          "2026-08-31",
+          "2026-09-04",
+          "2026-09-05",
+          "2026-09-06",
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-04",
+          "2026-10-05",
+          "2026-10-06"
+        ]
+      },
+      "accounts": [
+        {
+          "id": "act_716311018073722",
+          "name": "Felipe Mendes Pampolha",
+          "label": "Felipe Pampolha 01",
+          "start": "2026-08-08",
+          "end": "2026-10-06",
+          "days": 60,
+          "totals": {
+            "spend": 735.68,
+            "impressions": 80551.0,
+            "reach": 54327.0,
+            "clicks": 1871.0,
+            "linkClicks": 1918.0,
+            "engagements": 19941.0,
+            "videoViews": 77902.0
+          },
+          "coverageDays": 60,
+          "missingDates": [],
+          "noDeliveryDates": [
+            "2026-08-17",
+            "2026-08-18",
+            "2026-08-19",
+            "2026-08-20",
+            "2026-08-21",
+            "2026-08-22",
+            "2026-08-23",
+            "2026-08-24",
+            "2026-08-25",
+            "2026-08-26",
+            "2026-08-27",
+            "2026-08-28",
+            "2026-08-29",
+            "2026-08-30",
+            "2026-08-31",
+            "2026-09-01",
+            "2026-09-02",
+            "2026-09-03",
+            "2026-09-04",
+            "2026-09-05",
+            "2026-09-06",
+            "2026-09-07",
+            "2026-09-08",
+            "2026-09-09",
+            "2026-09-10",
+            "2026-09-11",
+            "2026-09-12",
+            "2026-09-13",
+            "2026-09-14",
+            "2026-09-15",
+            "2026-09-16",
+            "2026-09-17",
+            "2026-09-18",
+            "2026-09-19",
+            "2026-09-20",
+            "2026-09-21",
+            "2026-09-22",
+            "2026-09-23",
+            "2026-09-24",
+            "2026-09-25",
+            "2026-09-26",
+            "2026-09-27",
+            "2026-09-28",
+            "2026-09-29",
+            "2026-09-30",
+            "2026-10-01",
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-04",
+            "2026-10-05",
+            "2026-10-06"
+          ],
+          "source": "Meta Marketing API v24.0 — conta completa, sem filtro por nome · Felipe Pampolha 01 (act_716311018073722)"
+        },
+        {
+          "id": "act_2174013390129316",
+          "name": "Felipe Mendes 02",
+          "label": "Felipe Pampolha 02",
+          "start": "2026-08-17",
+          "end": "2026-10-06",
+          "days": 51,
+          "totals": {
+            "spend": 9663.54,
+            "impressions": 1494360.0,
+            "reach": 579922.0,
+            "clicks": 24007.0,
+            "linkClicks": 24429.0,
+            "engagements": 155994.0,
+            "videoViews": 839242.0
+          },
+          "coverageDays": 51,
+          "missingDates": [],
+          "noDeliveryDates": [
+            "2026-08-17",
+            "2026-08-18",
+            "2026-08-19",
+            "2026-08-20",
+            "2026-08-21",
+            "2026-08-22",
+            "2026-08-23",
+            "2026-08-24",
+            "2026-08-25",
+            "2026-08-26",
+            "2026-08-27",
+            "2026-08-28",
+            "2026-08-29",
+            "2026-08-30",
+            "2026-08-31",
+            "2026-09-04",
+            "2026-09-05",
+            "2026-09-06",
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-04",
+            "2026-10-05",
+            "2026-10-06"
+          ],
+          "source": "Meta Marketing API v24.0 — conta completa, sem filtro por nome · Felipe Pampolha 02 (act_2174013390129316)"
+        }
+      ],
+      "instagram": {
+        "source": "Supabase pampolha_ig_daily_metrics · coletor pampolha-snapshot v3",
+        "coverageDays": 58,
+        "missingDates": [
+          "2026-09-10",
+          "2026-09-13"
+        ],
+        "baseline": {
+          "date": "2026-08-07",
+          "followers": 17562,
+          "capturedAt": "2026-08-08T06:00:11.021084+00:00"
+        },
+        "end": {
+          "date": "2026-10-06",
+          "followers": 22732,
+          "capturedAt": "2026-10-07T06:00:06.910593+00:00"
+        },
+        "daily": [
+          {
+            "date": "2026-08-08",
+            "followers": 17603,
+            "reach": 14676,
+            "profileViews": 533,
+            "interactions": 1470,
+            "capturedAt": "2026-08-09T06:00:13.381617+00:00"
+          },
+          {
+            "date": "2026-08-09",
+            "followers": 17617,
+            "reach": 17299,
+            "profileViews": 460,
+            "interactions": 1342,
+            "capturedAt": "2026-08-10T06:00:10.836681+00:00"
+          },
+          {
+            "date": "2026-08-10",
+            "followers": 17654,
+            "reach": 15998,
+            "profileViews": 610,
+            "interactions": 1191,
+            "capturedAt": "2026-08-11T06:00:12.229478+00:00"
+          },
+          {
+            "date": "2026-08-11",
+            "followers": 17749,
+            "reach": 21573,
+            "profileViews": 778,
+            "interactions": 2966,
+            "capturedAt": "2026-08-12T06:00:12.011139+00:00"
+          },
+          {
+            "date": "2026-08-12",
+            "followers": 17842,
+            "reach": 24134,
+            "profileViews": 711,
+            "interactions": 1816,
+            "capturedAt": "2026-08-13T06:00:12.039156+00:00"
+          },
+          {
+            "date": "2026-08-13",
+            "followers": 17903,
+            "reach": 16065,
+            "profileViews": 725,
+            "interactions": 1748,
+            "capturedAt": "2026-08-14T06:00:11.283647+00:00"
+          },
+          {
+            "date": "2026-08-14",
+            "followers": 17976,
+            "reach": 21484,
+            "profileViews": 753,
+            "interactions": 2724,
+            "capturedAt": "2026-08-15T06:00:12.338013+00:00"
+          },
+          {
+            "date": "2026-08-15",
+            "followers": 18051,
+            "reach": 24578,
+            "profileViews": 1167,
+            "interactions": 5103,
+            "capturedAt": "2026-08-16T06:00:10.56772+00:00"
+          },
+          {
+            "date": "2026-08-16",
+            "followers": 18177,
+            "reach": 53127,
+            "profileViews": 1806,
+            "interactions": 7584,
+            "capturedAt": "2026-08-17T06:00:12.183064+00:00"
+          },
+          {
+            "date": "2026-08-17",
+            "followers": 18296,
+            "reach": 22802,
+            "profileViews": 1237,
+            "interactions": 3249,
+            "capturedAt": "2026-08-18T06:00:14.70762+00:00"
+          },
+          {
+            "date": "2026-08-18",
+            "followers": 18444,
+            "reach": 22224,
+            "profileViews": 1206,
+            "interactions": 4572,
+            "capturedAt": "2026-08-19T06:00:12.701186+00:00"
+          },
+          {
+            "date": "2026-08-19",
+            "followers": 18560,
+            "reach": 19401,
+            "profileViews": 887,
+            "interactions": 3353,
+            "capturedAt": "2026-08-20T06:00:12.534567+00:00"
+          },
+          {
+            "date": "2026-08-20",
+            "followers": 18666,
+            "reach": 19687,
+            "profileViews": 758,
+            "interactions": 2882,
+            "capturedAt": "2026-08-21T06:00:11.939103+00:00"
+          },
+          {
+            "date": "2026-08-21",
+            "followers": 18731,
+            "reach": 17330,
+            "profileViews": 695,
+            "interactions": 4341,
+            "capturedAt": "2026-08-22T06:00:16.725838+00:00"
+          },
+          {
+            "date": "2026-08-22",
+            "followers": 18776,
+            "reach": 20651,
+            "profileViews": 765,
+            "interactions": 3288,
+            "capturedAt": "2026-08-23T06:00:12.3887+00:00"
+          },
+          {
+            "date": "2026-08-23",
+            "followers": 18814,
+            "reach": 20745,
+            "profileViews": 760,
+            "interactions": 3158,
+            "capturedAt": "2026-08-24T06:00:08.919323+00:00"
+          },
+          {
+            "date": "2026-08-24",
+            "followers": 18896,
+            "reach": 18089,
+            "profileViews": 773,
+            "interactions": 2508,
+            "capturedAt": "2026-08-25T06:00:12.98417+00:00"
+          },
+          {
+            "date": "2026-08-25",
+            "followers": 18968,
+            "reach": 14858,
+            "profileViews": 808,
+            "interactions": 7093,
+            "capturedAt": "2026-08-26T06:00:17.295457+00:00"
+          },
+          {
+            "date": "2026-08-26",
+            "followers": 19070,
+            "reach": 31326,
+            "profileViews": 1051,
+            "interactions": 5861,
+            "capturedAt": "2026-08-27T06:00:10.258716+00:00"
+          },
+          {
+            "date": "2026-08-27",
+            "followers": 19155,
+            "reach": 21950,
+            "profileViews": 826,
+            "interactions": 3488,
+            "capturedAt": "2026-08-28T06:00:10.169279+00:00"
+          },
+          {
+            "date": "2026-08-28",
+            "followers": 19211,
+            "reach": 20503,
+            "profileViews": 726,
+            "interactions": 3347,
+            "capturedAt": "2026-08-29T06:00:10.290232+00:00"
+          },
+          {
+            "date": "2026-08-29",
+            "followers": 19238,
+            "reach": 16767,
+            "profileViews": 570,
+            "interactions": 4761,
+            "capturedAt": "2026-08-30T06:00:10.728552+00:00"
+          },
+          {
+            "date": "2026-08-30",
+            "followers": 19296,
+            "reach": 25664,
+            "profileViews": 739,
+            "interactions": 4846,
+            "capturedAt": "2026-08-31T06:00:11.589025+00:00"
+          },
+          {
+            "date": "2026-08-31",
+            "followers": 19377,
+            "reach": 25297,
+            "profileViews": 1013,
+            "interactions": 3911,
+            "capturedAt": "2026-09-01T06:00:12.307314+00:00"
+          },
+          {
+            "date": "2026-09-01",
+            "followers": 19454,
+            "reach": 21701,
+            "profileViews": 920,
+            "interactions": 4805,
+            "capturedAt": "2026-09-02T06:00:12.041022+00:00"
+          },
+          {
+            "date": "2026-09-02",
+            "followers": 19544,
+            "reach": 21839,
+            "profileViews": 796,
+            "interactions": 3375,
+            "capturedAt": "2026-09-03T06:00:13.013919+00:00"
+          },
+          {
+            "date": "2026-09-03",
+            "followers": 19631,
+            "reach": 19740,
+            "profileViews": 902,
+            "interactions": 2976,
+            "capturedAt": "2026-09-04T06:00:14.678882+00:00"
+          },
+          {
+            "date": "2026-09-04",
+            "followers": 19718,
+            "reach": 29006,
+            "profileViews": 1170,
+            "interactions": 6391,
+            "capturedAt": "2026-09-05T06:00:10.887268+00:00"
+          },
+          {
+            "date": "2026-09-05",
+            "followers": 19760,
+            "reach": 27141,
+            "profileViews": 659,
+            "interactions": 3362,
+            "capturedAt": "2026-09-06T06:00:15.314079+00:00"
+          },
+          {
+            "date": "2026-09-06",
+            "followers": 19803,
+            "reach": 26343,
+            "profileViews": 640,
+            "interactions": 3746,
+            "capturedAt": "2026-09-07T06:00:15.790707+00:00"
+          },
+          {
+            "date": "2026-09-07",
+            "followers": 19855,
+            "reach": 35484,
+            "profileViews": 819,
+            "interactions": 5021,
+            "capturedAt": "2026-09-08T06:00:12.72514+00:00"
+          },
+          {
+            "date": "2026-09-08",
+            "followers": 19925,
+            "reach": 34831,
+            "profileViews": 1250,
+            "interactions": 5219,
+            "capturedAt": "2026-09-09T06:00:07.277492+00:00"
+          },
+          {
+            "date": "2026-09-09",
+            "followers": 20017,
+            "reach": 34485,
+            "profileViews": 1280,
+            "interactions": 6574,
+            "capturedAt": "2026-09-10T06:00:07.84423+00:00"
+          },
+          {
+            "date": "2026-09-11",
+            "followers": 20179,
+            "reach": 71957,
+            "profileViews": 1822,
+            "interactions": 5685,
+            "capturedAt": "2026-09-12T06:00:25.73188+00:00"
+          },
+          {
+            "date": "2026-09-12",
+            "followers": 20253,
+            "reach": 86166,
+            "profileViews": 2169,
+            "interactions": 4190,
+            "capturedAt": "2026-09-13T06:00:21.101919+00:00"
+          },
+          {
+            "date": "2026-09-14",
+            "followers": 20423,
+            "reach": 84533,
+            "profileViews": 2305,
+            "interactions": 4416,
+            "capturedAt": "2026-09-15T06:00:06.273663+00:00"
+          },
+          {
+            "date": "2026-09-15",
+            "followers": 20523,
+            "reach": 64663,
+            "profileViews": 1604,
+            "interactions": 5807,
+            "capturedAt": "2026-09-16T06:00:05.538606+00:00"
+          },
+          {
+            "date": "2026-09-16",
+            "followers": 20645,
+            "reach": 56731,
+            "profileViews": 1545,
+            "interactions": 4487,
+            "capturedAt": "2026-09-17T06:00:05.958757+00:00"
+          },
+          {
+            "date": "2026-09-17",
+            "followers": 20707,
+            "reach": 62099,
+            "profileViews": 1588,
+            "interactions": 3926,
+            "capturedAt": "2026-09-18T06:00:06.118723+00:00"
+          },
+          {
+            "date": "2026-09-18",
+            "followers": 20823,
+            "reach": 57169,
+            "profileViews": 1575,
+            "interactions": 4195,
+            "capturedAt": "2026-09-19T06:00:08.56475+00:00"
+          },
+          {
+            "date": "2026-09-19",
+            "followers": 20889,
+            "reach": 68857,
+            "profileViews": 1690,
+            "interactions": 5114,
+            "capturedAt": "2026-09-20T06:00:05.662339+00:00"
+          },
+          {
+            "date": "2026-09-20",
+            "followers": 20947,
+            "reach": 135397,
+            "profileViews": 2874,
+            "interactions": 5927,
+            "capturedAt": "2026-09-21T06:00:04.938316+00:00"
+          },
+          {
+            "date": "2026-09-21",
+            "followers": 21021,
+            "reach": 100363,
+            "profileViews": 2477,
+            "interactions": 4142,
+            "capturedAt": "2026-09-22T06:00:05.316569+00:00"
+          },
+          {
+            "date": "2026-09-22",
+            "followers": 21112,
+            "reach": 118143,
+            "profileViews": 2658,
+            "interactions": 5395,
+            "capturedAt": "2026-09-23T06:00:05.228006+00:00"
+          },
+          {
+            "date": "2026-09-23",
+            "followers": 21218,
+            "reach": 118589,
+            "profileViews": 2710,
+            "interactions": 5334,
+            "capturedAt": "2026-09-24T06:00:06.158043+00:00"
+          },
+          {
+            "date": "2026-09-24",
+            "followers": 21276,
+            "reach": 108088,
+            "profileViews": 2317,
+            "interactions": 3647,
+            "capturedAt": "2026-09-25T06:00:07.604099+00:00"
+          },
+          {
+            "date": "2026-09-25",
+            "followers": 21364,
+            "reach": 61360,
+            "profileViews": 1702,
+            "interactions": 5318,
+            "capturedAt": "2026-09-26T06:00:06.91914+00:00"
+          },
+          {
+            "date": "2026-09-26",
+            "followers": 21437,
+            "reach": 46955,
+            "profileViews": 1529,
+            "interactions": 4494,
+            "capturedAt": "2026-09-27T06:00:06.777326+00:00"
+          },
+          {
+            "date": "2026-09-27",
+            "followers": 21510,
+            "reach": 62324,
+            "profileViews": 2070,
+            "interactions": 5644,
+            "capturedAt": "2026-09-28T06:00:09.900873+00:00"
+          },
+          {
+            "date": "2026-09-28",
+            "followers": 21591,
+            "reach": 49093,
+            "profileViews": 2191,
+            "interactions": 5128,
+            "capturedAt": "2026-09-29T06:00:04.492345+00:00"
+          },
+          {
+            "date": "2026-09-29",
+            "followers": 21676,
+            "reach": 55891,
+            "profileViews": 1891,
+            "interactions": 6674,
+            "capturedAt": "2026-09-30T06:00:05.905274+00:00"
+          },
+          {
+            "date": "2026-09-30",
+            "followers": 21754,
+            "reach": 84490,
+            "profileViews": 2306,
+            "interactions": 6469,
+            "capturedAt": "2026-10-01T06:00:05.583007+00:00"
+          },
+          {
+            "date": "2026-10-01",
+            "followers": 21867,
+            "reach": 84014,
+            "profileViews": 2620,
+            "interactions": 4861,
+            "capturedAt": "2026-10-02T06:00:05.552529+00:00"
+          },
+          {
+            "date": "2026-10-02",
+            "followers": 22016,
+            "reach": 39485,
+            "profileViews": 1469,
+            "interactions": 7438,
+            "capturedAt": "2026-10-03T06:00:08.294198+00:00"
+          },
+          {
+            "date": "2026-10-03",
+            "followers": 22235,
+            "reach": 65548,
+            "profileViews": 3345,
+            "interactions": 11402,
+            "capturedAt": "2026-10-04T06:00:05.178216+00:00"
+          },
+          {
+            "date": "2026-10-04",
+            "followers": 22577,
+            "reach": 87489,
+            "profileViews": 8576,
+            "interactions": 11777,
+            "capturedAt": "2026-10-05T06:00:06.162527+00:00"
+          },
+          {
+            "date": "2026-10-05",
+            "followers": 22722,
+            "reach": 102669,
+            "profileViews": 4272,
+            "interactions": 5950,
+            "capturedAt": "2026-10-06T06:00:06.001747+00:00"
+          },
+          {
+            "date": "2026-10-06",
+            "followers": 22732,
+            "reach": 18834,
+            "profileViews": 870,
+            "interactions": 3529,
+            "capturedAt": "2026-10-07T06:00:06.910593+00:00"
+          }
+        ],
+        "totals": {
+          "profileViews": 88968,
+          "interactions": 269020
+        },
+        "notes": [
+          "Seguidores são snapshots atuais na coleta, não fechamento do dia nominal. Base nominal 07/08 coletada em 08/08 às 03h; final nominal 06/10 coletado em 07/10 às 03h (Brasília). capturedAt registra o horário de persistência, próximo da coleta.",
+          "Variação líquida entre esses snapshots; não mede seguidores atribuídos aos anúncios.",
+          "Insights diários do Instagram consultados pelo coletor em janela UTC (00:00–23:59:59), diferente do dia de mídia em America/Sao_Paulo.",
+          "Totais de visitas e interações somam somente os dias presentes; lacunas não são zeros.",
+          "Coletor legado converte falhas/ausências em zero. Zeros sem comprovação ficam null neste relatório.",
+          "Qualidade dos snapshots: 0 zeros de seguidores; 0 quedas entre coletas consecutivas."
+        ],
+        "period": {
+          "start": "2026-08-08",
+          "end": "2026-10-06",
+          "days": 60
+        },
+        "profile": "@felipepampolha.rio"
+      }
+    },
+    "history": {
+      "meta": {
+        "title": "Felipe Pampolha · Histórico completo das contas 01 e 02",
+        "start": "2025-08-19",
+        "end": "2026-10-06",
+        "days": 414,
+        "timezone": "America/Sao_Paulo",
+        "extractedAt": "2026-10-07T23:21:06.884268+00:00",
+        "profile": "@felipepampolha.rio",
+        "sources": [
+          "Meta Marketing API v24.0 — conta completa, sem filtro por nome · Felipe Pampolha 01 (act_716311018073722)",
+          "Meta Marketing API v24.0 — conta completa, sem filtro por nome · Felipe Pampolha 02 (act_2174013390129316)",
+          "Supabase pampolha_ig_daily_metrics · coletor pampolha-snapshot v3"
+        ],
+        "status": "partial",
+        "notes": [
+          "As duas contas estão reunidas; cada campanha e anúncio mantém sua conta de origem.",
+          "Alcance único entre contas indisponível: públicos podem se sobrepor. O alcance é exibido separadamente por conta e não é somado.",
+          "CPC, CPM e CTR são calculados pelos totais correspondentes, nunca pela média das taxas.",
+          "Instagram corresponde somente a 08/08/2026–06/10/2026, com 58 de 60 dias disponíveis; não representa o histórico completo da mídia."
+        ]
+      },
+      "ads": {
+        "source": "Meta Marketing API v24.0 · contas Felipe Pampolha 01 e 02",
+        "totals": {
+          "spend": 29532.39,
+          "impressions": 3952604.0,
+          "clicks": 72105.0,
+          "linkClicks": 67730.0,
+          "engagements": 965759.0,
+          "videoViews": 3019872.0,
+          "reach": null
+        },
+        "daily": [
+          {
+            "date": "2025-08-22",
+            "spend": 24.1,
+            "impressions": 2784.0,
+            "clicks": 14.0
+          },
+          {
+            "date": "2025-08-23",
+            "spend": 19.78,
+            "impressions": 3532.0,
+            "clicks": 37.0
+          },
+          {
+            "date": "2025-08-24",
+            "spend": 39.39,
+            "impressions": 7455.0,
+            "clicks": 85.0
+          },
+          {
+            "date": "2025-08-25",
+            "spend": 68.92,
+            "impressions": 5410.0,
+            "clicks": 68.0
+          },
+          {
+            "date": "2025-08-26",
+            "spend": 46.19,
+            "impressions": 3941.0,
+            "clicks": 75.0
+          },
+          {
+            "date": "2025-08-27",
+            "spend": 49.86,
+            "impressions": 5855.0,
+            "clicks": 197.0
+          },
+          {
+            "date": "2025-08-28",
+            "spend": 50.01,
+            "impressions": 5523.0,
+            "clicks": 202.0
+          },
+          {
+            "date": "2025-08-29",
+            "spend": 36.12,
+            "impressions": 2913.0,
+            "clicks": 70.0
+          },
+          {
+            "date": "2025-08-30",
+            "spend": 27.57,
+            "impressions": 2663.0,
+            "clicks": 44.0
+          },
+          {
+            "date": "2025-08-31",
+            "spend": 41.19,
+            "impressions": 3834.0,
+            "clicks": 74.0
+          },
+          {
+            "date": "2025-09-01",
+            "spend": 33.87,
+            "impressions": 3973.0,
+            "clicks": 80.0
+          },
+          {
+            "date": "2025-09-02",
+            "spend": 36.32,
+            "impressions": 4152.0,
+            "clicks": 54.0
+          },
+          {
+            "date": "2025-09-03",
+            "spend": 59.72,
+            "impressions": 6442.0,
+            "clicks": 76.0
+          },
+          {
+            "date": "2025-09-04",
+            "spend": 64.79,
+            "impressions": 7088.0,
+            "clicks": 94.0
+          },
+          {
+            "date": "2025-09-05",
+            "spend": 42.26,
+            "impressions": 4933.0,
+            "clicks": 82.0
+          },
+          {
+            "date": "2025-09-06",
+            "spend": 34.69,
+            "impressions": 3247.0,
+            "clicks": 41.0
+          },
+          {
+            "date": "2025-09-07",
+            "spend": 40.07,
+            "impressions": 3192.0,
+            "clicks": 62.0
+          },
+          {
+            "date": "2025-09-08",
+            "spend": 35.85,
+            "impressions": 3044.0,
+            "clicks": 59.0
+          },
+          {
+            "date": "2025-09-09",
+            "spend": 22.32,
+            "impressions": 3128.0,
+            "clicks": 39.0
+          },
+          {
+            "date": "2025-09-10",
+            "spend": 31.07,
+            "impressions": 3869.0,
+            "clicks": 66.0
+          },
+          {
+            "date": "2025-09-11",
+            "spend": 33.33,
+            "impressions": 3935.0,
+            "clicks": 70.0
+          },
+          {
+            "date": "2025-09-12",
+            "spend": 30.99,
+            "impressions": 3429.0,
+            "clicks": 58.0
+          },
+          {
+            "date": "2025-09-13",
+            "spend": 32.97,
+            "impressions": 2883.0,
+            "clicks": 42.0
+          },
+          {
+            "date": "2025-09-14",
+            "spend": 37.57,
+            "impressions": 3165.0,
+            "clicks": 45.0
+          },
+          {
+            "date": "2025-09-15",
+            "spend": 34.94,
+            "impressions": 3412.0,
+            "clicks": 58.0
+          },
+          {
+            "date": "2025-09-16",
+            "spend": 16.84,
+            "impressions": 1353.0,
+            "clicks": 18.0
+          },
+          {
+            "date": "2025-09-19",
+            "spend": 20.35,
+            "impressions": 1647.0,
+            "clicks": 10.0
+          },
+          {
+            "date": "2025-09-20",
+            "spend": 30.29,
+            "impressions": 2347.0,
+            "clicks": 20.0
+          },
+          {
+            "date": "2025-09-21",
+            "spend": 39.58,
+            "impressions": 3456.0,
+            "clicks": 42.0
+          },
+          {
+            "date": "2025-09-22",
+            "spend": 33.7,
+            "impressions": 2750.0,
+            "clicks": 20.0
+          },
+          {
+            "date": "2025-09-23",
+            "spend": 31.3,
+            "impressions": 2645.0,
+            "clicks": 24.0
+          },
+          {
+            "date": "2025-09-24",
+            "spend": 35.03,
+            "impressions": 3024.0,
+            "clicks": 22.0
+          },
+          {
+            "date": "2025-09-25",
+            "spend": 34.74,
+            "impressions": 3303.0,
+            "clicks": 31.0
+          },
+          {
+            "date": "2025-09-26",
+            "spend": 10.28,
+            "impressions": 1087.0,
+            "clicks": 7.0
+          },
+          {
+            "date": "2025-09-30",
+            "spend": 43.05,
+            "impressions": 3472.0,
+            "clicks": 36.0
+          },
+          {
+            "date": "2025-10-01",
+            "spend": 73.19,
+            "impressions": 5981.0,
+            "clicks": 83.0
+          },
+          {
+            "date": "2025-10-02",
+            "spend": 82.03,
+            "impressions": 6041.0,
+            "clicks": 71.0
+          },
+          {
+            "date": "2025-10-03",
+            "spend": 80.63,
+            "impressions": 5097.0,
+            "clicks": 67.0
+          },
+          {
+            "date": "2025-10-04",
+            "spend": 43.44,
+            "impressions": 1776.0,
+            "clicks": 22.0
+          },
+          {
+            "date": "2025-10-05",
+            "spend": 38.75,
+            "impressions": 1102.0,
+            "clicks": 21.0
+          },
+          {
+            "date": "2025-10-06",
+            "spend": 35.12,
+            "impressions": 1079.0,
+            "clicks": 9.0
+          },
+          {
+            "date": "2025-10-07",
+            "spend": 13.51,
+            "impressions": 402.0,
+            "clicks": 10.0
+          },
+          {
+            "date": "2025-10-08",
+            "spend": 21.8,
+            "impressions": 2741.0,
+            "clicks": 170.0
+          },
+          {
+            "date": "2025-10-09",
+            "spend": 30.97,
+            "impressions": 3358.0,
+            "clicks": 224.0
+          },
+          {
+            "date": "2025-10-10",
+            "spend": 31.73,
+            "impressions": 3237.0,
+            "clicks": 165.0
+          },
+          {
+            "date": "2025-10-11",
+            "spend": 33.65,
+            "impressions": 3202.0,
+            "clicks": 109.0
+          },
+          {
+            "date": "2025-10-12",
+            "spend": 40.36,
+            "impressions": 3790.0,
+            "clicks": 106.0
+          },
+          {
+            "date": "2025-10-13",
+            "spend": 56.88,
+            "impressions": 5833.0,
+            "clicks": 187.0
+          },
+          {
+            "date": "2025-10-14",
+            "spend": 68.76,
+            "impressions": 6413.0,
+            "clicks": 177.0
+          },
+          {
+            "date": "2025-10-15",
+            "spend": 51.1,
+            "impressions": 4260.0,
+            "clicks": 95.0
+          },
+          {
+            "date": "2025-10-16",
+            "spend": 29.02,
+            "impressions": 2012.0,
+            "clicks": 48.0
+          },
+          {
+            "date": "2025-10-17",
+            "spend": 0.01,
+            "impressions": 1.0,
+            "clicks": 0.0
+          },
+          {
+            "date": "2025-10-18",
+            "spend": 60.24,
+            "impressions": 4228.0,
+            "clicks": 82.0
+          },
+          {
+            "date": "2025-10-19",
+            "spend": 38.2,
+            "impressions": 3683.0,
+            "clicks": 64.0
+          },
+          {
+            "date": "2025-10-20",
+            "spend": 48.48,
+            "impressions": 6980.0,
+            "clicks": 144.0
+          },
+          {
+            "date": "2025-10-21",
+            "spend": 51.71,
+            "impressions": 6878.0,
+            "clicks": 204.0
+          },
+          {
+            "date": "2025-10-22",
+            "spend": 47.9,
+            "impressions": 5828.0,
+            "clicks": 164.0
+          },
+          {
+            "date": "2025-10-23",
+            "spend": 47.93,
+            "impressions": 7142.0,
+            "clicks": 178.0
+          },
+          {
+            "date": "2025-10-24",
+            "spend": 81.86,
+            "impressions": 9070.0,
+            "clicks": 206.0
+          },
+          {
+            "date": "2025-10-25",
+            "spend": 89.41,
+            "impressions": 10219.0,
+            "clicks": 215.0
+          },
+          {
+            "date": "2025-10-26",
+            "spend": 114.37,
+            "impressions": 13232.0,
+            "clicks": 293.0
+          },
+          {
+            "date": "2025-10-27",
+            "spend": 65.21,
+            "impressions": 6753.0,
+            "clicks": 142.0
+          },
+          {
+            "date": "2025-10-28",
+            "spend": 49.47,
+            "impressions": 5489.0,
+            "clicks": 133.0
+          },
+          {
+            "date": "2025-10-29",
+            "spend": 49.07,
+            "impressions": 5368.0,
+            "clicks": 116.0
+          },
+          {
+            "date": "2025-10-30",
+            "spend": 50.63,
+            "impressions": 5202.0,
+            "clicks": 99.0
+          },
+          {
+            "date": "2025-10-31",
+            "spend": 16.38,
+            "impressions": 1495.0,
+            "clicks": 39.0
+          },
+          {
+            "date": "2025-11-06",
+            "spend": 50.48,
+            "impressions": 7306.0,
+            "clicks": 86.0
+          },
+          {
+            "date": "2025-11-07",
+            "spend": 97.95,
+            "impressions": 11038.0,
+            "clicks": 128.0
+          },
+          {
+            "date": "2025-11-08",
+            "spend": 108.1,
+            "impressions": 12265.0,
+            "clicks": 153.0
+          },
+          {
+            "date": "2025-11-09",
+            "spend": 131.46,
+            "impressions": 14255.0,
+            "clicks": 226.0
+          },
+          {
+            "date": "2025-11-10",
+            "spend": 106.39,
+            "impressions": 10837.0,
+            "clicks": 180.0
+          },
+          {
+            "date": "2025-11-11",
+            "spend": 115.44,
+            "impressions": 10136.0,
+            "clicks": 181.0
+          },
+          {
+            "date": "2025-11-12",
+            "spend": 79.32,
+            "impressions": 5817.0,
+            "clicks": 95.0
+          },
+          {
+            "date": "2025-11-19",
+            "spend": 29.49,
+            "impressions": 3205.0,
+            "clicks": 86.0
+          },
+          {
+            "date": "2025-11-20",
+            "spend": 74.59,
+            "impressions": 10962.0,
+            "clicks": 156.0
+          },
+          {
+            "date": "2025-11-21",
+            "spend": 94.41,
+            "impressions": 14466.0,
+            "clicks": 178.0
+          },
+          {
+            "date": "2025-11-22",
+            "spend": 101.52,
+            "impressions": 15796.0,
+            "clicks": 254.0
+          },
+          {
+            "date": "2025-11-23",
+            "spend": 110.06,
+            "impressions": 17472.0,
+            "clicks": 259.0
+          },
+          {
+            "date": "2025-11-24",
+            "spend": 99.66,
+            "impressions": 15399.0,
+            "clicks": 222.0
+          },
+          {
+            "date": "2025-11-25",
+            "spend": 99.35,
+            "impressions": 15079.0,
+            "clicks": 189.0
+          },
+          {
+            "date": "2025-11-26",
+            "spend": 71.42,
+            "impressions": 11075.0,
+            "clicks": 107.0
+          },
+          {
+            "date": "2025-11-27",
+            "spend": 51.69,
+            "impressions": 6235.0,
+            "clicks": 46.0
+          },
+          {
+            "date": "2025-11-28",
+            "spend": 66.88,
+            "impressions": 4452.0,
+            "clicks": 65.0
+          },
+          {
+            "date": "2025-11-29",
+            "spend": 93.1,
+            "impressions": 6332.0,
+            "clicks": 88.0
+          },
+          {
+            "date": "2025-11-30",
+            "spend": 51.3,
+            "impressions": 3470.0,
+            "clicks": 45.0
+          },
+          {
+            "date": "2025-12-04",
+            "spend": 17.09,
+            "impressions": 1633.0,
+            "clicks": 18.0
+          },
+          {
+            "date": "2025-12-05",
+            "spend": 30.73,
+            "impressions": 2564.0,
+            "clicks": 41.0
+          },
+          {
+            "date": "2025-12-06",
+            "spend": 31.93,
+            "impressions": 2852.0,
+            "clicks": 58.0
+          },
+          {
+            "date": "2025-12-07",
+            "spend": 38.55,
+            "impressions": 3433.0,
+            "clicks": 42.0
+          },
+          {
+            "date": "2025-12-08",
+            "spend": 35.18,
+            "impressions": 3019.0,
+            "clicks": 34.0
+          },
+          {
+            "date": "2025-12-09",
+            "spend": 35.09,
+            "impressions": 2472.0,
+            "clicks": 30.0
+          },
+          {
+            "date": "2025-12-10",
+            "spend": 52.71,
+            "impressions": 5648.0,
+            "clicks": 91.0
+          },
+          {
+            "date": "2025-12-11",
+            "spend": 61.46,
+            "impressions": 7001.0,
+            "clicks": 169.0
+          },
+          {
+            "date": "2025-12-12",
+            "spend": 47.96,
+            "impressions": 6770.0,
+            "clicks": 152.0
+          },
+          {
+            "date": "2025-12-13",
+            "spend": 44.9,
+            "impressions": 6839.0,
+            "clicks": 189.0
+          },
+          {
+            "date": "2025-12-14",
+            "spend": 57.9,
+            "impressions": 9972.0,
+            "clicks": 193.0
+          },
+          {
+            "date": "2025-12-15",
+            "spend": 50.07,
+            "impressions": 6370.0,
+            "clicks": 145.0
+          },
+          {
+            "date": "2025-12-16",
+            "spend": 30.37,
+            "impressions": 2963.0,
+            "clicks": 95.0
+          },
+          {
+            "date": "2025-12-19",
+            "spend": 11.05,
+            "impressions": 1368.0,
+            "clicks": 41.0
+          },
+          {
+            "date": "2025-12-20",
+            "spend": 22.79,
+            "impressions": 2575.0,
+            "clicks": 140.0
+          },
+          {
+            "date": "2025-12-21",
+            "spend": 28.5,
+            "impressions": 2709.0,
+            "clicks": 193.0
+          },
+          {
+            "date": "2025-12-22",
+            "spend": 25.3,
+            "impressions": 2556.0,
+            "clicks": 160.0
+          },
+          {
+            "date": "2025-12-23",
+            "spend": 24.46,
+            "impressions": 2343.0,
+            "clicks": 119.0
+          },
+          {
+            "date": "2025-12-24",
+            "spend": 24.07,
+            "impressions": 2667.0,
+            "clicks": 104.0
+          },
+          {
+            "date": "2025-12-25",
+            "spend": 25.66,
+            "impressions": 3436.0,
+            "clicks": 137.0
+          },
+          {
+            "date": "2025-12-26",
+            "spend": 13.04,
+            "impressions": 1679.0,
+            "clicks": 67.0
+          },
+          {
+            "date": "2026-01-08",
+            "spend": 20.2,
+            "impressions": 3689.0,
+            "clicks": 74.0
+          },
+          {
+            "date": "2026-01-09",
+            "spend": 46.59,
+            "impressions": 7236.0,
+            "clicks": 142.0
+          },
+          {
+            "date": "2026-01-10",
+            "spend": 46.87,
+            "impressions": 6993.0,
+            "clicks": 153.0
+          },
+          {
+            "date": "2026-01-11",
+            "spend": 53.72,
+            "impressions": 8937.0,
+            "clicks": 159.0
+          },
+          {
+            "date": "2026-01-12",
+            "spend": 49.65,
+            "impressions": 7501.0,
+            "clicks": 121.0
+          },
+          {
+            "date": "2026-01-13",
+            "spend": 49.5,
+            "impressions": 7394.0,
+            "clicks": 137.0
+          },
+          {
+            "date": "2026-01-14",
+            "spend": 49.75,
+            "impressions": 8038.0,
+            "clicks": 139.0
+          },
+          {
+            "date": "2026-01-15",
+            "spend": 82.13,
+            "impressions": 19652.0,
+            "clicks": 99.0
+          },
+          {
+            "date": "2026-01-16",
+            "spend": 69.09,
+            "impressions": 24579.0,
+            "clicks": 165.0
+          },
+          {
+            "date": "2026-01-17",
+            "spend": 79.55,
+            "impressions": 26283.0,
+            "clicks": 177.0
+          },
+          {
+            "date": "2026-01-18",
+            "spend": 90.23,
+            "impressions": 30447.0,
+            "clicks": 163.0
+          },
+          {
+            "date": "2026-01-19",
+            "spend": 86.33,
+            "impressions": 29337.0,
+            "clicks": 182.0
+          },
+          {
+            "date": "2026-01-20",
+            "spend": 86.11,
+            "impressions": 26876.0,
+            "clicks": 140.0
+          },
+          {
+            "date": "2026-01-21",
+            "spend": 116.09,
+            "impressions": 33089.0,
+            "clicks": 188.0
+          },
+          {
+            "date": "2026-01-22",
+            "spend": 97.06,
+            "impressions": 31845.0,
+            "clicks": 144.0
+          },
+          {
+            "date": "2026-01-23",
+            "spend": 63.16,
+            "impressions": 17803.0,
+            "clicks": 116.0
+          },
+          {
+            "date": "2026-01-24",
+            "spend": 49.16,
+            "impressions": 11345.0,
+            "clicks": 113.0
+          },
+          {
+            "date": "2026-01-25",
+            "spend": 56.18,
+            "impressions": 15599.0,
+            "clicks": 134.0
+          },
+          {
+            "date": "2026-01-26",
+            "spend": 74.21,
+            "impressions": 27110.0,
+            "clicks": 125.0
+          },
+          {
+            "date": "2026-01-27",
+            "spend": 67.2,
+            "impressions": 26408.0,
+            "clicks": 111.0
+          },
+          {
+            "date": "2026-01-28",
+            "spend": 68.33,
+            "impressions": 25018.0,
+            "clicks": 94.0
+          },
+          {
+            "date": "2026-01-29",
+            "spend": 67.41,
+            "impressions": 16790.0,
+            "clicks": 140.0
+          },
+          {
+            "date": "2026-01-30",
+            "spend": 67.39,
+            "impressions": 11554.0,
+            "clicks": 177.0
+          },
+          {
+            "date": "2026-01-31",
+            "spend": 55.61,
+            "impressions": 7597.0,
+            "clicks": 208.0
+          },
+          {
+            "date": "2026-02-01",
+            "spend": 78.23,
+            "impressions": 12368.0,
+            "clicks": 423.0
+          },
+          {
+            "date": "2026-02-02",
+            "spend": 64.08,
+            "impressions": 9838.0,
+            "clicks": 330.0
+          },
+          {
+            "date": "2026-02-03",
+            "spend": 66.56,
+            "impressions": 9489.0,
+            "clicks": 313.0
+          },
+          {
+            "date": "2026-02-04",
+            "spend": 64.89,
+            "impressions": 8660.0,
+            "clicks": 257.0
+          },
+          {
+            "date": "2026-02-05",
+            "spend": 67.82,
+            "impressions": 8798.0,
+            "clicks": 262.0
+          },
+          {
+            "date": "2026-02-06",
+            "spend": 64.16,
+            "impressions": 8500.0,
+            "clicks": 251.0
+          },
+          {
+            "date": "2026-02-07",
+            "spend": 51.41,
+            "impressions": 7254.0,
+            "clicks": 211.0
+          },
+          {
+            "date": "2026-02-08",
+            "spend": 53.1,
+            "impressions": 6415.0,
+            "clicks": 176.0
+          },
+          {
+            "date": "2026-02-09",
+            "spend": 46.65,
+            "impressions": 6096.0,
+            "clicks": 198.0
+          },
+          {
+            "date": "2026-02-10",
+            "spend": 47.12,
+            "impressions": 4834.0,
+            "clicks": 112.0
+          },
+          {
+            "date": "2026-02-11",
+            "spend": 57.59,
+            "impressions": 5521.0,
+            "clicks": 118.0
+          },
+          {
+            "date": "2026-02-12",
+            "spend": 70.94,
+            "impressions": 7445.0,
+            "clicks": 174.0
+          },
+          {
+            "date": "2026-02-13",
+            "spend": 40.61,
+            "impressions": 3902.0,
+            "clicks": 86.0
+          },
+          {
+            "date": "2026-02-14",
+            "spend": 21.51,
+            "impressions": 2057.0,
+            "clicks": 46.0
+          },
+          {
+            "date": "2026-02-15",
+            "spend": 27.08,
+            "impressions": 2727.0,
+            "clicks": 54.0
+          },
+          {
+            "date": "2026-02-16",
+            "spend": 21.84,
+            "impressions": 2631.0,
+            "clicks": 44.0
+          },
+          {
+            "date": "2026-02-17",
+            "spend": 23.07,
+            "impressions": 2826.0,
+            "clicks": 51.0
+          },
+          {
+            "date": "2026-02-18",
+            "spend": 7.9,
+            "impressions": 1130.0,
+            "clicks": 23.0
+          },
+          {
+            "date": "2026-02-23",
+            "spend": 34.75,
+            "impressions": 4207.0,
+            "clicks": 30.0
+          },
+          {
+            "date": "2026-02-24",
+            "spend": 45.38,
+            "impressions": 4513.0,
+            "clicks": 48.0
+          },
+          {
+            "date": "2026-02-25",
+            "spend": 43.56,
+            "impressions": 3759.0,
+            "clicks": 35.0
+          },
+          {
+            "date": "2026-02-26",
+            "spend": 41.28,
+            "impressions": 3153.0,
+            "clicks": 32.0
+          },
+          {
+            "date": "2026-02-27",
+            "spend": 42.0,
+            "impressions": 3386.0,
+            "clicks": 33.0
+          },
+          {
+            "date": "2026-02-28",
+            "spend": 44.29,
+            "impressions": 4598.0,
+            "clicks": 34.0
+          },
+          {
+            "date": "2026-03-01",
+            "spend": 50.66,
+            "impressions": 5348.0,
+            "clicks": 54.0
+          },
+          {
+            "date": "2026-03-02",
+            "spend": 12.57,
+            "impressions": 1767.0,
+            "clicks": 15.0
+          },
+          {
+            "date": "2026-03-05",
+            "spend": 42.54,
+            "impressions": 6467.0,
+            "clicks": 85.0
+          },
+          {
+            "date": "2026-03-06",
+            "spend": 50.5,
+            "impressions": 6399.0,
+            "clicks": 37.0
+          },
+          {
+            "date": "2026-03-07",
+            "spend": 83.29,
+            "impressions": 14689.0,
+            "clicks": 140.0
+          },
+          {
+            "date": "2026-03-08",
+            "spend": 101.55,
+            "impressions": 20128.0,
+            "clicks": 192.0
+          },
+          {
+            "date": "2026-03-09",
+            "spend": 81.83,
+            "impressions": 16778.0,
+            "clicks": 125.0
+          },
+          {
+            "date": "2026-03-10",
+            "spend": 81.86,
+            "impressions": 13942.0,
+            "clicks": 262.0
+          },
+          {
+            "date": "2026-03-11",
+            "spend": 87.07,
+            "impressions": 14678.0,
+            "clicks": 396.0
+          },
+          {
+            "date": "2026-03-12",
+            "spend": 82.23,
+            "impressions": 13975.0,
+            "clicks": 309.0
+          },
+          {
+            "date": "2026-03-13",
+            "spend": 83.56,
+            "impressions": 13210.0,
+            "clicks": 291.0
+          },
+          {
+            "date": "2026-03-14",
+            "spend": 84.78,
+            "impressions": 12730.0,
+            "clicks": 256.0
+          },
+          {
+            "date": "2026-03-15",
+            "spend": 93.98,
+            "impressions": 13608.0,
+            "clicks": 216.0
+          },
+          {
+            "date": "2026-03-16",
+            "spend": 86.76,
+            "impressions": 11955.0,
+            "clicks": 172.0
+          },
+          {
+            "date": "2026-03-17",
+            "spend": 85.97,
+            "impressions": 11931.0,
+            "clicks": 164.0
+          },
+          {
+            "date": "2026-03-18",
+            "spend": 117.6,
+            "impressions": 16686.0,
+            "clicks": 339.0
+          },
+          {
+            "date": "2026-03-19",
+            "spend": 112.82,
+            "impressions": 14933.0,
+            "clicks": 314.0
+          },
+          {
+            "date": "2026-03-20",
+            "spend": 126.34,
+            "impressions": 16516.0,
+            "clicks": 320.0
+          },
+          {
+            "date": "2026-03-21",
+            "spend": 129.65,
+            "impressions": 17371.0,
+            "clicks": 356.0
+          },
+          {
+            "date": "2026-03-22",
+            "spend": 149.74,
+            "impressions": 19491.0,
+            "clicks": 408.0
+          },
+          {
+            "date": "2026-03-23",
+            "spend": 163.21,
+            "impressions": 20645.0,
+            "clicks": 449.0
+          },
+          {
+            "date": "2026-03-24",
+            "spend": 171.05,
+            "impressions": 22531.0,
+            "clicks": 503.0
+          },
+          {
+            "date": "2026-03-25",
+            "spend": 168.53,
+            "impressions": 20927.0,
+            "clicks": 422.0
+          },
+          {
+            "date": "2026-03-26",
+            "spend": 169.09,
+            "impressions": 21597.0,
+            "clicks": 394.0
+          },
+          {
+            "date": "2026-03-27",
+            "spend": 139.75,
+            "impressions": 17012.0,
+            "clicks": 362.0
+          },
+          {
+            "date": "2026-03-28",
+            "spend": 154.93,
+            "impressions": 17861.0,
+            "clicks": 387.0
+          },
+          {
+            "date": "2026-03-29",
+            "spend": 180.84,
+            "impressions": 21883.0,
+            "clicks": 463.0
+          },
+          {
+            "date": "2026-03-30",
+            "spend": 163.9,
+            "impressions": 20339.0,
+            "clicks": 475.0
+          },
+          {
+            "date": "2026-03-31",
+            "spend": 23.91,
+            "impressions": 2068.0,
+            "clicks": 60.0
+          },
+          {
+            "date": "2026-04-01",
+            "spend": 16.93,
+            "impressions": 1963.0,
+            "clicks": 63.0
+          },
+          {
+            "date": "2026-04-02",
+            "spend": 18.49,
+            "impressions": 2146.0,
+            "clicks": 73.0
+          },
+          {
+            "date": "2026-04-03",
+            "spend": 30.0,
+            "impressions": 3729.0,
+            "clicks": 93.0
+          },
+          {
+            "date": "2026-04-04",
+            "spend": 15.26,
+            "impressions": 2085.0,
+            "clicks": 87.0
+          },
+          {
+            "date": "2026-04-05",
+            "spend": 26.55,
+            "impressions": 3688.0,
+            "clicks": 135.0
+          },
+          {
+            "date": "2026-04-06",
+            "spend": 22.02,
+            "impressions": 3523.0,
+            "clicks": 106.0
+          },
+          {
+            "date": "2026-04-07",
+            "spend": 24.79,
+            "impressions": 3200.0,
+            "clicks": 113.0
+          },
+          {
+            "date": "2026-04-08",
+            "spend": 23.87,
+            "impressions": 3014.0,
+            "clicks": 95.0
+          },
+          {
+            "date": "2026-04-09",
+            "spend": 22.15,
+            "impressions": 2649.0,
+            "clicks": 74.0
+          },
+          {
+            "date": "2026-04-10",
+            "spend": 17.84,
+            "impressions": 2198.0,
+            "clicks": 46.0
+          },
+          {
+            "date": "2026-04-17",
+            "spend": 30.96,
+            "impressions": 4080.0,
+            "clicks": 150.0
+          },
+          {
+            "date": "2026-04-18",
+            "spend": 40.98,
+            "impressions": 5183.0,
+            "clicks": 151.0
+          },
+          {
+            "date": "2026-04-19",
+            "spend": 26.56,
+            "impressions": 3477.0,
+            "clicks": 111.0
+          },
+          {
+            "date": "2026-04-20",
+            "spend": 24.17,
+            "impressions": 3142.0,
+            "clicks": 91.0
+          },
+          {
+            "date": "2026-04-21",
+            "spend": 24.11,
+            "impressions": 3055.0,
+            "clicks": 99.0
+          },
+          {
+            "date": "2026-04-22",
+            "spend": 21.26,
+            "impressions": 2896.0,
+            "clicks": 90.0
+          },
+          {
+            "date": "2026-04-23",
+            "spend": 21.81,
+            "impressions": 2593.0,
+            "clicks": 70.0
+          },
+          {
+            "date": "2026-04-24",
+            "spend": 21.05,
+            "impressions": 2274.0,
+            "clicks": 66.0
+          },
+          {
+            "date": "2026-04-25",
+            "spend": 22.55,
+            "impressions": 2552.0,
+            "clicks": 58.0
+          },
+          {
+            "date": "2026-04-26",
+            "spend": 23.79,
+            "impressions": 2765.0,
+            "clicks": 59.0
+          },
+          {
+            "date": "2026-04-27",
+            "spend": 43.32,
+            "impressions": 3954.0,
+            "clicks": 90.0
+          },
+          {
+            "date": "2026-04-28",
+            "spend": 65.03,
+            "impressions": 4114.0,
+            "clicks": 113.0
+          },
+          {
+            "date": "2026-04-29",
+            "spend": 56.34,
+            "impressions": 3551.0,
+            "clicks": 84.0
+          },
+          {
+            "date": "2026-04-30",
+            "spend": 61.0,
+            "impressions": 3583.0,
+            "clicks": 131.0
+          },
+          {
+            "date": "2026-05-01",
+            "spend": 50.51,
+            "impressions": 3769.0,
+            "clicks": 107.0
+          },
+          {
+            "date": "2026-05-02",
+            "spend": 17.47,
+            "impressions": 2786.0,
+            "clicks": 60.0
+          },
+          {
+            "date": "2026-05-03",
+            "spend": 20.55,
+            "impressions": 2870.0,
+            "clicks": 78.0
+          },
+          {
+            "date": "2026-05-04",
+            "spend": 20.67,
+            "impressions": 2681.0,
+            "clicks": 75.0
+          },
+          {
+            "date": "2026-05-05",
+            "spend": 42.15,
+            "impressions": 4888.0,
+            "clicks": 118.0
+          },
+          {
+            "date": "2026-05-06",
+            "spend": 47.97,
+            "impressions": 4917.0,
+            "clicks": 119.0
+          },
+          {
+            "date": "2026-05-07",
+            "spend": 48.83,
+            "impressions": 4974.0,
+            "clicks": 139.0
+          },
+          {
+            "date": "2026-05-08",
+            "spend": 44.77,
+            "impressions": 4632.0,
+            "clicks": 125.0
+          },
+          {
+            "date": "2026-05-09",
+            "spend": 42.94,
+            "impressions": 4538.0,
+            "clicks": 100.0
+          },
+          {
+            "date": "2026-05-10",
+            "spend": 51.62,
+            "impressions": 6100.0,
+            "clicks": 160.0
+          },
+          {
+            "date": "2026-05-11",
+            "spend": 51.5,
+            "impressions": 5674.0,
+            "clicks": 139.0
+          },
+          {
+            "date": "2026-05-12",
+            "spend": 76.6,
+            "impressions": 6129.0,
+            "clicks": 159.0
+          },
+          {
+            "date": "2026-05-13",
+            "spend": 93.53,
+            "impressions": 6621.0,
+            "clicks": 212.0
+          },
+          {
+            "date": "2026-05-14",
+            "spend": 115.09,
+            "impressions": 6784.0,
+            "clicks": 200.0
+          },
+          {
+            "date": "2026-05-15",
+            "spend": 131.99,
+            "impressions": 9036.0,
+            "clicks": 202.0
+          },
+          {
+            "date": "2026-05-16",
+            "spend": 123.43,
+            "impressions": 8372.0,
+            "clicks": 210.0
+          },
+          {
+            "date": "2026-05-17",
+            "spend": 155.7,
+            "impressions": 10253.0,
+            "clicks": 269.0
+          },
+          {
+            "date": "2026-05-18",
+            "spend": 166.08,
+            "impressions": 14289.0,
+            "clicks": 342.0
+          },
+          {
+            "date": "2026-05-19",
+            "spend": 135.46,
+            "impressions": 10728.0,
+            "clicks": 261.0
+          },
+          {
+            "date": "2026-05-20",
+            "spend": 106.16,
+            "impressions": 7274.0,
+            "clicks": 176.0
+          },
+          {
+            "date": "2026-05-21",
+            "spend": 101.27,
+            "impressions": 5786.0,
+            "clicks": 170.0
+          },
+          {
+            "date": "2026-05-22",
+            "spend": 101.08,
+            "impressions": 6296.0,
+            "clicks": 146.0
+          },
+          {
+            "date": "2026-05-23",
+            "spend": 102.96,
+            "impressions": 6577.0,
+            "clicks": 161.0
+          },
+          {
+            "date": "2026-05-24",
+            "spend": 127.75,
+            "impressions": 9514.0,
+            "clicks": 222.0
+          },
+          {
+            "date": "2026-05-25",
+            "spend": 120.03,
+            "impressions": 8932.0,
+            "clicks": 228.0
+          },
+          {
+            "date": "2026-05-26",
+            "spend": 129.4,
+            "impressions": 8380.0,
+            "clicks": 242.0
+          },
+          {
+            "date": "2026-05-27",
+            "spend": 73.15,
+            "impressions": 6490.0,
+            "clicks": 130.0
+          },
+          {
+            "date": "2026-05-28",
+            "spend": 64.79,
+            "impressions": 5643.0,
+            "clicks": 180.0
+          },
+          {
+            "date": "2026-05-29",
+            "spend": 69.22,
+            "impressions": 6135.0,
+            "clicks": 158.0
+          },
+          {
+            "date": "2026-05-30",
+            "spend": 62.82,
+            "impressions": 5773.0,
+            "clicks": 137.0
+          },
+          {
+            "date": "2026-05-31",
+            "spend": 79.88,
+            "impressions": 7853.0,
+            "clicks": 191.0
+          },
+          {
+            "date": "2026-06-01",
+            "spend": 65.71,
+            "impressions": 7255.0,
+            "clicks": 193.0
+          },
+          {
+            "date": "2026-06-02",
+            "spend": 52.96,
+            "impressions": 5291.0,
+            "clicks": 118.0
+          },
+          {
+            "date": "2026-06-03",
+            "spend": 29.07,
+            "impressions": 3115.0,
+            "clicks": 77.0
+          },
+          {
+            "date": "2026-06-04",
+            "spend": 33.6,
+            "impressions": 3598.0,
+            "clicks": 79.0
+          },
+          {
+            "date": "2026-06-05",
+            "spend": 30.29,
+            "impressions": 3539.0,
+            "clicks": 97.0
+          },
+          {
+            "date": "2026-06-06",
+            "spend": 36.04,
+            "impressions": 4080.0,
+            "clicks": 101.0
+          },
+          {
+            "date": "2026-06-07",
+            "spend": 61.44,
+            "impressions": 6771.0,
+            "clicks": 192.0
+          },
+          {
+            "date": "2026-06-08",
+            "spend": 55.52,
+            "impressions": 6174.0,
+            "clicks": 147.0
+          },
+          {
+            "date": "2026-06-09",
+            "spend": 51.25,
+            "impressions": 5521.0,
+            "clicks": 153.0
+          },
+          {
+            "date": "2026-06-10",
+            "spend": 51.14,
+            "impressions": 5477.0,
+            "clicks": 136.0
+          },
+          {
+            "date": "2026-06-11",
+            "spend": 48.45,
+            "impressions": 4848.0,
+            "clicks": 130.0
+          },
+          {
+            "date": "2026-06-12",
+            "spend": 47.36,
+            "impressions": 5206.0,
+            "clicks": 114.0
+          },
+          {
+            "date": "2026-06-13",
+            "spend": 48.8,
+            "impressions": 6177.0,
+            "clicks": 132.0
+          },
+          {
+            "date": "2026-06-14",
+            "spend": 62.7,
+            "impressions": 9068.0,
+            "clicks": 189.0
+          },
+          {
+            "date": "2026-06-15",
+            "spend": 56.73,
+            "impressions": 7524.0,
+            "clicks": 184.0
+          },
+          {
+            "date": "2026-06-16",
+            "spend": 51.92,
+            "impressions": 5774.0,
+            "clicks": 147.0
+          },
+          {
+            "date": "2026-06-17",
+            "spend": 55.79,
+            "impressions": 5693.0,
+            "clicks": 161.0
+          },
+          {
+            "date": "2026-06-18",
+            "spend": 69.79,
+            "impressions": 6683.0,
+            "clicks": 191.0
+          },
+          {
+            "date": "2026-06-19",
+            "spend": 68.22,
+            "impressions": 5706.0,
+            "clicks": 171.0
+          },
+          {
+            "date": "2026-06-20",
+            "spend": 64.31,
+            "impressions": 6001.0,
+            "clicks": 148.0
+          },
+          {
+            "date": "2026-06-21",
+            "spend": 83.89,
+            "impressions": 8221.0,
+            "clicks": 213.0
+          },
+          {
+            "date": "2026-06-22",
+            "spend": 75.45,
+            "impressions": 7506.0,
+            "clicks": 222.0
+          },
+          {
+            "date": "2026-06-23",
+            "spend": 85.54,
+            "impressions": 8095.0,
+            "clicks": 216.0
+          },
+          {
+            "date": "2026-06-24",
+            "spend": 48.77,
+            "impressions": 4046.0,
+            "clicks": 134.0
+          },
+          {
+            "date": "2026-06-26",
+            "spend": 141.8,
+            "impressions": 12993.0,
+            "clicks": 327.0
+          },
+          {
+            "date": "2026-06-27",
+            "spend": 205.2,
+            "impressions": 19058.0,
+            "clicks": 518.0
+          },
+          {
+            "date": "2026-06-28",
+            "spend": 149.91,
+            "impressions": 13984.0,
+            "clicks": 397.0
+          },
+          {
+            "date": "2026-06-29",
+            "spend": 132.35,
+            "impressions": 14228.0,
+            "clicks": 380.0
+          },
+          {
+            "date": "2026-06-30",
+            "spend": 126.02,
+            "impressions": 12804.0,
+            "clicks": 347.0
+          },
+          {
+            "date": "2026-07-01",
+            "spend": 90.79,
+            "impressions": 9095.0,
+            "clicks": 260.0
+          },
+          {
+            "date": "2026-07-02",
+            "spend": 79.82,
+            "impressions": 8481.0,
+            "clicks": 204.0
+          },
+          {
+            "date": "2026-07-03",
+            "spend": 79.12,
+            "impressions": 8392.0,
+            "clicks": 201.0
+          },
+          {
+            "date": "2026-07-04",
+            "spend": 74.44,
+            "impressions": 9806.0,
+            "clicks": 216.0
+          },
+          {
+            "date": "2026-07-05",
+            "spend": 99.62,
+            "impressions": 14377.0,
+            "clicks": 298.0
+          },
+          {
+            "date": "2026-07-06",
+            "spend": 93.41,
+            "impressions": 13225.0,
+            "clicks": 274.0
+          },
+          {
+            "date": "2026-07-07",
+            "spend": 83.12,
+            "impressions": 10294.0,
+            "clicks": 222.0
+          },
+          {
+            "date": "2026-07-08",
+            "spend": 82.27,
+            "impressions": 9407.0,
+            "clicks": 217.0
+          },
+          {
+            "date": "2026-07-09",
+            "spend": 81.83,
+            "impressions": 9083.0,
+            "clicks": 252.0
+          },
+          {
+            "date": "2026-07-10",
+            "spend": 76.86,
+            "impressions": 8950.0,
+            "clicks": 217.0
+          },
+          {
+            "date": "2026-07-11",
+            "spend": 71.81,
+            "impressions": 9265.0,
+            "clicks": 207.0
+          },
+          {
+            "date": "2026-07-12",
+            "spend": 95.06,
+            "impressions": 13745.0,
+            "clicks": 288.0
+          },
+          {
+            "date": "2026-07-13",
+            "spend": 85.81,
+            "impressions": 12023.0,
+            "clicks": 280.0
+          },
+          {
+            "date": "2026-07-14",
+            "spend": 75.93,
+            "impressions": 13528.0,
+            "clicks": 258.0
+          },
+          {
+            "date": "2026-07-15",
+            "spend": 73.17,
+            "impressions": 12669.0,
+            "clicks": 215.0
+          },
+          {
+            "date": "2026-07-16",
+            "spend": 78.28,
+            "impressions": 10066.0,
+            "clicks": 222.0
+          },
+          {
+            "date": "2026-07-17",
+            "spend": 77.4,
+            "impressions": 8089.0,
+            "clicks": 217.0
+          },
+          {
+            "date": "2026-07-18",
+            "spend": 42.21,
+            "impressions": 4557.0,
+            "clicks": 98.0
+          },
+          {
+            "date": "2026-07-19",
+            "spend": 0.01,
+            "impressions": 4.0,
+            "clicks": 0.0
+          },
+          {
+            "date": "2026-07-24",
+            "spend": 117.69,
+            "impressions": 13365.0,
+            "clicks": 321.0
+          },
+          {
+            "date": "2026-07-25",
+            "spend": 133.0,
+            "impressions": 14663.0,
+            "clicks": 378.0
+          },
+          {
+            "date": "2026-07-26",
+            "spend": 93.37,
+            "impressions": 10507.0,
+            "clicks": 243.0
+          },
+          {
+            "date": "2026-07-27",
+            "spend": 92.19,
+            "impressions": 10210.0,
+            "clicks": 252.0
+          },
+          {
+            "date": "2026-07-28",
+            "spend": 97.94,
+            "impressions": 10025.0,
+            "clicks": 245.0
+          },
+          {
+            "date": "2026-07-29",
+            "spend": 80.66,
+            "impressions": 8383.0,
+            "clicks": 222.0
+          },
+          {
+            "date": "2026-07-30",
+            "spend": 109.76,
+            "impressions": 11233.0,
+            "clicks": 294.0
+          },
+          {
+            "date": "2026-07-31",
+            "spend": 97.48,
+            "impressions": 9942.0,
+            "clicks": 248.0
+          },
+          {
+            "date": "2026-08-01",
+            "spend": 84.02,
+            "impressions": 10111.0,
+            "clicks": 194.0
+          },
+          {
+            "date": "2026-08-02",
+            "spend": 113.64,
+            "impressions": 15068.0,
+            "clicks": 263.0
+          },
+          {
+            "date": "2026-08-03",
+            "spend": 68.55,
+            "impressions": 8589.0,
+            "clicks": 196.0
+          },
+          {
+            "date": "2026-08-04",
+            "spend": 76.29,
+            "impressions": 8001.0,
+            "clicks": 208.0
+          },
+          {
+            "date": "2026-08-05",
+            "spend": 64.0,
+            "impressions": 7046.0,
+            "clicks": 180.0
+          },
+          {
+            "date": "2026-08-06",
+            "spend": 74.42,
+            "impressions": 7822.0,
+            "clicks": 210.0
+          },
+          {
+            "date": "2026-08-07",
+            "spend": 72.85,
+            "impressions": 7192.0,
+            "clicks": 214.0
+          },
+          {
+            "date": "2026-08-08",
+            "spend": 88.38,
+            "impressions": 8956.0,
+            "clicks": 221.0
+          },
+          {
+            "date": "2026-08-09",
+            "spend": 104.47,
+            "impressions": 11878.0,
+            "clicks": 281.0
+          },
+          {
+            "date": "2026-08-10",
+            "spend": 90.37,
+            "impressions": 10424.0,
+            "clicks": 237.0
+          },
+          {
+            "date": "2026-08-11",
+            "spend": 71.14,
+            "impressions": 7825.0,
+            "clicks": 196.0
+          },
+          {
+            "date": "2026-08-12",
+            "spend": 84.4,
+            "impressions": 8089.0,
+            "clicks": 189.0
+          },
+          {
+            "date": "2026-08-13",
+            "spend": 75.77,
+            "impressions": 8038.0,
+            "clicks": 171.0
+          },
+          {
+            "date": "2026-08-14",
+            "spend": 85.02,
+            "impressions": 8844.0,
+            "clicks": 175.0
+          },
+          {
+            "date": "2026-08-15",
+            "spend": 75.93,
+            "impressions": 8452.0,
+            "clicks": 190.0
+          },
+          {
+            "date": "2026-08-16",
+            "spend": 60.2,
+            "impressions": 8045.0,
+            "clicks": 211.0
+          },
+          {
+            "date": "2026-09-01",
+            "spend": 2.78,
+            "impressions": 361.0,
+            "clicks": 14.0
+          },
+          {
+            "date": "2026-09-02",
+            "spend": 0.16,
+            "impressions": 11.0,
+            "clicks": 2.0
+          },
+          {
+            "date": "2026-09-03",
+            "spend": 24.21,
+            "impressions": 3593.0,
+            "clicks": 114.0
+          },
+          {
+            "date": "2026-09-07",
+            "spend": 8.15,
+            "impressions": 1555.0,
+            "clicks": 32.0
+          },
+          {
+            "date": "2026-09-08",
+            "spend": 119.74,
+            "impressions": 17558.0,
+            "clicks": 433.0
+          },
+          {
+            "date": "2026-09-09",
+            "spend": 98.08,
+            "impressions": 14146.0,
+            "clicks": 322.0
+          },
+          {
+            "date": "2026-09-10",
+            "spend": 128.19,
+            "impressions": 18685.0,
+            "clicks": 377.0
+          },
+          {
+            "date": "2026-09-11",
+            "spend": 324.65,
+            "impressions": 52135.0,
+            "clicks": 834.0
+          },
+          {
+            "date": "2026-09-12",
+            "spend": 467.09,
+            "impressions": 75428.0,
+            "clicks": 1268.0
+          },
+          {
+            "date": "2026-09-13",
+            "spend": 708.33,
+            "impressions": 122967.0,
+            "clicks": 1867.0
+          },
+          {
+            "date": "2026-09-14",
+            "spend": 520.43,
+            "impressions": 83375.0,
+            "clicks": 1426.0
+          },
+          {
+            "date": "2026-09-15",
+            "spend": 329.45,
+            "impressions": 53035.0,
+            "clicks": 825.0
+          },
+          {
+            "date": "2026-09-16",
+            "spend": 284.04,
+            "impressions": 41727.0,
+            "clicks": 634.0
+          },
+          {
+            "date": "2026-09-17",
+            "spend": 322.9,
+            "impressions": 52315.0,
+            "clicks": 735.0
+          },
+          {
+            "date": "2026-09-18",
+            "spend": 273.22,
+            "impressions": 46459.0,
+            "clicks": 688.0
+          },
+          {
+            "date": "2026-09-19",
+            "spend": 294.71,
+            "impressions": 49053.0,
+            "clicks": 785.0
+          },
+          {
+            "date": "2026-09-20",
+            "spend": 740.35,
+            "impressions": 138199.0,
+            "clicks": 1888.0
+          },
+          {
+            "date": "2026-09-21",
+            "spend": 577.13,
+            "impressions": 104855.0,
+            "clicks": 1401.0
+          },
+          {
+            "date": "2026-09-22",
+            "spend": 663.64,
+            "impressions": 119935.0,
+            "clicks": 1633.0
+          },
+          {
+            "date": "2026-09-23",
+            "spend": 699.97,
+            "impressions": 115363.0,
+            "clicks": 1668.0
+          },
+          {
+            "date": "2026-09-24",
+            "spend": 652.0,
+            "impressions": 101563.0,
+            "clicks": 1415.0
+          },
+          {
+            "date": "2026-09-25",
+            "spend": 401.49,
+            "impressions": 55311.0,
+            "clicks": 886.0
+          },
+          {
+            "date": "2026-09-26",
+            "spend": 205.55,
+            "impressions": 23262.0,
+            "clicks": 545.0
+          },
+          {
+            "date": "2026-09-27",
+            "spend": 308.08,
+            "impressions": 40479.0,
+            "clicks": 763.0
+          },
+          {
+            "date": "2026-09-28",
+            "spend": 233.76,
+            "impressions": 28506.0,
+            "clicks": 636.0
+          },
+          {
+            "date": "2026-09-29",
+            "spend": 193.33,
+            "impressions": 20832.0,
+            "clicks": 478.0
+          },
+          {
+            "date": "2026-09-30",
+            "spend": 443.83,
+            "impressions": 44262.0,
+            "clicks": 950.0
+          },
+          {
+            "date": "2026-10-01",
+            "spend": 638.28,
+            "impressions": 69390.0,
+            "clicks": 1388.0
+          }
+        ],
+        "campaigns": [
+          {
+            "id": "120242974198750790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - Dark Posts",
+            "objective": "LINK_CLICKS",
+            "spend": 1412.91,
+            "impressions": 142785.0,
+            "reach": 74739.0,
+            "clicks": 4055.0,
+            "linkClicks": 4191.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120251598416400790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 23.06",
+            "objective": "LINK_CLICKS",
+            "spend": 1292.96,
+            "impressions": 140983.0,
+            "reach": 66258.0,
+            "clicks": 3670.0,
+            "linkClicks": 3715.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120250881665290790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 17.06",
+            "objective": "LINK_CLICKS",
+            "spend": 774.54,
+            "impressions": 46524.0,
+            "reach": 27816.0,
+            "clicks": 1846.0,
+            "linkClicks": 1756.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120242475341940790",
+            "name": "[DISTRIBUIÇÃO] [ENVOLVIMENTO] [COLD] - 06/03",
+            "objective": "OUTCOME_ENGAGEMENT",
+            "spend": 722.31,
+            "impressions": 162294.0,
+            "reach": 52389.0,
+            "clicks": 1491.0,
+            "linkClicks": 285.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120249210097210790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 06.05",
+            "objective": "LINK_CLICKS",
+            "spend": 646.13,
+            "impressions": 67568.0,
+            "reach": 30033.0,
+            "clicks": 1783.0,
+            "linkClicks": 1812.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120242588060500790",
+            "name": "[DISTRIBUIÇÃO] [ENVOLVIMENTO] [COLD] - 09/03",
+            "objective": "OUTCOME_ENGAGEMENT",
+            "spend": 632.54,
+            "impressions": 88125.0,
+            "reach": 35621.0,
+            "clicks": 2774.0,
+            "linkClicks": 525.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120247302300240790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 18.05",
+            "objective": "LINK_CLICKS",
+            "spend": 600.51,
+            "impressions": 53684.0,
+            "reach": 26338.0,
+            "clicks": 1133.0,
+            "linkClicks": 1169.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120244011061360790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - Novo Ciclo",
+            "objective": "LINK_CLICKS",
+            "spend": 533.65,
+            "impressions": 68431.0,
+            "reach": 37171.0,
+            "clicks": 1794.0,
+            "linkClicks": 1831.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120246273246640790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - FM O Dia",
+            "objective": "LINK_CLICKS",
+            "spend": 399.07,
+            "impressions": 47689.0,
+            "reach": 30181.0,
+            "clicks": 1506.0,
+            "linkClicks": 1511.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120242974312830790",
+            "name": "[DISTRIBUIÇÃO] [ENVOLVIMENTO] [COLD] - 17/03",
+            "objective": "OUTCOME_ENGAGEMENT",
+            "spend": 392.56,
+            "impressions": 36124.0,
+            "reach": 17858.0,
+            "clicks": 696.0,
+            "linkClicks": 343.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120243128487000790",
+            "name": "Post do Instagram: Obra é mais do que concreto e...",
+            "objective": "LINK_CLICKS",
+            "spend": 358.12,
+            "impressions": 41539.0,
+            "reach": 26984.0,
+            "clicks": 1144.0,
+            "linkClicks": 1159.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120237593998380790",
+            "name": "Evento Zona Oeste",
+            "objective": "OUTCOME_ENGAGEMENT",
+            "spend": 354.7,
+            "impressions": 67317.0,
+            "reach": 52386.0,
+            "clicks": 442.0,
+            "linkClicks": 237.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120237527455500790",
+            "name": "Semana 1",
+            "objective": "LINK_CLICKS",
+            "spend": 350.2,
+            "impressions": 40544.0,
+            "reach": 19574.0,
+            "clicks": 1030.0,
+            "linkClicks": 1045.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120240327758650790",
+            "name": "Post do Instagram: Hoje foi dia de estar em...",
+            "objective": "LINK_CLICKS",
+            "spend": 349.91,
+            "impressions": 39692.0,
+            "reach": 20356.0,
+            "clicks": 880.0,
+            "linkClicks": 873.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120246947478590790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD]: Começando o dia em Resende, na...",
+            "objective": "LINK_CLICKS",
+            "spend": 349.76,
+            "impressions": 26766.0,
+            "reach": 15211.0,
+            "clicks": 209.0,
+            "linkClicks": 197.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120235895849460790",
+            "name": "Post do Instagram: A Suderj é o coração do...",
+            "objective": "LINK_CLICKS",
+            "spend": 349.75,
+            "impressions": 36621.0,
+            "reach": 24414.0,
+            "clicks": 769.0,
+            "linkClicks": 765.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120235581021390790",
+            "name": "Dias das Crianças - Craque do Amanhã",
+            "objective": "LINK_CLICKS",
+            "spend": 349.3,
+            "impressions": 45915.0,
+            "reach": 30925.0,
+            "clicks": 1143.0,
+            "linkClicks": 1155.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120247447674610790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD]: Segurança pública também...",
+            "objective": "LINK_CLICKS",
+            "spend": 337.32,
+            "impressions": 17495.0,
+            "reach": 12329.0,
+            "clicks": 220.0,
+            "linkClicks": 202.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120251993246890790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 26.06",
+            "objective": "LINK_CLICKS",
+            "spend": 330.87,
+            "impressions": 51501.0,
+            "reach": 26761.0,
+            "clicks": 791.0,
+            "linkClicks": 801.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120240054070110790",
+            "name": "Que 2026 traga...",
+            "objective": "LINK_CLICKS",
+            "spend": 328.36,
+            "impressions": 51342.0,
+            "reach": 28825.0,
+            "clicks": 951.0,
+            "linkClicks": 979.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120252577764970790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 07.07",
+            "objective": "LINK_CLICKS",
+            "spend": 322.74,
+            "impressions": 34869.0,
+            "reach": 24332.0,
+            "clicks": 1199.0,
+            "linkClicks": 1204.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120242395549090790",
+            "name": "Post do Instagram: Hoje é um dia muito feliz....",
+            "objective": "LINK_CLICKS",
+            "spend": 320.37,
+            "impressions": 17681.0,
+            "reach": 12542.0,
+            "clicks": 299.0,
+            "linkClicks": 279.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120241920150660790",
+            "name": "Post do Instagram: Quarta-feira de Cinzas é dia...",
+            "objective": "LINK_CLICKS",
+            "spend": 314.49,
+            "impressions": 30731.0,
+            "reach": 18834.0,
+            "clicks": 281.0,
+            "linkClicks": 279.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120238812315790790",
+            "name": "Homenagem Paratletas",
+            "objective": "LINK_CLICKS",
+            "spend": 298.42,
+            "impressions": 42564.0,
+            "reach": 17731.0,
+            "clicks": 984.0,
+            "linkClicks": 1011.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120243217443810790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - Suderj",
+            "objective": "LINK_CLICKS",
+            "spend": 298.07,
+            "impressions": 41813.0,
+            "reach": 24681.0,
+            "clicks": 1197.0,
+            "linkClicks": 1218.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120240578336040790",
+            "name": "Post do Instagram: Essa semana participei de uma...",
+            "objective": "LINK_CLICKS",
+            "spend": 295.97,
+            "impressions": 70169.0,
+            "reach": 28006.0,
+            "clicks": 610.0,
+            "linkClicks": 618.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120236676340130790",
+            "name": "Ballet",
+            "objective": "OUTCOME_ENGAGEMENT",
+            "spend": 283.84,
+            "impressions": 44084.0,
+            "reach": 30413.0,
+            "clicks": 450.0,
+            "linkClicks": 0.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120240328072460790",
+            "name": "Ensaio Bangu",
+            "objective": "OUTCOME_ENGAGEMENT",
+            "spend": 278.49,
+            "impressions": 171568.0,
+            "reach": 138246.0,
+            "clicks": 239.0,
+            "linkClicks": 25.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120252800273830790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 14.07",
+            "objective": "LINK_CLICKS",
+            "spend": 262.17,
+            "impressions": 40483.0,
+            "reach": 25108.0,
+            "clicks": 756.0,
+            "linkClicks": 769.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120232584155690790",
+            "name": "Post do Instagram: Empreender não é apenas...",
+            "objective": "LINK_CLICKS",
+            "spend": 244.82,
+            "impressions": 23817.0,
+            "reach": 16292.0,
+            "clicks": 400.0,
+            "linkClicks": 419.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120234864647660790",
+            "name": "Post do Instagram: Hoje inicio uma nova etapa da...",
+            "objective": "LINK_CLICKS",
+            "spend": 244.79,
+            "impressions": 24755.0,
+            "reach": 16647.0,
+            "clicks": 1074.0,
+            "linkClicks": 1076.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120233788568760790",
+            "name": "Post do Instagram: Percorrer o estado é uma...",
+            "objective": "LINK_CLICKS",
+            "spend": 235.27,
+            "impressions": 20259.0,
+            "reach": 13559.0,
+            "clicks": 176.0,
+            "linkClicks": 179.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120252494490790790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 04.07",
+            "objective": "LINK_CLICKS",
+            "spend": 233.23,
+            "impressions": 41639.0,
+            "reach": 27207.0,
+            "clicks": 683.0,
+            "linkClicks": 691.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120235117842480790",
+            "name": "Post do Instagram: Esporte é mais que jogo: é...",
+            "objective": "LINK_CLICKS",
+            "spend": 231.3,
+            "impressions": 19123.0,
+            "reach": 13022.0,
+            "clicks": 374.0,
+            "linkClicks": 368.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120233238880600790",
+            "name": "Post do Instagram: Empreender é decidir o tempo...",
+            "objective": "LINK_CLICKS",
+            "spend": 231.15,
+            "impressions": 24467.0,
+            "reach": 18470.0,
+            "clicks": 383.0,
+            "linkClicks": 389.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120236676233130790",
+            "name": "Post do Instagram: Outubro Rosa em pauta! 🩷\n\nUm...",
+            "objective": "LINK_CLICKS",
+            "spend": 223.45,
+            "impressions": 10086.0,
+            "reach": 6979.0,
+            "clicks": 117.0,
+            "linkClicks": 119.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120232383259340790",
+            "name": "Post do Instagram: Quando decidi empreender,...",
+            "objective": "LINK_CLICKS",
+            "spend": 220.85,
+            "impressions": 20644.0,
+            "reach": 16797.0,
+            "clicks": 572.0,
+            "linkClicks": 589.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120238483772410790",
+            "name": "Post do Instagram: O Tour Social do Maracanã...",
+            "objective": "LINK_CLICKS",
+            "spend": 209.89,
+            "impressions": 16530.0,
+            "reach": 11458.0,
+            "clicks": 239.0,
+            "linkClicks": 233.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120246885439790790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD]: Campo Grande, hoje a aula foi...",
+            "objective": "LINK_CLICKS",
+            "spend": 209.76,
+            "impressions": 10571.0,
+            "reach": 7661.0,
+            "clicks": 501.0,
+            "linkClicks": 499.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120234484733930790",
+            "name": "Post do Instagram: Hoje, no Dia do Idoso, quero...",
+            "objective": "LINK_CLICKS",
+            "spend": 209.73,
+            "impressions": 6458.0,
+            "reach": 5789.0,
+            "clicks": 107.0,
+            "linkClicks": 105.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120246885403710790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD]: Bangu, muito obrigado pelo...",
+            "objective": "LINK_CLICKS",
+            "spend": 209.61,
+            "impressions": 11028.0,
+            "reach": 6928.0,
+            "clicks": 417.0,
+            "linkClicks": 416.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120232871014650790",
+            "name": "Post do Instagram: Liderar é ser exemplo. 💡 No...",
+            "objective": "LINK_CLICKS",
+            "spend": 202.8,
+            "impressions": 21167.0,
+            "reach": 17547.0,
+            "clicks": 302.0,
+            "linkClicks": 304.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120234407351190790",
+            "name": "Post do Instagram: O dia a dia nos pede escolhas...",
+            "objective": "LINK_CLICKS",
+            "spend": 199.99,
+            "impressions": 18492.0,
+            "reach": 13834.0,
+            "clicks": 212.0,
+            "linkClicks": 220.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120238061537760790",
+            "name": "Post do Instagram: 🚀Olha o time que chegou pra...",
+            "objective": "LINK_CLICKS",
+            "spend": 197.75,
+            "impressions": 13353.0,
+            "reach": 10753.0,
+            "clicks": 174.0,
+            "linkClicks": 167.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120246010455590790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD]: Neste fim de semana, estive em...",
+            "objective": "LINK_CLICKS",
+            "spend": 197.04,
+            "impressions": 10122.0,
+            "reach": 6461.0,
+            "clicks": 286.0,
+            "linkClicks": 288.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120236758793400790",
+            "name": "Vila Olímpica Sampaio",
+            "objective": "LINK_CLICKS",
+            "spend": 181.85,
+            "impressions": 17484.0,
+            "reach": 13506.0,
+            "clicks": 482.0,
+            "linkClicks": 482.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120253121753300790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 27.07",
+            "objective": "LINK_CLICKS",
+            "spend": 180.66,
+            "impressions": 21564.0,
+            "reach": 13984.0,
+            "clicks": 488.0,
+            "linkClicks": 500.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120248020102750790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 26.05",
+            "objective": "LINK_CLICKS",
+            "spend": 176.05,
+            "impressions": 14578.0,
+            "reach": 9627.0,
+            "clicks": 404.0,
+            "linkClicks": 404.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120239304367940790",
+            "name": "Post do Instagram: 5 comentários",
+            "objective": "LINK_CLICKS",
+            "spend": 174.87,
+            "impressions": 19333.0,
+            "reach": 11715.0,
+            "clicks": 961.0,
+            "linkClicks": 870.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120241003930090790",
+            "name": "Post do Instagram: O sábado já começou com muitas...",
+            "objective": "LINK_CLICKS",
+            "spend": 160.93,
+            "impressions": 27935.0,
+            "reach": 19201.0,
+            "clicks": 1068.0,
+            "linkClicks": 1072.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120241444501870790",
+            "name": "Post do Instagram: Quando assumi a presidência da...",
+            "objective": "LINK_CLICKS",
+            "spend": 160.83,
+            "impressions": 17294.0,
+            "reach": 12902.0,
+            "clicks": 351.0,
+            "linkClicks": 349.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120241248719030790",
+            "name": "Post do Instagram: 🤝Presença, diálogo e parcerias...",
+            "objective": "LINK_CLICKS",
+            "spend": 160.82,
+            "impressions": 21514.0,
+            "reach": 14750.0,
+            "clicks": 737.0,
+            "linkClicks": 734.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120241256223840790",
+            "name": "Post do Instagram: Conversa que constrói 🗣️🚧...",
+            "objective": "LINK_CLICKS",
+            "spend": 160.3,
+            "impressions": 15294.0,
+            "reach": 10699.0,
+            "clicks": 212.0,
+            "linkClicks": 217.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120240964229390790",
+            "name": "Post do Instagram: Novidade boa pra Rocinha!📣\n\nEm...",
+            "objective": "LINK_CLICKS",
+            "spend": 149.58,
+            "impressions": 15483.0,
+            "reach": 11781.0,
+            "clicks": 257.0,
+            "linkClicks": 252.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120242395266920790",
+            "name": "[DISTRIBUIÇÃO] [ENVOLVIMENTO] [COLD] - Post Cláudio Castro",
+            "objective": "OUTCOME_ENGAGEMENT",
+            "spend": 146.98,
+            "impressions": 29761.0,
+            "reach": 26440.0,
+            "clicks": 164.0,
+            "linkClicks": 0.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120241003441910790",
+            "name": "Post do Instagram: Não basta reativar a piscina,...",
+            "objective": "LINK_CLICKS",
+            "spend": 138.38,
+            "impressions": 19732.0,
+            "reach": 16801.0,
+            "clicks": 691.0,
+            "linkClicks": 699.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120246471838520790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - FM o Dia 2",
+            "objective": "LINK_CLICKS",
+            "spend": 110.07,
+            "impressions": 9440.0,
+            "reach": 5455.0,
+            "clicks": 228.0,
+            "linkClicks": 234.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120240839766230790",
+            "name": "Projeto Leny da África",
+            "objective": "OUTCOME_ENGAGEMENT",
+            "spend": 108.78,
+            "impressions": 23155.0,
+            "reach": 19013.0,
+            "clicks": 223.0,
+            "linkClicks": 20.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120246428018630790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - Carapebus",
+            "objective": "LINK_CLICKS",
+            "spend": 106.65,
+            "impressions": 13998.0,
+            "reach": 5070.0,
+            "clicks": 272.0,
+            "linkClicks": 278.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120240796917120790",
+            "name": "Domingo na Zona Oeste",
+            "objective": "OUTCOME_ENGAGEMENT",
+            "spend": 103.01,
+            "impressions": 55190.0,
+            "reach": 49758.0,
+            "clicks": 66.0,
+            "linkClicks": 20.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120253417118920790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 05.08",
+            "objective": "LINK_CLICKS",
+            "spend": 96.42,
+            "impressions": 13098.0,
+            "reach": 9980.0,
+            "clicks": 231.0,
+            "linkClicks": 240.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120232239555960790",
+            "name": "Post do Instagram: Semana intensa! 🚀 Do Norte ao...",
+            "objective": "LINK_CLICKS",
+            "spend": 91.11,
+            "impressions": 15060.0,
+            "reach": 12795.0,
+            "clicks": 153.0,
+            "linkClicks": 154.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120247904314560790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 25.05",
+            "objective": "LINK_CLICKS",
+            "spend": 89.13,
+            "impressions": 8966.0,
+            "reach": 7273.0,
+            "clicks": 202.0,
+            "linkClicks": 208.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120253074900760790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 25.07",
+            "objective": "LINK_CLICKS",
+            "spend": 78.5,
+            "impressions": 9787.0,
+            "reach": 6677.0,
+            "clicks": 75.0,
+            "linkClicks": 74.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120240918426180790",
+            "name": "Post do Instagram: Encerrando essa quarta-feira...",
+            "objective": "LINK_CLICKS",
+            "spend": 70.72,
+            "impressions": 13243.0,
+            "reach": 11038.0,
+            "clicks": 245.0,
+            "linkClicks": 253.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120245582723950790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD]: Com muita alegria, compromisso...",
+            "objective": "LINK_CLICKS",
+            "spend": 59.63,
+            "impressions": 7012.0,
+            "reach": 4301.0,
+            "clicks": 88.0,
+            "linkClicks": 84.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120253505093300790",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - Sampaio",
+            "objective": "LINK_CLICKS",
+            "spend": 48.32,
+            "impressions": 4269.0,
+            "reach": 2800.0,
+            "clicks": 45.0,
+            "linkClicks": 45.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120238006823370790",
+            "name": "Post do Instagram: 🚀Olha o time que chegou pra...",
+            "objective": "LINK_CLICKS",
+            "spend": 40.82,
+            "impressions": 2729.0,
+            "reach": 2551.0,
+            "clicks": 49.0,
+            "linkClicks": 49.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120238421184780790",
+            "name": "Post do Instagram: O Tour Social do Maracanã...",
+            "objective": "LINK_CLICKS",
+            "spend": 25.63,
+            "impressions": 2442.0,
+            "reach": 2273.0,
+            "clicks": 34.0,
+            "linkClicks": 35.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120243664668390790",
+            "name": "Post do Instagram: Hoje foi dia de reforçar um...",
+            "objective": "LINK_CLICKS",
+            "spend": 7.35,
+            "impressions": 471.0,
+            "reach": 438.0,
+            "clicks": 13.0,
+            "linkClicks": 12.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "52605679799264",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+            "objective": "LINK_CLICKS",
+            "spend": 1440.34,
+            "impressions": 221502.0,
+            "reach": 112692.0,
+            "clicks": 2552.0,
+            "linkClicks": 2593.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52605680811464",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Eu não entrei na política",
+            "objective": "LINK_CLICKS",
+            "spend": 1398.16,
+            "impressions": 214440.0,
+            "reach": 112990.0,
+            "clicks": 4463.0,
+            "linkClicks": 4548.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52605680383464",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+            "objective": "LINK_CLICKS",
+            "spend": 1392.51,
+            "impressions": 200938.0,
+            "reach": 110713.0,
+            "clicks": 2965.0,
+            "linkClicks": 3030.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52605679798664",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+            "objective": "LINK_CLICKS",
+            "spend": 1282.44,
+            "impressions": 317264.0,
+            "reach": 141558.0,
+            "clicks": 4157.0,
+            "linkClicks": 4244.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52610279401064",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Ufc",
+            "objective": "LINK_CLICKS",
+            "spend": 802.94,
+            "impressions": 94442.0,
+            "reach": 65092.0,
+            "clicks": 1851.0,
+            "linkClicks": 1873.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52610668414464",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Eu acredito no esporte",
+            "objective": "LINK_CLICKS",
+            "spend": 699.97,
+            "impressions": 92670.0,
+            "reach": 54896.0,
+            "clicks": 1340.0,
+            "linkClicks": 1362.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52608367469864",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]  Política, pra mim, nunca foi sobre cargo",
+            "objective": "LINK_CLICKS",
+            "spend": 687.31,
+            "impressions": 108818.0,
+            "reach": 67340.0,
+            "clicks": 1429.0,
+            "linkClicks": 1460.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52605679798464",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+            "objective": "LINK_CLICKS",
+            "spend": 391.21,
+            "impressions": 65301.0,
+            "reach": 47876.0,
+            "clicks": 1438.0,
+            "linkClicks": 1470.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52605679798064",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+            "objective": "LINK_CLICKS",
+            "spend": 372.63,
+            "impressions": 48213.0,
+            "reach": 32882.0,
+            "clicks": 716.0,
+            "linkClicks": 743.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52611755097064",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Leo Moura",
+            "objective": "LINK_CLICKS",
+            "spend": 307.08,
+            "impressions": 34799.0,
+            "reach": 31476.0,
+            "clicks": 1058.0,
+            "linkClicks": 1058.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52613263199864",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Eu entro para dar 100%",
+            "objective": "LINK_CLICKS",
+            "spend": 214.88,
+            "impressions": 28349.0,
+            "reach": 20972.0,
+            "clicks": 631.0,
+            "linkClicks": 643.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52614084827264",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] José Aldo 2 - Quando quem acredita",
+            "objective": "LINK_CLICKS",
+            "spend": 145.51,
+            "impressions": 16450.0,
+            "reach": 14758.0,
+            "clicks": 406.0,
+            "linkClicks": 410.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52613661985664",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Bangu",
+            "objective": "LINK_CLICKS",
+            "spend": 134.49,
+            "impressions": 13783.0,
+            "reach": 10330.0,
+            "clicks": 277.0,
+            "linkClicks": 278.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52614080294464",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Política pra mim é propósito",
+            "objective": "LINK_CLICKS",
+            "spend": 129.02,
+            "impressions": 13514.0,
+            "reach": 10909.0,
+            "clicks": 233.0,
+            "linkClicks": 234.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52613261638664",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Eu não entrei na política",
+            "objective": "LINK_CLICKS",
+            "spend": 126.45,
+            "impressions": 9090.0,
+            "reach": 8269.0,
+            "clicks": 170.0,
+            "linkClicks": 162.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52614370214464",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Força do esporte",
+            "objective": "LINK_CLICKS",
+            "spend": 58.13,
+            "impressions": 5716.0,
+            "reach": 5432.0,
+            "clicks": 111.0,
+            "linkClicks": 108.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52614369251864",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Não estou por necessidade",
+            "objective": "LINK_CLICKS",
+            "spend": 53.32,
+            "impressions": 5106.0,
+            "reach": 4802.0,
+            "clicks": 80.0,
+            "linkClicks": 81.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52604748514664",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+            "objective": "LINK_CLICKS",
+            "spend": 6.59,
+            "impressions": 994.0,
+            "reach": 934.0,
+            "clicks": 41.0,
+            "linkClicks": 43.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52604748546064",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+            "objective": "LINK_CLICKS",
+            "spend": 6.23,
+            "impressions": 1150.0,
+            "reach": 1103.0,
+            "clicks": 29.0,
+            "linkClicks": 29.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52604748406864",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+            "objective": "LINK_CLICKS",
+            "spend": 5.81,
+            "impressions": 741.0,
+            "reach": 693.0,
+            "clicks": 21.0,
+            "linkClicks": 20.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52604748005064",
+            "name": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+            "objective": "LINK_CLICKS",
+            "spend": 5.58,
+            "impressions": 707.0,
+            "reach": 656.0,
+            "clicks": 23.0,
+            "linkClicks": 25.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52604213893064",
+            "name": "Post do Instagram: O #TimePampolha só cresce! Vem...",
+            "objective": "LINK_CLICKS",
+            "spend": 2.94,
+            "impressions": 372.0,
+            "reach": 343.0,
+            "clicks": 16.0,
+            "linkClicks": 15.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52604737774864",
+            "name": "Post do Instagram: Política não se faz com...",
+            "objective": "LINK_CLICKS",
+            "spend": 0.0,
+            "impressions": 1.0,
+            "reach": 1.0,
+            "clicks": 0.0,
+            "linkClicks": 0.0,
+            "results": null,
+            "resultType": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          }
+        ],
+        "highlights": [
+          {
+            "id": "120240328072470790",
+            "name": "Novo anúncio de Engajamento",
+            "campaignName": "Ensaio Bangu",
+            "impressions": 171568.0,
+            "reach": 138246.0,
+            "spend": 278.49,
+            "engagements": 93398.0,
+            "link": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120242475341930790",
+            "name": "AD01",
+            "campaignName": "[DISTRIBUIÇÃO] [ENVOLVIMENTO] [COLD] - 06/03",
+            "impressions": 162294.0,
+            "reach": 52389.0,
+            "spend": 722.31,
+            "engagements": 61073.0,
+            "link": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120242974198760790",
+            "name": "AD01",
+            "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - Dark Posts",
+            "impressions": 142785.0,
+            "reach": 74739.0,
+            "spend": 1412.91,
+            "engagements": 43924.0,
+            "link": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120251598416420790",
+            "name": "AD01",
+            "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDORES] [COLD] - 23.06",
+            "impressions": 140983.0,
+            "reach": 66258.0,
+            "spend": 1292.96,
+            "engagements": 29851.0,
+            "link": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "120242588165200790",
+            "name": "AD01",
+            "campaignName": "[DISTRIBUIÇÃO] [ENVOLVIMENTO] [COLD] - 09/03",
+            "impressions": 75826.0,
+            "reach": 32431.0,
+            "spend": 550.01,
+            "engagements": 33659.0,
+            "link": null,
+            "accountId": "act_716311018073722",
+            "accountName": "Felipe Mendes Pampolha",
+            "accountLabel": "Felipe Pampolha 01"
+          },
+          {
+            "id": "52605679799064",
+            "name": "AD01",
+            "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+            "impressions": 317264.0,
+            "reach": 141558.0,
+            "spend": 1282.44,
+            "engagements": 4869.0,
+            "link": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52605679798264",
+            "name": "AD01",
+            "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+            "impressions": 221502.0,
+            "reach": 112692.0,
+            "spend": 1440.34,
+            "engagements": 25331.0,
+            "link": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52605680811064",
+            "name": "AD01 - Eu não entrei na política",
+            "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD] Eu não entrei na política",
+            "impressions": 214440.0,
+            "reach": 112990.0,
+            "spend": 1398.16,
+            "engagements": 5596.0,
+            "link": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52605680383664",
+            "name": "AD01",
+            "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]",
+            "impressions": 200938.0,
+            "reach": 110713.0,
+            "spend": 1392.51,
+            "engagements": 28473.0,
+            "link": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          },
+          {
+            "id": "52608367470064",
+            "name": "AD01",
+            "campaignName": "[DISTRIBUIÇÃO] [C1] [SEGUIDOR] [COLD]  Política, pra mim, nunca foi sobre cargo",
+            "impressions": 108818.0,
+            "reach": 67340.0,
+            "spend": 687.31,
+            "engagements": 17100.0,
+            "link": null,
+            "accountId": "act_2174013390129316",
+            "accountName": "Felipe Mendes 02",
+            "accountLabel": "Felipe Pampolha 02"
+          }
+        ],
+        "notes": [
+          "As duas contas estão reunidas; cada campanha e anúncio mantém sua conta de origem.",
+          "Alcance único entre contas indisponível: públicos podem se sobrepor. O alcance é exibido separadamente por conta e não é somado.",
+          "CPC, CPM e CTR são calculados pelos totais correspondentes, nunca pela média das taxas.",
+          "Instagram corresponde somente a 08/08/2026–06/10/2026, com 58 de 60 dias disponíveis; não representa o histórico completo da mídia.",
+          "Felipe Pampolha 01: Campanhas com entrega reportada no intervalo, incluindo campanhas hoje pausadas/arquivadas; nenhuma filtragem por nome.",
+          "Felipe Pampolha 01: Alcance do período consultado no nível da conta: não é a soma do alcance diário ou das campanhas.",
+          "Felipe Pampolha 01: Destaques: cinco anúncios com mais impressões no intervalo; links públicos não coletados.",
+          "Felipe Pampolha 01: Resultados/conversões por objetivo não consolidados; engagements representa post_engagement e videoViews representa reproduções de vídeo.",
+          "Felipe Pampolha 01: Dias sem linha foram consultados novamente com sucesso: sem entrega reportada, distintos de falhas de coleta. A série preserva apenas observações retornadas; não preenche zeros.",
+          "Felipe Pampolha 01: Consulta dos 414 dias retornou 310 linhas diárias, de 2025-08-22 a 2026-08-16; a soma de investimento, impressões e cliques concilia com o total da conta no período.",
+          "Felipe Pampolha 01: Histórico consultado desde a criação da conta em 2025-08-19, até 2026-10-06 (último dia completo do recorte).",
+          "Felipe Pampolha 01: Primeira/última linha diária reportada: 2025-08-22 / 2026-08-16.",
+          "Felipe Pampolha 01: datas anteriores à criação em 2025-08-19 não têm atividade possível nesta conta.",
+          "Felipe Pampolha 02: Campanhas com entrega reportada no intervalo, incluindo campanhas hoje pausadas/arquivadas; nenhuma filtragem por nome.",
+          "Felipe Pampolha 02: Alcance do período consultado no nível da conta: não é a soma do alcance diário ou das campanhas.",
+          "Felipe Pampolha 02: Destaques: cinco anúncios com mais impressões no intervalo; links públicos não coletados.",
+          "Felipe Pampolha 02: Resultados/conversões por objetivo não consolidados; engagements representa post_engagement e videoViews representa reproduções de vídeo.",
+          "Felipe Pampolha 02: Dias sem linha foram consultados novamente com sucesso: sem entrega reportada, distintos de falhas de coleta. A série preserva apenas observações retornadas; não preenche zeros.",
+          "Felipe Pampolha 02: Consulta dos 51 dias retornou 28 linhas diárias, de 2026-09-01 a 2026-10-01; a soma de investimento, impressões e cliques concilia com o total da conta no período.",
+          "Felipe Pampolha 02: A API reporta mais inline_link_clicks que clicks no mesmo período. Valores preservados sem ajuste; CPC e CTR usam clicks. Não tratar as duas contagens como um funil reconciliado.",
+          "Felipe Pampolha 02: Histórico consultado desde a criação da conta em 2026-08-17, até 2026-10-06 (último dia completo do recorte).",
+          "Felipe Pampolha 02: Primeira/última linha diária reportada: 2026-09-01 / 2026-10-01.",
+          "Felipe Pampolha 02: datas anteriores à criação em 2026-08-17 não têm atividade possível nesta conta."
+        ],
+        "coverageDays": 414,
+        "missingDates": [],
+        "noDeliveryDates": [
+          "2025-08-19",
+          "2025-08-20",
+          "2025-08-21",
+          "2025-09-17",
+          "2025-09-18",
+          "2025-09-27",
+          "2025-09-28",
+          "2025-09-29",
+          "2025-11-01",
+          "2025-11-02",
+          "2025-11-03",
+          "2025-11-04",
+          "2025-11-05",
+          "2025-11-13",
+          "2025-11-14",
+          "2025-11-15",
+          "2025-11-16",
+          "2025-11-17",
+          "2025-11-18",
+          "2025-12-01",
+          "2025-12-02",
+          "2025-12-03",
+          "2025-12-17",
+          "2025-12-18",
+          "2025-12-27",
+          "2025-12-28",
+          "2025-12-29",
+          "2025-12-30",
+          "2025-12-31",
+          "2026-01-01",
+          "2026-01-02",
+          "2026-01-03",
+          "2026-01-04",
+          "2026-01-05",
+          "2026-01-06",
+          "2026-01-07",
+          "2026-02-19",
+          "2026-02-20",
+          "2026-02-21",
+          "2026-02-22",
+          "2026-03-03",
+          "2026-03-04",
+          "2026-04-11",
+          "2026-04-12",
+          "2026-04-13",
+          "2026-04-14",
+          "2026-04-15",
+          "2026-04-16",
+          "2026-06-25",
+          "2026-07-20",
+          "2026-07-21",
+          "2026-07-22",
+          "2026-07-23",
+          "2026-08-17",
+          "2026-08-18",
+          "2026-08-19",
+          "2026-08-20",
+          "2026-08-21",
+          "2026-08-22",
+          "2026-08-23",
+          "2026-08-24",
+          "2026-08-25",
+          "2026-08-26",
+          "2026-08-27",
+          "2026-08-28",
+          "2026-08-29",
+          "2026-08-30",
+          "2026-08-31",
+          "2026-09-04",
+          "2026-09-05",
+          "2026-09-06",
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-04",
+          "2026-10-05",
+          "2026-10-06"
+        ]
+      },
+      "accounts": [
+        {
+          "id": "act_716311018073722",
+          "name": "Felipe Mendes Pampolha",
+          "label": "Felipe Pampolha 01",
+          "start": "2025-08-19",
+          "end": "2026-10-06",
+          "days": 414,
+          "totals": {
+            "spend": 19868.85,
+            "impressions": 2458244.0,
+            "reach": 946376.0,
+            "clicks": 48098.0,
+            "linkClicks": 43301.0,
+            "engagements": 809765.0,
+            "videoViews": 2180630.0
+          },
+          "coverageDays": 414,
+          "missingDates": [],
+          "noDeliveryDates": [
+            "2025-08-19",
+            "2025-08-20",
+            "2025-08-21",
+            "2025-09-17",
+            "2025-09-18",
+            "2025-09-27",
+            "2025-09-28",
+            "2025-09-29",
+            "2025-11-01",
+            "2025-11-02",
+            "2025-11-03",
+            "2025-11-04",
+            "2025-11-05",
+            "2025-11-13",
+            "2025-11-14",
+            "2025-11-15",
+            "2025-11-16",
+            "2025-11-17",
+            "2025-11-18",
+            "2025-12-01",
+            "2025-12-02",
+            "2025-12-03",
+            "2025-12-17",
+            "2025-12-18",
+            "2025-12-27",
+            "2025-12-28",
+            "2025-12-29",
+            "2025-12-30",
+            "2025-12-31",
+            "2026-01-01",
+            "2026-01-02",
+            "2026-01-03",
+            "2026-01-04",
+            "2026-01-05",
+            "2026-01-06",
+            "2026-01-07",
+            "2026-02-19",
+            "2026-02-20",
+            "2026-02-21",
+            "2026-02-22",
+            "2026-03-03",
+            "2026-03-04",
+            "2026-04-11",
+            "2026-04-12",
+            "2026-04-13",
+            "2026-04-14",
+            "2026-04-15",
+            "2026-04-16",
+            "2026-06-25",
+            "2026-07-20",
+            "2026-07-21",
+            "2026-07-22",
+            "2026-07-23",
+            "2026-08-17",
+            "2026-08-18",
+            "2026-08-19",
+            "2026-08-20",
+            "2026-08-21",
+            "2026-08-22",
+            "2026-08-23",
+            "2026-08-24",
+            "2026-08-25",
+            "2026-08-26",
+            "2026-08-27",
+            "2026-08-28",
+            "2026-08-29",
+            "2026-08-30",
+            "2026-08-31",
+            "2026-09-01",
+            "2026-09-02",
+            "2026-09-03",
+            "2026-09-04",
+            "2026-09-05",
+            "2026-09-06",
+            "2026-09-07",
+            "2026-09-08",
+            "2026-09-09",
+            "2026-09-10",
+            "2026-09-11",
+            "2026-09-12",
+            "2026-09-13",
+            "2026-09-14",
+            "2026-09-15",
+            "2026-09-16",
+            "2026-09-17",
+            "2026-09-18",
+            "2026-09-19",
+            "2026-09-20",
+            "2026-09-21",
+            "2026-09-22",
+            "2026-09-23",
+            "2026-09-24",
+            "2026-09-25",
+            "2026-09-26",
+            "2026-09-27",
+            "2026-09-28",
+            "2026-09-29",
+            "2026-09-30",
+            "2026-10-01",
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-04",
+            "2026-10-05",
+            "2026-10-06"
+          ],
+          "source": "Meta Marketing API v24.0 — conta completa, sem filtro por nome · Felipe Pampolha 01 (act_716311018073722)"
+        },
+        {
+          "id": "act_2174013390129316",
+          "name": "Felipe Mendes 02",
+          "label": "Felipe Pampolha 02",
+          "start": "2026-08-17",
+          "end": "2026-10-06",
+          "days": 51,
+          "totals": {
+            "spend": 9663.54,
+            "impressions": 1494360.0,
+            "reach": 579922.0,
+            "clicks": 24007.0,
+            "linkClicks": 24429.0,
+            "engagements": 155994.0,
+            "videoViews": 839242.0
+          },
+          "coverageDays": 51,
+          "missingDates": [],
+          "noDeliveryDates": [
+            "2026-08-17",
+            "2026-08-18",
+            "2026-08-19",
+            "2026-08-20",
+            "2026-08-21",
+            "2026-08-22",
+            "2026-08-23",
+            "2026-08-24",
+            "2026-08-25",
+            "2026-08-26",
+            "2026-08-27",
+            "2026-08-28",
+            "2026-08-29",
+            "2026-08-30",
+            "2026-08-31",
+            "2026-09-04",
+            "2026-09-05",
+            "2026-09-06",
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-04",
+            "2026-10-05",
+            "2026-10-06"
+          ],
+          "source": "Meta Marketing API v24.0 — conta completa, sem filtro por nome · Felipe Pampolha 02 (act_2174013390129316)"
+        }
+      ],
+      "instagram": {
+        "source": "Supabase pampolha_ig_daily_metrics · coletor pampolha-snapshot v3",
+        "coverageDays": 58,
+        "missingDates": [
+          "2026-09-10",
+          "2026-09-13"
+        ],
+        "baseline": {
+          "date": "2026-08-07",
+          "followers": 17562,
+          "capturedAt": "2026-08-08T06:00:11.021084+00:00"
+        },
+        "end": {
+          "date": "2026-10-06",
+          "followers": 22732,
+          "capturedAt": "2026-10-07T06:00:06.910593+00:00"
+        },
+        "daily": [
+          {
+            "date": "2026-08-08",
+            "followers": 17603,
+            "reach": 14676,
+            "profileViews": 533,
+            "interactions": 1470,
+            "capturedAt": "2026-08-09T06:00:13.381617+00:00"
+          },
+          {
+            "date": "2026-08-09",
+            "followers": 17617,
+            "reach": 17299,
+            "profileViews": 460,
+            "interactions": 1342,
+            "capturedAt": "2026-08-10T06:00:10.836681+00:00"
+          },
+          {
+            "date": "2026-08-10",
+            "followers": 17654,
+            "reach": 15998,
+            "profileViews": 610,
+            "interactions": 1191,
+            "capturedAt": "2026-08-11T06:00:12.229478+00:00"
+          },
+          {
+            "date": "2026-08-11",
+            "followers": 17749,
+            "reach": 21573,
+            "profileViews": 778,
+            "interactions": 2966,
+            "capturedAt": "2026-08-12T06:00:12.011139+00:00"
+          },
+          {
+            "date": "2026-08-12",
+            "followers": 17842,
+            "reach": 24134,
+            "profileViews": 711,
+            "interactions": 1816,
+            "capturedAt": "2026-08-13T06:00:12.039156+00:00"
+          },
+          {
+            "date": "2026-08-13",
+            "followers": 17903,
+            "reach": 16065,
+            "profileViews": 725,
+            "interactions": 1748,
+            "capturedAt": "2026-08-14T06:00:11.283647+00:00"
+          },
+          {
+            "date": "2026-08-14",
+            "followers": 17976,
+            "reach": 21484,
+            "profileViews": 753,
+            "interactions": 2724,
+            "capturedAt": "2026-08-15T06:00:12.338013+00:00"
+          },
+          {
+            "date": "2026-08-15",
+            "followers": 18051,
+            "reach": 24578,
+            "profileViews": 1167,
+            "interactions": 5103,
+            "capturedAt": "2026-08-16T06:00:10.56772+00:00"
+          },
+          {
+            "date": "2026-08-16",
+            "followers": 18177,
+            "reach": 53127,
+            "profileViews": 1806,
+            "interactions": 7584,
+            "capturedAt": "2026-08-17T06:00:12.183064+00:00"
+          },
+          {
+            "date": "2026-08-17",
+            "followers": 18296,
+            "reach": 22802,
+            "profileViews": 1237,
+            "interactions": 3249,
+            "capturedAt": "2026-08-18T06:00:14.70762+00:00"
+          },
+          {
+            "date": "2026-08-18",
+            "followers": 18444,
+            "reach": 22224,
+            "profileViews": 1206,
+            "interactions": 4572,
+            "capturedAt": "2026-08-19T06:00:12.701186+00:00"
+          },
+          {
+            "date": "2026-08-19",
+            "followers": 18560,
+            "reach": 19401,
+            "profileViews": 887,
+            "interactions": 3353,
+            "capturedAt": "2026-08-20T06:00:12.534567+00:00"
+          },
+          {
+            "date": "2026-08-20",
+            "followers": 18666,
+            "reach": 19687,
+            "profileViews": 758,
+            "interactions": 2882,
+            "capturedAt": "2026-08-21T06:00:11.939103+00:00"
+          },
+          {
+            "date": "2026-08-21",
+            "followers": 18731,
+            "reach": 17330,
+            "profileViews": 695,
+            "interactions": 4341,
+            "capturedAt": "2026-08-22T06:00:16.725838+00:00"
+          },
+          {
+            "date": "2026-08-22",
+            "followers": 18776,
+            "reach": 20651,
+            "profileViews": 765,
+            "interactions": 3288,
+            "capturedAt": "2026-08-23T06:00:12.3887+00:00"
+          },
+          {
+            "date": "2026-08-23",
+            "followers": 18814,
+            "reach": 20745,
+            "profileViews": 760,
+            "interactions": 3158,
+            "capturedAt": "2026-08-24T06:00:08.919323+00:00"
+          },
+          {
+            "date": "2026-08-24",
+            "followers": 18896,
+            "reach": 18089,
+            "profileViews": 773,
+            "interactions": 2508,
+            "capturedAt": "2026-08-25T06:00:12.98417+00:00"
+          },
+          {
+            "date": "2026-08-25",
+            "followers": 18968,
+            "reach": 14858,
+            "profileViews": 808,
+            "interactions": 7093,
+            "capturedAt": "2026-08-26T06:00:17.295457+00:00"
+          },
+          {
+            "date": "2026-08-26",
+            "followers": 19070,
+            "reach": 31326,
+            "profileViews": 1051,
+            "interactions": 5861,
+            "capturedAt": "2026-08-27T06:00:10.258716+00:00"
+          },
+          {
+            "date": "2026-08-27",
+            "followers": 19155,
+            "reach": 21950,
+            "profileViews": 826,
+            "interactions": 3488,
+            "capturedAt": "2026-08-28T06:00:10.169279+00:00"
+          },
+          {
+            "date": "2026-08-28",
+            "followers": 19211,
+            "reach": 20503,
+            "profileViews": 726,
+            "interactions": 3347,
+            "capturedAt": "2026-08-29T06:00:10.290232+00:00"
+          },
+          {
+            "date": "2026-08-29",
+            "followers": 19238,
+            "reach": 16767,
+            "profileViews": 570,
+            "interactions": 4761,
+            "capturedAt": "2026-08-30T06:00:10.728552+00:00"
+          },
+          {
+            "date": "2026-08-30",
+            "followers": 19296,
+            "reach": 25664,
+            "profileViews": 739,
+            "interactions": 4846,
+            "capturedAt": "2026-08-31T06:00:11.589025+00:00"
+          },
+          {
+            "date": "2026-08-31",
+            "followers": 19377,
+            "reach": 25297,
+            "profileViews": 1013,
+            "interactions": 3911,
+            "capturedAt": "2026-09-01T06:00:12.307314+00:00"
+          },
+          {
+            "date": "2026-09-01",
+            "followers": 19454,
+            "reach": 21701,
+            "profileViews": 920,
+            "interactions": 4805,
+            "capturedAt": "2026-09-02T06:00:12.041022+00:00"
+          },
+          {
+            "date": "2026-09-02",
+            "followers": 19544,
+            "reach": 21839,
+            "profileViews": 796,
+            "interactions": 3375,
+            "capturedAt": "2026-09-03T06:00:13.013919+00:00"
+          },
+          {
+            "date": "2026-09-03",
+            "followers": 19631,
+            "reach": 19740,
+            "profileViews": 902,
+            "interactions": 2976,
+            "capturedAt": "2026-09-04T06:00:14.678882+00:00"
+          },
+          {
+            "date": "2026-09-04",
+            "followers": 19718,
+            "reach": 29006,
+            "profileViews": 1170,
+            "interactions": 6391,
+            "capturedAt": "2026-09-05T06:00:10.887268+00:00"
+          },
+          {
+            "date": "2026-09-05",
+            "followers": 19760,
+            "reach": 27141,
+            "profileViews": 659,
+            "interactions": 3362,
+            "capturedAt": "2026-09-06T06:00:15.314079+00:00"
+          },
+          {
+            "date": "2026-09-06",
+            "followers": 19803,
+            "reach": 26343,
+            "profileViews": 640,
+            "interactions": 3746,
+            "capturedAt": "2026-09-07T06:00:15.790707+00:00"
+          },
+          {
+            "date": "2026-09-07",
+            "followers": 19855,
+            "reach": 35484,
+            "profileViews": 819,
+            "interactions": 5021,
+            "capturedAt": "2026-09-08T06:00:12.72514+00:00"
+          },
+          {
+            "date": "2026-09-08",
+            "followers": 19925,
+            "reach": 34831,
+            "profileViews": 1250,
+            "interactions": 5219,
+            "capturedAt": "2026-09-09T06:00:07.277492+00:00"
+          },
+          {
+            "date": "2026-09-09",
+            "followers": 20017,
+            "reach": 34485,
+            "profileViews": 1280,
+            "interactions": 6574,
+            "capturedAt": "2026-09-10T06:00:07.84423+00:00"
+          },
+          {
+            "date": "2026-09-11",
+            "followers": 20179,
+            "reach": 71957,
+            "profileViews": 1822,
+            "interactions": 5685,
+            "capturedAt": "2026-09-12T06:00:25.73188+00:00"
+          },
+          {
+            "date": "2026-09-12",
+            "followers": 20253,
+            "reach": 86166,
+            "profileViews": 2169,
+            "interactions": 4190,
+            "capturedAt": "2026-09-13T06:00:21.101919+00:00"
+          },
+          {
+            "date": "2026-09-14",
+            "followers": 20423,
+            "reach": 84533,
+            "profileViews": 2305,
+            "interactions": 4416,
+            "capturedAt": "2026-09-15T06:00:06.273663+00:00"
+          },
+          {
+            "date": "2026-09-15",
+            "followers": 20523,
+            "reach": 64663,
+            "profileViews": 1604,
+            "interactions": 5807,
+            "capturedAt": "2026-09-16T06:00:05.538606+00:00"
+          },
+          {
+            "date": "2026-09-16",
+            "followers": 20645,
+            "reach": 56731,
+            "profileViews": 1545,
+            "interactions": 4487,
+            "capturedAt": "2026-09-17T06:00:05.958757+00:00"
+          },
+          {
+            "date": "2026-09-17",
+            "followers": 20707,
+            "reach": 62099,
+            "profileViews": 1588,
+            "interactions": 3926,
+            "capturedAt": "2026-09-18T06:00:06.118723+00:00"
+          },
+          {
+            "date": "2026-09-18",
+            "followers": 20823,
+            "reach": 57169,
+            "profileViews": 1575,
+            "interactions": 4195,
+            "capturedAt": "2026-09-19T06:00:08.56475+00:00"
+          },
+          {
+            "date": "2026-09-19",
+            "followers": 20889,
+            "reach": 68857,
+            "profileViews": 1690,
+            "interactions": 5114,
+            "capturedAt": "2026-09-20T06:00:05.662339+00:00"
+          },
+          {
+            "date": "2026-09-20",
+            "followers": 20947,
+            "reach": 135397,
+            "profileViews": 2874,
+            "interactions": 5927,
+            "capturedAt": "2026-09-21T06:00:04.938316+00:00"
+          },
+          {
+            "date": "2026-09-21",
+            "followers": 21021,
+            "reach": 100363,
+            "profileViews": 2477,
+            "interactions": 4142,
+            "capturedAt": "2026-09-22T06:00:05.316569+00:00"
+          },
+          {
+            "date": "2026-09-22",
+            "followers": 21112,
+            "reach": 118143,
+            "profileViews": 2658,
+            "interactions": 5395,
+            "capturedAt": "2026-09-23T06:00:05.228006+00:00"
+          },
+          {
+            "date": "2026-09-23",
+            "followers": 21218,
+            "reach": 118589,
+            "profileViews": 2710,
+            "interactions": 5334,
+            "capturedAt": "2026-09-24T06:00:06.158043+00:00"
+          },
+          {
+            "date": "2026-09-24",
+            "followers": 21276,
+            "reach": 108088,
+            "profileViews": 2317,
+            "interactions": 3647,
+            "capturedAt": "2026-09-25T06:00:07.604099+00:00"
+          },
+          {
+            "date": "2026-09-25",
+            "followers": 21364,
+            "reach": 61360,
+            "profileViews": 1702,
+            "interactions": 5318,
+            "capturedAt": "2026-09-26T06:00:06.91914+00:00"
+          },
+          {
+            "date": "2026-09-26",
+            "followers": 21437,
+            "reach": 46955,
+            "profileViews": 1529,
+            "interactions": 4494,
+            "capturedAt": "2026-09-27T06:00:06.777326+00:00"
+          },
+          {
+            "date": "2026-09-27",
+            "followers": 21510,
+            "reach": 62324,
+            "profileViews": 2070,
+            "interactions": 5644,
+            "capturedAt": "2026-09-28T06:00:09.900873+00:00"
+          },
+          {
+            "date": "2026-09-28",
+            "followers": 21591,
+            "reach": 49093,
+            "profileViews": 2191,
+            "interactions": 5128,
+            "capturedAt": "2026-09-29T06:00:04.492345+00:00"
+          },
+          {
+            "date": "2026-09-29",
+            "followers": 21676,
+            "reach": 55891,
+            "profileViews": 1891,
+            "interactions": 6674,
+            "capturedAt": "2026-09-30T06:00:05.905274+00:00"
+          },
+          {
+            "date": "2026-09-30",
+            "followers": 21754,
+            "reach": 84490,
+            "profileViews": 2306,
+            "interactions": 6469,
+            "capturedAt": "2026-10-01T06:00:05.583007+00:00"
+          },
+          {
+            "date": "2026-10-01",
+            "followers": 21867,
+            "reach": 84014,
+            "profileViews": 2620,
+            "interactions": 4861,
+            "capturedAt": "2026-10-02T06:00:05.552529+00:00"
+          },
+          {
+            "date": "2026-10-02",
+            "followers": 22016,
+            "reach": 39485,
+            "profileViews": 1469,
+            "interactions": 7438,
+            "capturedAt": "2026-10-03T06:00:08.294198+00:00"
+          },
+          {
+            "date": "2026-10-03",
+            "followers": 22235,
+            "reach": 65548,
+            "profileViews": 3345,
+            "interactions": 11402,
+            "capturedAt": "2026-10-04T06:00:05.178216+00:00"
+          },
+          {
+            "date": "2026-10-04",
+            "followers": 22577,
+            "reach": 87489,
+            "profileViews": 8576,
+            "interactions": 11777,
+            "capturedAt": "2026-10-05T06:00:06.162527+00:00"
+          },
+          {
+            "date": "2026-10-05",
+            "followers": 22722,
+            "reach": 102669,
+            "profileViews": 4272,
+            "interactions": 5950,
+            "capturedAt": "2026-10-06T06:00:06.001747+00:00"
+          },
+          {
+            "date": "2026-10-06",
+            "followers": 22732,
+            "reach": 18834,
+            "profileViews": 870,
+            "interactions": 3529,
+            "capturedAt": "2026-10-07T06:00:06.910593+00:00"
+          }
+        ],
+        "totals": {
+          "profileViews": 88968,
+          "interactions": 269020
+        },
+        "notes": [
+          "Seguidores são snapshots atuais na coleta, não fechamento do dia nominal. Base nominal 07/08 coletada em 08/08 às 03h; final nominal 06/10 coletado em 07/10 às 03h (Brasília). capturedAt registra o horário de persistência, próximo da coleta.",
+          "Variação líquida entre esses snapshots; não mede seguidores atribuídos aos anúncios.",
+          "Insights diários do Instagram consultados pelo coletor em janela UTC (00:00–23:59:59), diferente do dia de mídia em America/Sao_Paulo.",
+          "Totais de visitas e interações somam somente os dias presentes; lacunas não são zeros.",
+          "Coletor legado converte falhas/ausências em zero. Zeros sem comprovação ficam null neste relatório.",
+          "Qualidade dos snapshots: 0 zeros de seguidores; 0 quedas entre coletas consecutivas."
+        ],
+        "period": {
+          "start": "2026-08-08",
+          "end": "2026-10-06",
+          "days": 60
+        },
+        "profile": "@felipepampolha.rio"
+      }
+    }
+  }
+}

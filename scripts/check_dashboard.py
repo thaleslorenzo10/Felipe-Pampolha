@@ -13,7 +13,6 @@ import threading
 ROOT = Path(__file__).resolve().parents[1]
 SESSION = "felipe-account-pages-check"
 PAGES = [
-    ("campanha", "act_716311018073722", "relatorio-inicial-conta-01"),
     ("conta-01", "act_716311018073722", "historico-conta-01"),
     ("conta-02", "act_2174013390129316", "historico-conta-02"),
 ]
@@ -122,7 +121,7 @@ def main():
     threading.Thread(target=server.serve_forever, daemon=True).start()
     base = f"http://127.0.0.1:{server.server_port}"
     try:
-        browser("open", f"{base}/relatorio-campanha.html")
+        browser("open", f"{base}/relatorio-conta-01.html")
         for index, (slug, account_id, file_key) in enumerate(PAGES):
             if index:
                 browser("click", f'.report-links a[href="relatorio-{slug}.html"]')
@@ -131,8 +130,8 @@ def main():
         browser("click", '.report-links a[href="relatorio-campanha.html"]')
         browser("wait", "--url", "**/relatorio-campanha.html")
         browser("wait", "#report:not([hidden])")
-        assert evaluate("config.legacy && !!document.querySelector('#instagram')")
-        print("OK: real navigation through all three pages and back to original")
+        assert evaluate("config.unified && !!document.querySelector('#instagram') && report.ads.campaigns.length === 31")
+        print("OK: real navigation through both account pages and back to unified report")
     finally:
         browser("close")
         server.shutdown()
